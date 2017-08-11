@@ -1,0 +1,88 @@
+/*用户设置弹出菜单*/
+
+.user-set-menu {
+    padding-top: 6px;
+    top: 26px;
+    position: absolute;
+    right: 75px;
+    float: right;
+    width: 100px;
+    z-index: 999;
+    text-align: left;
+}
+
+.user-set-menu.menu-top {
+    width: 70px;
+    right: 134.5px;
+    display: none;
+}
+
+.user-set-menu a {
+    position: relative;
+    text-decoration: none;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 8px;
+    background-color: #fff;
+    -moz-user-select: none;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    color: #333;
+    margin: 0;
+    font-size: 12px;
+}
+
+.user-set-menu.menu-top .menu-arrow {
+    float: right;
+    right: 32px;
+}
+
+.user-set-menu .menu-arrow {
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    left: 28px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed transparent;
+    border-bottom: 5px solid #e3e3e3;
+    font-size: 0;
+}
+
+.user-set-menu .menupop {
+    position: relative;
+    border: 1px solid #E3E3E3;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+}
+
+.user-set-menu.menu-set-top {
+    width: 70px;
+    right: 80px;
+    display: none;
+}
+
+
+/*“设置”菜单的弹出菜单*/
+
+
+/*
+.user-set-menu {
+    padding-top: 6px;
+    top: 26px;
+    position: absolute;
+    right: 75px;
+    float: right;
+    width: 100px;
+    z-index: 999;
+    text-align: left;
+}
+.user-set-menu.menu-top {
+    width: 70px;
+    display: none;
+}
+*/

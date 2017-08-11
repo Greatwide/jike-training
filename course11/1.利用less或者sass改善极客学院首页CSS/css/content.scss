@@ -1,0 +1,179 @@
+/*内容样式*/
+@import 'base';
+
+.content {
+  background: $color-lightgray;
+}
+
+.margin-top20 {
+  margin-top: 20px!important;
+}
+
+.width1k {
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#main {
+  width: 776px;
+}
+
+.float_r {
+  float: right;
+}
+
+.allCourse>.cwrap {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.course-menu {
+  position: relative;
+  z-index: 500;
+    >.m-wrap {
+      box-sizing: content-box;
+      height: 38px;
+      background:$color-white;
+      color: gray;
+      line-height: 38px;
+    }
+    .menu-left {
+      overflow: visible;
+      float: left;
+      height: 38px;
+      h3 {
+        float: left;
+        padding: 0 21px;
+        background: $color-white;
+        border-right: 1px solid $color-lightgray;
+        font-size: 12px;
+        font-weight: 400;
+        cursor: default;
+      }
+      >dl{
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        float: left;
+        height: 36px;
+        margin: 0 1px 0 -1px;
+        white-space: nowrap;
+
+
+
+        :hover dt {
+          padding: 0 17px;
+        }
+
+        >dl:hover {
+          height: auto;
+          overflow: visible;
+          background:$color-white;
+          border: 1px solid #e4e4e4;
+          border-width: 0 1px 1px;
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+        }
+      }
+      dt {
+        padding: 0 18px;
+        cursor: default;
+        >.arrow {
+          position: relative;
+          display: inline-block;
+          margin-left: 5px;
+        }
+        >.arrow:after {
+          position: absolute;
+          left: 1px;
+          bottom: 1px;
+          border-width: 4px;
+          border-bottom-width: 0;
+          border-top-color: $color-white;
+        }
+      }
+    }
+  dd {
+    position: relative;
+    z-index: 12;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $color-white;
+
+    transition: all .1s ease .1s;
+    a {
+      display: block;
+      padding: 0 32px 0 17px;
+      font-weight: 500;
+      color: gray;
+    }
+    a:hover {
+      color: $color-green;
+    }
+  }
+
+  .previewMode {
+    float: right;
+    li {
+      position: relative;
+      float: left;
+      width: 36px;
+      height: 38px;
+      border-left: 1px solid $color-lightgray;
+      line-height: 36px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .2s;
+
+      .curr,
+      :hover {
+        background: $color-white;
+      }
+
+      .icon {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        background: url(../img/preview-icon.png) no-repeat 0 0;
+      }
+
+      .kuai-icon .icon {
+        width: 14px;
+        background: url(../img/icon-kuai.png) no-repeat 0 0;
+        background-size: 14px;
+      }
+      .list-icon .icon {
+        width: 19px;
+        background: url(../img/icon-list.png) no-repeat center;
+        background-size: 16px 12px;
+      }
+
+    }
+  }
+}
+
+
+p {
+  display: block;
+  margin-start: 0px;
+  margin-end: 0px;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+  border: 0 none;
+}
+
+
+
+.type-title-one:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+

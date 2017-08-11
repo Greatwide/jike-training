@@ -1,0 +1,130 @@
+/*Ä§¹í³ÌÐòÔ±*/
+
+.crazyman {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.crazyman h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    padding-top: 30px;
+    margin-bottom: 22px;
+    display: block;
+}
+
+.crazyman .bigcrbox {
+    width: 620px;
+    height: 135px;
+    float: left;
+}
+
+.crazyman .bigcrbox a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.bigcrbox .img-big {
+    width: 345px height: 135px;
+}
+
+.bigcrbox .img-s {
+    width: 216px height: 135px;
+}
+
+.bigcrbox .textp-s {
+    width: 216px;
+    float: left;
+    height: 75px;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.bigcrbox .textp-big {
+    width: 345px;
+    float: left;
+    height: 75px;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.bigcrbox:hover {
+    opacity: .8;
+}
+
+.smallcrbox:hover {
+    opacity: .8;
+}
+
+.crazyman p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.crazyman span {
+    color: #fff;
+    font-size: 12px;
+}
+
+.smallcrbox {
+    width: 380px;
+    height: 135px;
+    float: left;
+}
+
+.crazyman .crbox1 {
+    background-color: #df5a49;
+}
+
+.crazyman .crbox2 {
+    background-color: #efc94c;
+}
+
+.crazyman .crbox3 {
+    background-color: #e27a3f;
+}
+
+.crazyman .crbox4 {
+    background-color: #45b29d;
+}
+
+.crazyman .smallcrbox a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.smallcrbox .img-s {
+    width: 175px;
+    height: 135px;
+}
+
+.smallcrbox .img-big {
+    width: 205px;
+    height: 135px;
+}
+
+.smallcrbox .textp-big {
+    width: 185px;
+    float: left;
+    height: 75px;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.smallcrbox .textp-s {
+    width: 175px;
+    float: left;
+    height: 75px;
+    text-align: justify;
+    margin-top: 50px;
+}

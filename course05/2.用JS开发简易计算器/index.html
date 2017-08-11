@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function calc() {
+
+        var value1 = parseFloat(document.getElementById("num1").value);
+        var value2 = parseFloat(document.getElementById("num2").value);
+        var op = document.getElementById("op").value;
+        if (isNaN(value1) || isNaN(value2)) {
+            alert("输入的数字无效，请重新输入！");
+            return false;
+        }
+        if (op == "/" && value2 == 0) {
+            alert("除数不能为0！");
+            return false;
+        }
+        var results = 0;
+        switch (op) {
+            case "+":
+                results = value1 + value2;
+                break;
+            case "-":
+                results = value1 - value2;
+                break;
+            case "*":
+                results = value1 * value2;
+                break;
+            case "/":
+                results = value1 / value2;
+                break;
+            default:
+                break;
+        }
+        if (parseInt(results) != results) //不是整数
+        {
+            document.getElementById("data").innerText = "得数为:" + results.toFixed(2); //保留2位小数，免得很长
+        } else {
+            document.getElementById("data").innerText = "得数为:" + results;
+        }
+        return true;
+
+    }
+    </script>
+    <input type="text" id="num1" placeholder="请输入数字">
+    <br>
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <input type="text" id="num2" placeholder="请输入数字">
+    <br>
+    <button onclick="calc()">计算</button>
+    <br>
+    <span id="data" style="color: #0000ff"></span>
+</body>
+
+</html>

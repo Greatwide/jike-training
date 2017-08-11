@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet " type="text/css " href="cal.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="screen">
+            <span>计算器</span>
+            <span id="warning"></span>
+            <input id="showdata" class="data-text" type="text" readonly="readonly" maxlength="9" value="0">
+        </div>
+        <div>
+            <ul>
+                <li id="clear">C</li>
+                <li id="onediv">1/x</li>
+                <li id="percent">%</li>
+                <li id="divided">÷</li>
+                <li id="cal7">7</li>
+                <li id="cal8">8</li>
+                <li id="cal9">9</li>
+                <li id="times">*</li>
+                <li id="cal4">4</li>
+                <li id="cal5">5</li>
+                <li id="cal6">6</li>
+                <li id="minus">-</li>
+                <li id="cal1">1</li>
+                <li id="cal2">2</li>
+                <li id="cal3">3</li>
+                <li id="plus">+</li>
+                <li id="cal0">0</li>
+                <li id="dot">.</li>
+                <li id="del">←</li>
+                <li id="results">=</li>
+            </ul>
+            <input id="formula" type="text" readonly="readonly" value="" />
+        </div>
+    </div>
+    <script type="text/javascript" src="cal.js"></script>
+    <!--
+    <script type="text/javascript">
+
+    function cal( num){
+        formula += num;
+        document.getElementById("formula").value = "12345";
+    }
+
+</script>-->
+</body>
+
+</html>

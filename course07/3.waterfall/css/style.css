@@ -1,0 +1,27 @@
+/*图片框样式*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+#wrapper {
+    position: absolute;
+}
+
+.pic-wrap {
+    padding: 15px 0 0 15px;
+    float: left;
+}
+
+.pic-box {
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 6px #ccc;
+    border-radius: 5px;
+}
+
+.pic-box img {
+    width: 230px;
+    height: auto;
+}

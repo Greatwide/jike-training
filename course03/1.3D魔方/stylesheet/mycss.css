@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.continer {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    /* -webkit-perspective: 150px;
+    perspective: 150px;*/
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: moving 10s linear infinite;
+    -moz--animation: moving 10s linear infinite;
+    animation: moving 10s linear infinite;
+}
+
+
+/*动画*/
+
+@-webkit-keyframes moving {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    30% {
+        -webkit-transform: rotateX(90deg) rotateY(120deg);
+    }
+    60% {
+        -webkit-transform: rotateX(180deg) rotateY(240deg);
+    }
+    80% {
+        -webkit-transform: rotateX(270deg) rotateY(480deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(720deg);
+    }
+}
+
+@-moz-keyframes moving {
+    0% {
+        -moz-transform: rotateX(0deg) rotateY(0deg);
+    }
+    30% {
+        -moz-transform: rotateX(90deg) rotateY(120deg);
+    }
+    60% {
+        -moz-transform: rotateX(180deg) rotateY(240deg);
+    }
+    80% {
+        -moz-transform: rotateX(270deg) rotateY(480deg);
+    }
+    100% {
+        -moz-transform: rotateX(360deg) rotateY(720deg);
+    }
+}
+
+@keyframes moving {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    30% {
+        rotateX(90deg) rotateY(120deg);
+    }
+    60% {
+        transform: rotateX(180deg) rotateY(240deg);
+    }
+    80% {
+        transform: rotateX(270deg) rotateY(480deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(720deg);
+    }
+}
+
+
+/*前面*/
+
+.front {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform: translatez(150px);
+    -webkit-transform: translatez(150px);
+    -moz-transform: translatez(150px);
+}
+
+
+/*后面*/
+
+.rear {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    -webkit-transform: translatez(-150px);
+    transform: translatez(-150px);
+    -moz-transform: translatez(-150px);
+}
+
+
+/*左侧*/
+
+.left {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: rotateY(-90deg) translateZ(150px);
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+    -moz-transform: rotateY(-90deg) translateZ(150px);
+}
+
+
+/*右侧*/
+
+.right {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: rotateY(90deg) translateZ(150px);
+    -webkit-transform: rotateY(90deg) translateZ(150px);
+    -moz-transform: rotateY(90deg) translateZ(150px);
+}
+
+
+/*上侧*/
+
+.upside {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: rotateX(90deg) translateZ(150px);
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+    -moz-transform: rotateX(90deg) translateZ(150px);
+}
+
+
+/*下侧*/
+
+.downside {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: rotateX(90deg) translateZ(-150px);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+}
+
+
+/*每个面小方格的基本属性定义*/
+
+div {
+    width: 98px;
+    height: 98px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #faebd7;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+/*前面九个小方块*/
+
+.front div {
+    background-color: #2d78f4;
+    float: left;
+}
+
+
+/*后面九个小方块*/
+
+.rear div {
+    background-color: #dc2620;
+    float: left;
+}
+
+
+/*左面九个小方块*/
+
+.left div {
+    background-color: #b734dc;
+    float: left;
+}
+
+
+/*右面九个小方块*/
+
+.right div {
+    background-color: #67dc4e;
+    float: left;
+}
+
+
+/*上面九个小方块*/
+
+.upside div {
+    background-color: #43ffd5;
+    float: left;
+}
+
+
+/*下面九个小方块*/
+
+.downside div {
+    background-color: #ff9022;
+    float: left;
+}

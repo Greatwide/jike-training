@@ -1,0 +1,272 @@
+/*回到顶部*/
+
+@import 'base';
+
+@mixin base-img{
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+
+.gotop {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+    span {
+        cursor: pointer;
+        .top {
+            display: block;
+            background: url(../img/gotop.jpg) 0 0 no-repeat;
+            background-size: 34px 103px;
+            width: 34px;
+            height: 34px;
+            :hover {
+                background: url(../img/gotop2.jpg) 0 0 no-repeat;
+                background-position: 0 0;
+                background-size: 34px 103px;
+            }
+        }
+        .QRcode {
+            position: relative;
+            display: block;
+            background: url(../img/gotop.jpg) 0 -34px no-repeat;
+            background-size: 34px 103px;
+            width: 34px;
+            height: 35px;
+            img{
+                @include base-img;
+            }
+        }
+        .jkxy-app {
+            position: relative;
+            display: block;
+            background: #f7f7f7 url(../img/phone-1.png) center center no-repeat;
+            background-size: 12px 24px;
+            width: 34px;
+            height: 35px;
+            border-bottom: 1px solid #e0e0e0;
+
+            :hover {
+                background: #f7f7f7 url(../img/phone-2.png) center center no-repeat;
+                background-size: 12px 24px;
+            }
+            img{
+                @include base-img;
+            }
+            :hover .appqrcode {
+                display: block;
+            }
+        }
+    }
+}
+
+.appqrcode {
+    background: url(../img/qrcode.png) center center no-repeat;
+    background-size: 100%;
+    @include base-img;
+}
+
+
+
+#aside {
+    width: 210px;
+}
+
+.aside-allCategory {
+    margin: 0;
+    border: 1px solid $color-green;
+    background-color: $color-white;
+
+    >.hd {
+        height: 45px;
+        padding: 0 32px;
+        border-bottom: 1px solid #eee;
+        line-height: 45px;
+        cursor: default;
+        h2 {
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            a {
+                color: $color-green;
+            }
+        }
+        .icon-course-curr {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: url(../img/icon-course-curr.png) no-repeat 0 0 / 15px 15px;
+            position: absolute;
+            margin-left: -20px;
+            margin-top: 14px;
+        }
+
+    }
+
+}
+
+.hdlist {
+    width: 100%;
+    background-color: $color-white;
+    li {
+        height: 45px;
+    }
+    
+    a {
+        display: block;
+        height: 45px;
+        width: 100%;
+        line-height: 45px;
+        color: $color-black;
+        font-size: 14px;
+        padding-left: 10px;
+        border-bottom: 1px solid #eee;
+        .icon-zylj {
+            background: url(../img/icon-zylj.png) no-repeat left center;
+            background-size: 15px 14px;
+        }
+        &:hover {
+            color: $color-green;
+            background: #fafafa url(../img/seeall.png) no-repeat 160px center;
+            background-size: 40px 10px;
+        }
+        .icon-zstx {
+            background: url(../img/icon-zstx.png) no-repeat left center;
+            background-size: 15px 12.5px;
+        }
+        i {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            vertical-align: text-bottom;
+        }
+        .icon-xlkc {
+            background: url(../img/icon-xlkc.png) no-repeat left center;
+            background-size: 14px 14px;
+        }
+        .icon-kcbq {
+            background: url(../img/icon-kcbq.png) no-repeat left center;
+            background-size: 15px 13px;
+        }
+
+    }
+}
+
+
+
+.aside-cList {
+    position: relative;
+    width: 208px;
+    li {
+        padding: 0;
+        border-bottom: 0;
+        >div {
+            cursor: pointer;
+            width: 178px;
+            height: 37px;
+            border-bottom: 1px solid $color-lightgray;
+            background: url(../img/icon-more.png) 186px center no-repeat;
+            background-size: 6px 10px;
+            padding-left: 32px;
+            a {
+                font-size: 12px;
+                color: #666;
+                line-height: 36px;
+            }
+            &:hover {
+                border-left: 1px solid #ddd;
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                height: 38px;
+                width: 210px;
+                margin-top: -1px;
+                margin-left: -1px;
+                padding-left: 24px;
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+            }
+        }
+
+        .list-show {
+            display: none;
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+            overflow: hidden;
+            min-height: 417px;
+            min-width: 401px;
+            background: $color-white;
+            border: 1px solid #ddd;
+            position: absolute;
+            left: 209px;
+            top: -46px;
+            z-index: 1101;
+            list-style: none;
+            margin-left: -1px;
+            padding-bottom: 30px;
+            float: left;
+            width: 591px;
+            dd {
+                list-style: none;
+                //margin-left: -8px;
+                padding: 3px 0;
+                margin: 0 15px;
+                overflow: hidden;
+            }
+            dt {
+                display: block;
+                border-bottom: 1px solid $color-lightgray;
+                height: 37px;
+                line-height: 45px;
+                >a {
+                    color: $color-black;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+
+            }
+            dd {
+                list-style: none;
+                margin-left: -8px;
+                padding: 3px 0;
+                a {
+                    height: 14px;
+                    line-height: 14px;
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                    padding: 0 7px;
+                    color: #666;
+                    display: inline-block;
+                    font-size: 12px;
+                    border-left: 1px solid #e0e0e0;
+                    float: left;
+                    white-space: nowrap;
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+}
+
+
+.aside-cList li:last-child>div:hover {
+    border-bottom: 0;
+
+    box-shadow: none;
+}
+
+.float_l {
+    float: left;
+}
+
+
+:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}

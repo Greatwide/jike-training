@@ -1,0 +1,105 @@
+.menus-wrap {
+    position: relative;
+    zoom: 1;
+    margin-bottom: 10px;
+    border: 0;
+}
+
+.menus-lists {
+    margin: 0 auto;
+    height: 38px;
+    /*border-top: 2px solid #099e6a;*/
+    border-bottom: 1px solid #eaeaea;
+    /* background: #fcfcfc;*/
+    background: #099e6a;
+    line-height: 38px;
+}
+
+.menus-lists .menu-item {
+    position: relative;
+    float: left;
+    width: 110px;
+}
+
+.menus-lists .menu-item1 {
+    position: relative;
+    float: left;
+    width: 90px;
+}
+
+
+/*
+.firstpage {
+    width: 81px;
+}*/
+
+.menu-item1 span {
+    color: #fff;
+}
+
+.menu-item1 .link {
+    position: relative;
+    display: block;
+    height: 38px;
+    text-align: center;
+    font: 400 16px/38px "Microsoft Yahei";
+    color: #333;
+    background-color: #0aa770;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*
+.menu-item1 .link{
+    background-color: #0aa770;
+    color: #fff;
+    text-decoration: none;
+}*/
+
+.menu-item .link {
+    position: relative;
+    display: block;
+    height: 38px;
+    text-align: center;
+    font: 400 16px/38px "Microsoft Yahei";
+    color: #333;
+    background-color: #0aa770;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*
+.menu-item .link{
+    background-color: #0aa770;
+    color: #fff;
+    text-decoration: none;
+}
+*/
+
+.menu-item .alink span:hover {
+    /* color:#0aa770 ;*/
+    color: #fff;
+}
+
+.menu-item .alink {
+    position: relative;
+    display: block;
+    height: 38px;
+    text-align: center;
+    font: 400 16px/38px "Microsoft Yahei";
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-item .alink:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 11px;
+    right: 0;
+    background: #eaeaea;
+}

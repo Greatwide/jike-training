@@ -1,0 +1,67 @@
+/*样式*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*计算器*/
+.wrapper {
+    position: relative;
+    width: 298px;
+    background: #000;
+    box-shadow: 4px 4px 5px #333333;
+    border-radius: 5px;
+    margin: 10px auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.screen {
+    text-align: center;
+}
+/*显示算式*/
+#formula {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    background: none;
+    border: 0;
+    font: 700 12px/1.5 Arial;
+    width: 270px;
+    padding: 3px 15px 0 5px;
+    text-align: right;
+}
+
+.screen span {
+    color: white;
+    font-size: 24px;
+}
+/*显示输入和结果*/
+.data-text {
+    border: 0;
+    width: 292px;
+    height: 84px;
+    text-align: right;
+    font: 700 28px/84px Arial;
+    border-radius: 3px;
+}
+/*按键*/
+ul li {
+    display: block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    background: url(btn4.png) no-repeat;
+    float: left;
+    margin: 5px;
+    color: #fff;
+}
+
+ul li:hover {
+    opacity: 0.4;
+}
+
+ul {
+    list-style-type: none;
+}

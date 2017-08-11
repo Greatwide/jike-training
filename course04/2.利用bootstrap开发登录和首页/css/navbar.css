@@ -1,0 +1,101 @@
+/*自定义样式*/
+body {
+    padding-top: 64px;
+
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        width: 100%;
+        padding-top: 64px;
+
+    }
+}
+
+.navbar-brand>img {
+    height: 48px;
+    width: 150px;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+
+.navbar-default {
+    background-color: #d8cedb;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.page-color {
+    /*background-color: #0fa6bc;*/
+    color: #761c19;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 750px) {
+    .page-color {
+        /* background-color: #0fa6bc;*/
+        color: #761c19;
+        border-radius: 6px;
+        margin-left: 5px;
+        padding-right: -5px;
+    }
+}
+
+.sidebar-color {
+    background: #d8cedb;
+    font-size: 16px;
+    color: #2edc02;
+}
+
+.navbar .nav .active > a .navbar .nav .active > a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #222222;
+}
+
+.sidebar-nav .nav .active > a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #222222;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-nav .nav a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #8cacb8;
+}
+
+.sidebar-nav .nav a {
+    font-size: 14px;
+    color: #000001;
+}
+
+.first-alarm span {
+    background: red;
+}
+
+.second-alarm span {
+    background: #ffa500;
+}
+
+.third-alarm span {
+    background: #f55dec;
+}
+
+.forth-alarm span {
+    background: #dcff8c;
+}
+
+tr td img {
+    width: 16px;
+    height: 16px;
+}
+
+.test{
+    width: 100%;
+
+}

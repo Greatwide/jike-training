@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组查找</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var arrayTobeseach = ["a", "x", "b", "d", "m", "a", "k", "m", "p", "j", "a"];
+    /* var arrayTobeseach = ["a", "x", "b", "d", "m","b", "a", "k", "m","b", "p", "j", "a","x","x"];*/
+    document.write("待搜素的数组为：a,x,b,d,m,a,k,m,p,j,a;");
+
+    //先找到有几个不同的元素
+    var arrTemp = new Array;
+    //arrPos用来记录该元素在待搜素数组中的位置,二维数组，arrPos[第n个字母][字母的位置]，
+    // 例如：字母"a"-->arrPos[0]=[0,5,10]
+
+    var arrPos = new Array;
+    arrayTobeseach.forEach(function(item, idx, arr) {
+        if (idx == 0) {
+            arrTemp[0] = item;
+            arrPos[0] = new Array;
+            arrPos[0][0] = 0;
+        } else {
+            for (var i = 0; i < arrTemp.length; i++) {
+                if (arrTemp[i] == item) {
+                    arrPos[i][arrPos[i].length] = idx;
+                    break;
+                }
+            }
+            if (i == arrTemp.length) //没找到，说明是一个新的元素
+            {
+                arrTemp[i] = item;
+                arrPos[i] = new Array; //二维数组，用来存放每一个字母出现的位置
+                arrPos[i][0] = idx;
+            }
+
+        }
+    })
+    document.write("<br>待搜素的数组中有如下几个不同的元素：" + arrTemp.toString());
+    var maxNum = arrPos[0].length; // 最大个数
+    var maxPos = 0; //最大个数所在位置
+    arrPos.forEach(function(item, idx, arr) {
+        if (item.length > maxNum) {
+            maxNum = item.length;
+            maxPos = idx;
+        }
+    })
+    //有可能有多个相同个数的字母，找到有几个具有maxNum个数的字母
+    var theNum =0;
+    arrPos.forEach(function(item, idx, arr) {
+        if (item.length == maxNum) {
+            theNum++;
+        }
+    })
+    if(theNum>1)
+    {
+        document.write("<br>共有"+theNum+"个字母出现次数最多，为："+maxNum+"次");
+        var i=1;
+        arrPos.forEach(function(item, idx, arr) {
+            if (item.length == maxNum) {
+
+                document.write("<br>第" +i+"个字母为："+arrTemp[idx] + "<br>在数组中的位置为：");
+                item.forEach(function(item1, idx1, arr1) {
+                    document.write(item1 + ",");});
+                i++;
+                }
+
+        })
+
+    }
+    else{
+        document.write("<br>出现字数最多的字母为：" + arrTemp[maxPos] + "<br>出现次数：" + maxNum + "<br>在数组中的位置为：");
+        arrPos[maxPos].forEach(function(item, idx, arr) {
+            document.write(item + ",");
+        })
+    }
+    </script>
+</body>
+
+</html>

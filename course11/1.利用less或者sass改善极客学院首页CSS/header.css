@@ -1,0 +1,536 @@
+/*头部区域样式*/
+
+.wrapper {
+    border-bottom: 1px solid #ececec;
+    zoom: 1;
+    min-width: 1000px;
+    min-height: 1000px;
+}
+
+.header {
+    width: 1010px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+  }
+
+.hd_logo {
+    position: absolute;
+    left: 0;
+}
+
+.hd_nav {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 170px;
+}
+
+.hd_nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+}
+
+.hd_nav li a {
+    display: block;
+    line-height: 60px;
+    font-size: 12px;
+    color: #333;
+}
+
+/*菜单右侧的带动画效果的小三角,由正方形旋转135°*/
+.right-arrow {
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+    margin-left: 5px;
+}
+
+
+/*动画效果,旋转加变色*/
+
+.header .hd_nav li:hover i.right-arrow {
+    margin-bottom: -2px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+
+@keyframes rotate {
+    0% {
+        margin-bottom: 2px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+    }
+    10% {
+        margin-bottom: -2px;
+    }
+    100% {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+}
+
+.header .hd_nav a:hover {
+    color: #35b558;
+}
+
+
+/*end 动画效果*/
+
+
+/*弹出菜单的图标定义*/
+
+.schools {}
+
+
+/*其中职业学院的web-icon和android-icon和会员课程的6个图标在allicon.png中*/
+
+.menulist .kck-icon,
+.menulist .zyljt-icon,
+.menulist .zstxt-icon,
+.menulist .xlkc-icon,
+.menulist .kcbq-icon,
+.menulist .vip-icon,
+.menulist .tenical-icon,
+.menulist .wiki-icon,
+.menulist .community-icon,
+.menulist .resource-icon,
+.schools .web-icon,
+.schools .android-icon {
+    background: url("../img/allicon.png") 0 0 no-repeat;
+    background-size: 64px 64px;
+    background-position: 0px 0px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    font-size: 12px;
+    /*padding-right: 10px; 不能用padding,会把右边的图标显示出来*/
+    margin-right: 10px!important;
+}
+
+.schools .web-icon {
+    background-position: -15px -27px;
+}
+
+.schools .android-icon {
+    background-position: -45px -14px;
+}
+
+
+/*end*/
+
+
+/*另外4个图标在allicon4.png*/
+
+.schools .python-icon,
+.schools .go-icon,
+.schools .ios-icon,
+.schools .wechat-icon {
+    background: url("../img/allicon4.png") 0 0 no-repeat;
+    background-position: 0px 0px;
+    background-size: 16px 148px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding-right: 10px;
+}
+
+.schools i .python-icon {
+    background-position: -2px -2px;
+}
+
+.schools i.go-icon {
+    background-position: -2px -38px;
+}
+
+.schools i.ios-icon {
+    background-position: -2px -82px;
+}
+
+.schools i.wechat-icon {
+    background-position: -2px -60px;
+}
+
+
+/*会员课程6个图标*/
+
+.menulist .kck-icon {
+    background-position: 0px -12px;
+}
+
+.menulist .zyljt-icon {
+    background-position: -45px 2px;
+}
+
+.menulist .zstxt-icon {
+    background-position: -30px -12px;
+}
+
+.menulist .xlkc-icon {
+    background-position: -45px -26px;
+}
+
+.menulist .kcbq-icon {
+    background-position: -14px -12px;
+}
+
+.menulist .vip-icon {
+    background-position: -14px 0px;
+}
+
+
+/*极客社群的4个图标*/
+
+.menulist .tenical-icon {
+    background-position: -28px 0px;
+}
+
+.menulist .wiki-icon {
+    background-position: -28px -26px;
+}
+
+.menulist .community-icon {
+    background-position: 0px 2px;
+}
+
+.menulist .resource-icon {
+    background-position: -28px 0px;
+}
+
+
+/*end*/
+
+.header .hd_nav .menulist {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.header .hd_nav li:hover .menulist {
+    display: block;
+}
+
+.header .hd_nav .menulist h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.header .hd_nav .menulist a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+
+/*
+会员课程
+*/
+
+.menulist span {
+    position: absolute;
+    right: 20px;
+}
+
+.community,
+.vip-course {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.community a,
+.vip-course a {
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+
+.community a:hover,
+.vip-course a:hover {
+    background: #f5f5f5;
+}
+
+
+/*头部右侧的三个图标*/
+
+.right-box {
+    width: 200px;
+    height: 60px;
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.header .search-icon:hover {
+    background: url("../img/search-icon2.png") 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+.header .right-box span {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.header .right-box .app-icon {
+    background: url("../img/app-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0, 0;
+}
+
+.header .right-box .app-icon:hover {
+    background: url("../img/app-icon2.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0, 0;
+}
+
+.header .right-box .login-icon {
+    background: url("../img/login-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0, 0;
+}
+
+
+/*end 头部右侧的三个图标*/
+
+
+/*菜单在光标移过时弹出*/
+
+.show-menubox:hover .menubox {
+    display: block;
+}
+
+
+/*弹出菜单样式*/
+
+.menubox {
+    display: none;
+    padding-bottom: 20px;
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    top: 60px;
+    right: 2px;
+    height: 165px;
+    border-top: 1px solid #ececec;
+    z-index: 1000;
+}
+
+
+/*弹出菜单顶部小三角的样式*/
+
+.up_arrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: 60px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    display: inline-block;
+    background: #fff;
+}
+
+.right-box .app-icon .menubox .up_arrow img {
+    width: 100%;
+}
+
+.show-menubox .menubox dd {
+    text-align: left;
+    font-size: 12px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.show-menubox .menubox dd a {
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+
+.show-menubox .menubox dd:hover {
+    background: #f5f5f5;
+}
+
+.show-menubox .menubox dd a:hover {
+    background: #f5f5f5;
+    color: #35b558;
+}
+
+.show-menubox .menubox dd a.reg-btn,
+.show-menubox .menubox dd a.login-btn {
+    width: 40%;
+    height: 35px;
+    line-height: 35px;
+    /*padding: 0 10px;*/
+    display: inline-block;
+    text-align: center;
+}
+
+.show-menubox .menubox dd a.reg-btn:hover,
+.show-menubox .menubox dd a.login-btn:hover {
+    background: none;
+}
+
+.login-icon .menubox {
+    padding-top: 10px;
+}
+
+
+/*最后一个图标弹弹出菜单顶部的小三角位置定义*/
+
+.login-icon .menubox .up_arrow {
+    right: 10px;
+}
+
+
+/*最后一个图标弹出菜单中的菜单项*/
+
+.header .right-box .show-menubox .menubox dd i {
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+/*最后一个图标弹出菜单中的四个小图标*/
+
+.learning-center-icon {
+    background-position: -16px -15px!important;
+}
+
+.homepage-icon {
+    background-position: -45px 0px!important;
+}
+
+.msg-center-icon {
+    background-position: -16px -30px!important;
+}
+
+.acount-icon {
+    background-position: -30px 0px!important;
+}
+
+
+/*搜索框*/
+
+.header .searchbox {
+    /*transform: scale(0.1,1);
+    transform-origin: right center;*/
+    opacity: 0;
+    display: none;
+    height: 59px;
+    line-height: 59px;
+    width: 850px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: 0;
+    white-space: normal;
+}
+
+.header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(../img/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+.header .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+}
+
+.header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#web_search_header {
+    border: none;
+    outline: none;
+}
+
+.header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+
+.header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+
+/*头部区域 end*/

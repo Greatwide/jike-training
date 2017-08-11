@@ -1,0 +1,64 @@
+/*外部套的大方块,垂直和水平方向都有3个小方块，长、宽为3*100px*/
+.continue {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+/*五个小方块，东、西、南、北、中*/
+.continue div {
+    width: 100px;
+    height: 100px;
+    float: left;
+    box-shadow: 2px 4px 6px #000;
+}
+
+.center {
+    background-color: #f0eccf;
+}
+
+.north {
+    background-color: #f681c4;
+    /*加小圆角修饰一下,顶部2个，靠近中心的两个角不变还是直角*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.south {
+    background-color: #dc9502;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    /*加小圆角修饰一下,底部*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+
+.east {
+    background-color: #93ded8;
+    top: 100px;
+    position: relative;
+    /*加小圆角修饰一下,右部*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.west {
+    background-color: #53ff91;
+    /*加小圆角修饰一下,左部*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+img {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    top: 18px;
+    left: 18px;
+}

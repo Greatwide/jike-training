@@ -1,0 +1,50 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    margin-left: 300px;
+    font-size: 12px;
+}
+header div{
+    height: 80px;
+    display: block;
+    float: left;
+}
+header a{
+    color: #FF0099;
+}
+.menu{
+   margin-left: 280px;
+    display: -webkit-box;
+    -webkit-box-align: end;
+    -webkit-box-pack:end ;
+
+}
+.first{
+    margin-top: 120px;
+    position: absolute;
+}
+.center{
+    margin-top: 80px;
+    position: absolute;
+    margin-left: 300px;
+}
+/*
+.img1{
+
+   width: 29px;
+    height: 82px;
+    display: block;
+    float: left;
+
+}
+.img2{
+
+    width: 230px;
+    height: 82px;
+    display: block;
+    float: left;
+}*/

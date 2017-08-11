@@ -1,0 +1,40 @@
+/*全局设置,初始化*/
+$fontStack: 'Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif';
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:$fontStack;
+}
+
+.part-packer {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 20px;
+    overflow: hidden;
+    zoom: 1
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.content {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    overflow: hidden;
+    zoom: 1
+}

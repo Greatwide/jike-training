@@ -1,0 +1,41 @@
+/*È¨ÍþÍÆ¼ö*/
+
+.news-sites {
+    position: relative;
+    margin: -11px auto 10px;
+    padding: 8px 0;
+    border: solid 1px #ade0c1;
+    line-height: 20px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.news-sites .title {
+    border-right: 1px solid #eaeaea;
+    width: 80px;
+    text-align: center;
+    color: #118850;
+}
+
+.news-sites .disp-inblock {
+    vertical-align: top;
+}
+
+.disp-inblock {
+    display: inline-block;
+}
+
+.news-sites .title,
+.news-sites .govsite-link {
+    margin-right: 30px;
+}
+
+.news-sites .govsite-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.news-sites .govsite-link:hover {
+    color: #f50;
+    text-decoration: underline;
+}

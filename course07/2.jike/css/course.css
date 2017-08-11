@@ -1,0 +1,448 @@
+/*课程介绍*/
+
+.course-list ul {
+    width: auto;
+    width: 790px;
+    margin-top: 15px;
+}
+
+.course-zoom {
+    zoom: 1;
+}
+
+.course-zoom:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.course-list ul li {
+    width: 250px;
+    height: 225px;
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.course-list .lessonimg-box {
+    width: 100%;
+    height: 135px;
+    position: relative;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+}
+
+.course-list .lessonimg-box .lessonimg {
+    width: 100%;
+    height: 135px;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.course-list .lessonplay {
+    background: #000;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.course-list .lessonplay .playericon {
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(../img/player_icon.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+}
+
+.course-list .lesson-infor {
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+    height: 88px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.course-list .lesson-infor .lesson-info-h2,
+.course-list .lesson-infor h5 {
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.course-list .lesson-infor p {
+    color: gray;
+    font-size: 12px;
+    line-height: 18px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.course-list .lesson-infor .timeandicon {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+
+.course-list .lesson-infor .timeandicon dl {
+    width: 120px;
+    float: left;
+    white-space: nowrap;
+}
+
+.timeandicon dl dd {
+    font-size: 12px;
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.mar-b8 {
+    margin-bottom: 8px;
+}
+
+.course-list .lesson-infor .timeandicon .time-icon {
+    background: url(../img/clock.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+
+.timeandicon .time-icon {
+    background: url(../img/clock.png) 0 -72px no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.course-list .lesson-infor .timeandicon dl dd {
+    font-size: 12px;
+}
+
+.course-list .lesson-infor .level {
+    display: none;
+}
+
+.lesson-infor .timeandicon .level-icon {
+    background: url(../img/level1.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.course-list .lesson-infor .timeandicon .learn-number {
+    float: right;
+    display: none;
+}
+
+.timeandicon .learn-number {
+    float: right;
+}
+
+.course-list .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    bottom: 4px;
+}
+
+.course-list .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+
+.course-list .lesson-infor .lessonicon-box a img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.course-list .lessonimg-box .vip-icon {
+    height: 22px;
+    width: 38px;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: 8px;
+    z-index: 101;
+    background: url(../img/vip-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.course-list .lessonimg-box .rz-icon {
+    height: 22px;
+    width: 61px;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: 8px;
+    z-index: 101;
+    background: url(../img/special.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.course-list .lessonimg-box .normal-icon {}
+
+.course-list .lesson-infor .lesson-info-h2 a,
+.course-list .lesson-infor .lesson-info-h2 a:hover,
+.course-list .lesson-infor h5 a,
+.course-list .lesson-infor h5 a:hover {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#page-nav {
+    text-align: center;
+    margin-top: 17px;
+    height: 28px;
+}
+
+.pagenum-input {
+    width: 35px;
+    height: 22px;
+    margin-top: -3px;
+    padding-top: 2px;
+    padding-left: 10px;
+    "
+
+}
+
+ul.pages {
+    display: block;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 10px 0 45px;
+    padding: 0;
+}
+
+ul.pages li.pgNext {
+    width: 50px;
+}
+
+ul.pages li.pgEmpty {
+    border: 1px solid #f0f0f0;
+    color: #d9d6c3;
+    width: 50px;
+    cursor: default;
+}
+
+ul.pages li:nth-child(2) {
+    width: 72px;
+}
+
+ul.pages li {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    margin-left: 5px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 12px;
+    background: #fff;
+    color: gray;
+    border: 1px solid #e4e4e4;
+}
+
+ul.pages li:hover {
+    line-height: 30px;
+    border: 1px solid #35B558;
+    color: #35B558;
+}
+
+ul.pages li.pgCurrent {
+    background: #35b558;
+    color: #fff;
+    border: 1px solid #35B558;
+}
+
+ul.pages li.dots {
+    border: 0;
+    cursor: auto;
+    color: #000;
+    background: none!important;
+    margin-top: 3px;
+}
+
+ul.pages li.pgNext {
+    width: 50px;
+}
+
+ul.pages li.pagetotal {
+    width: 70px;
+    margin-top: 3px;
+}
+
+ul.pages li.pagenow {
+    width: 100px;
+}
+
+#page-nav input {
+    width: 35px!important;
+    height: 22px!important;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    color: #666;
+    line-height: 22px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+ul.pages li.go {
+    width: 32px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 6px;
+}
+
+img,
+input,
+label,
+select {
+    vertical-align: middle;
+}
+
+.course-list-big ul li {
+    height: 100px;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 13px;
+}
+
+.course-list-big .lessonimg-box {
+    width: 185px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+
+.course-list-big .lessonimg-box .lessonimg {
+    width: 185px;
+    height: 100px;
+}
+
+.course-list-big .lessonplay {
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.course-list-big .lessonplay .playericon {
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(https://s1.jikexueyuan.com/course/images/player_icon_5c67475.png) no-repeat;
+    background-size: 50px 50px;
+    cursor: pointer;
+}
+
+.course-list-big .lesson-infor {
+    position: relative;
+    height: 100px;
+    width: 566px;
+    float: left;
+}
+
+.course-list-big .lesson-infor .lesson-info-h2,
+.course-list-big .lesson-infor h5 {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.course-list-big .lesson-infor p {
+    color: gray;
+    font-size: 12px;
+    opacity: 1!important;
+    line-height: 18px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.course-list-big .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    background-size: 16px 16px;
+    -webkit-background-size: 16px 16px;
+}
+
+.course-list-big .lesson-infor .lessonicon-box a img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.course-list-big .lesson-infor .lesson-info-h2 a,
+.course-list-big .lesson-infor h5 a {
+    color: #333;
+}
+
+.course-list-big .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -105px;
+    bottom: 4px;
+}
+
+.timeandicon .learn-num {
+    float: right;
+}

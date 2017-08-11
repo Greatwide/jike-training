@@ -1,0 +1,39 @@
+/*全局设置*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+.part-packer {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 20px;
+    overflow: hidden;
+    /*因为包含在里面的div用了float，必须加overflow和zoom这两句才能被撑开。*/
+    zoom: 1
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.content {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    overflow: hidden;
+    zoom: 1
+}

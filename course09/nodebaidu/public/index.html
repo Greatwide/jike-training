@@ -1,0 +1,95 @@
+<!--baidu新闻页面-->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/news.css">
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-wrap">
+            <header class="clr-fl">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </header>
+            <nav>
+                <ul>
+                    <hr color="#4e9fee" size="1">
+                    <li><a href="#">精选</a> </li>
+                    <li><a href="#">百家</a></li>
+                    <li><a href="#">本地</a> </li>
+                    <li><a href="#">图片</a></li>
+                    <li><a href="#">娱乐</a></li>
+                    <li><a href="#">社会</a></li>
+                    <hr color="#4e9fee" size="1">
+                    <li><a href="#">军事</a></li>
+                    <li><a href="#">女人</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">互联网</a></li>
+                    <li><a href="#">更多</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <article class="news-main">
+            <ul class="news-lists">
+                <!--动态加载以下样式的新闻
+                <li class="news-list">
+                    <div class="news-img">
+                        <img src="./img/news1.jpg" width="100%">
+                    </div>
+                    <div class="news-content">
+                        <h1>国际观察：政府军收复摩苏尔还要多久</h1>
+                        <p>
+                            <span class="news-time">2017年5月2日</span>
+                            <span class="news-src">网易新闻</span>
+                        </p>
+                    </div>
+                </li>
+                -->
+            </ul>
+            <div class="disp-msg">
+                <span>真的拉不出新东西了~</span>
+                <a href="#" class="news-refresh">点击刷新</a>
+            </div>
+            <div class="disp-wait">
+                <span>正在加载中</span>
+            </div>
+            <div class="to-top">
+                <img src="img/go-top.png" width="32px" height="32px">
+            </div>
+        </article>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            $(window).resize(function(e) {
+
+                resizewindow();
+            })
+
+            resizewindow();
+        })
+        //窗口缩放处理
+    function resizewindow() {
+        var deviceWidth = $('body').width() - 30;
+        $('nav li').each(function(index, item) {
+            if ($(this).find('a').html().split('').length > 2) {
+                $(this).width(deviceWidth / 3);
+            } else {
+                $(this).width(deviceWidth / 6);
+            }
+        })
+    }
+    </script>
+    <script type="text/javascript" src="./js/news.js" charset="UTF-8"></script>
+</body>
+
+</html>

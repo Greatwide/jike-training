@@ -1,0 +1,179 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+    font: 13px arial;
+}
+header{
+
+    float: right;
+    padding: 10px;
+
+}
+.wrapper{
+    height: 100%;
+    min-height: 600px;
+    min-width: 810px;
+    position: relative;
+}
+
+/*为兼容ie6,7,8修改
+#headerdivid {
+    width: 520px;
+
+    float: left;
+
+    display: inline-block;
+    margin-left: 400px\9;
+   }*/
+
+#headerdivid {
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px;
+    padding: 0 96px 0 0;
+}
+#headerdivid a {
+    color: black;
+    line-height: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+#headerdivid a:hover {
+    color: #0000cc;
+}
+
+#contentid {
+    text-align: center;
+    clear: both;
+}
+
+input {
+    width: 539px;
+    height: 34px;
+    padding: 0px;
+    background-image: url(../img/camara.png);
+    background-position: 510px;
+    background-repeat: no-repeat;
+    background-size: 18px 16px;
+    float: left;
+    border: 1px solid #ccc;
+    outline: 0px;
+    text-indent: 7px;
+    line-height: 34px;
+
+}
+input:hover{
+    border-color: #999;
+}
+#input:focus{
+    border-color: #38f;
+}
+form{
+    width: 641px;
+    margin: 10px auto;
+}
+button {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    background: #3385ff;
+    border: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-left: 0px;
+    float: left;
+    outline: 0px;
+    margin-left: -3px\9;    /*兼容ie6,7,8*/
+    border: 1px solid #2d78f4\9; /*兼容ie6,7,8*/
+}
+button:hover{
+    background-color: #0000cc;
+    cursor: pointer;
+}
+#bottomid1 {
+    text-align: center;
+    padding-top: 100px\9;
+}
+
+#bottomid1 a {
+    margin-left: 15px;
+    color: #999;
+
+}
+
+#bottomid2 {
+    text-align: center;
+}
+
+#bottomid2 a,
+span {
+    color: #999;
+}
+
+#bottomid2 img {
+    width: 14px;
+    height: 17px;
+    border: none;   /*ie6,7,8上显示的这个小图标多了一个红色边框，加了这句也不影响别的浏览器，所以不特别指明是\9*/
+}
+
+
+.content {
+    border: 1px solid #666;
+    display: none;
+}
+
+.content:hover {
+    display: block
+}
+
+
+/*
+在ie6,7,8中，使用float用问题，改掉
+.more {
+    color: white;
+    text-align: center;
+    height: 28px;
+    width: 60px;
+    margin: -2px;
+    padding: 0px;
+    line-height: 200%;
+    float: left;
+    display: block;
+    background-color: #3385ff;
+}*/
+ .more{
+    position: absolute;
+     top: -2px;
+    right: 25px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
+    width: 534px;
+    margin-left: -267px;
+    left: 50%;
+}

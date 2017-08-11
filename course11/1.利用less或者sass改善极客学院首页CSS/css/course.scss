@@ -1,0 +1,408 @@
+/*课程介绍*/
+
+@import 'base';
+
+
+@mixin base-icon{
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.course-zoom {
+    zoom: 1;
+    :after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+.course-list{
+    ul{
+        width: 790px;
+        margin-top: 15px;
+        li {
+            width: 250px;
+            height: 225px;
+            float: left;
+            margin-right: 13px;
+            margin-bottom: 13px;
+        }
+    }
+    .lessonimg-box {
+        width: 100%;
+        height: 135px;
+        position: relative;
+       .vip-icon {
+            height: 22px;
+            width: 38px;
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            right: 8px;
+            z-index: 101;
+            background: url(../img/vip-icon.png) 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        .lessonimg {
+            width: 100%;
+            height: 135px;
+        }
+
+        .vip-icon {
+            height: 22px;
+            width: 38px;
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            right: 8px;
+            z-index: 101;
+            background: url(../img/vip-icon.png) 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .rz-icon {
+            height: 22px;
+            width: 61px;
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            right: 8px;
+            z-index: 101;
+            background: url(../img/special.png) 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .normal-icon {}
+
+
+    }
+
+    .lessonplay {
+        position: absolute;
+        background: $color-black;
+        background: rgba(0, 0, 0, .4);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        opacity: 0;
+
+        .playericon {
+            position: absolute;
+            z-index: 120;
+            width: 50px;
+            height: 50px;
+            display: block;
+            left: 50%;
+            margin-left: -25px;
+            top: 50%;
+            margin-top: -25px;
+            background: url(../img/player_icon.png) 0 0 no-repeat;
+            cursor: pointer;
+            background-size: 50px 50px;
+        }
+    }
+
+    .lesson-infor {
+        padding: 10px;
+        position: relative;
+        z-index: 200;
+        height: 88px;
+        overflow: hidden;
+        background: $color-white;
+
+        .lesson-info-h2,
+         h5 {
+            font-size: 14px;
+            color: $color-black;
+            line-height: 18px;
+            margin-bottom: 12px;
+            height: 36px;
+            overflow: hidden;
+        }
+        p {
+            color: gray;
+            font-size: 12px;
+            line-height: 18px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .timeandicon {
+            font-size: 12px;
+            color: gray;
+            position: relative;
+            dl {
+                width: 120px;
+                float: left;
+                white-space: nowrap;
+                dd {
+                    font-size: 12px;
+                    float: left;
+                    display: inline-block;
+                    margin-right: 15px;
+                }
+            }
+            .time-icon {
+                background: url(../img/clock.png) 0 0 no-repeat;
+                background-size: 14px 14px;
+                @include base-icon;
+            }
+            .level-icon {
+                background: url(../img/level1.png) 0 0 no-repeat;
+                background-size: 14px 14px;
+                @include base-icon;
+            }
+            .learn-number {
+                float: right;
+                display: none;
+            }
+        }
+        .level {
+            display: none;
+        }
+        .lessonicon-box {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            bottom: 4px;
+        }
+        .lessonicon-box {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            bottom: 4px;
+            a {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-left: 3px;
+                img {
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+       .lesson-info-h2 a,
+       .lesson-info-h2 a:hover,
+       h5 a,
+       h5 a:hover {
+            color: $color-black;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+    }
+
+}
+
+.mar-b8 {
+    margin-bottom: 8px;
+}
+
+
+#page-nav {
+    text-align: center;
+    margin-top: 17px;
+    height: 28px;
+    input {
+        width: 35px!important;
+        height: 22px!important;
+        background: $color-white;
+        border: 1px solid #e4e4e4;
+        color: #666;
+        line-height: 22px;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+}
+
+.pagenum-input {
+    width: 35px;
+    height: 22px;
+    margin-top: -3px;
+    padding-top: 2px;
+    padding-left: 10px;
+    }
+
+ul.pages {
+    display: block;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 10px 0 45px;
+    padding: 0;
+    .pgNext {
+        width: 50px;
+    }
+    .pgEmpty {
+        border: 1px solid #f0f0f0;
+        color: #d9d6c3;
+        width: 50px;
+        cursor: default;
+    }
+    .pgCurrent {
+        background: $color-green;
+        color: $color-white;
+        border: 1px solid $color-green;
+    }
+    .dots {
+        border: 0;
+        cursor: auto;
+        color: #000;
+        background: none!important;
+        margin-top: 3px;
+    }
+
+    .pagetotal {
+        width: 70px;
+        margin-top: 3px;
+    }
+
+    .pagenow {
+        width: 100px;
+    }
+    .go {
+        width: 32px;
+        height: 22px;
+        line-height: 22px;
+        margin-top: 6px;
+    }
+
+    li{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+
+        margin-left: 5px;
+        line-height: 30px;
+        margin-top: 10px;
+
+        text-align: center;
+        font-size: 12px;
+        background: $color-white;
+        color: gray;
+        border: 1px solid #e4e4e4;
+
+        :nth-child(2) {
+            width: 72px;
+        }
+        :hover {
+            line-height: 30px;
+            border: 1px solid $color-green;
+            color: $color-green;
+        }
+
+    }
+}
+
+
+.course-list-big {
+    ul li {
+        height: 100px;
+        padding: 0;
+        background-color: $color-white;
+        margin-top: 13px;
+    }
+    .lessonimg-box {
+        width: 185px;
+        height: 100px;
+        float: left;
+        margin-right: 15px;
+        position: relative;
+        .lessonimg {
+            width: 185px;
+            height: 100px;
+        }
+    }
+
+    .lessonplay {
+        background: rgba(0, 0, 0, .4);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+
+        .playericon {
+            position: absolute;
+            z-index: 120;
+            width: 50px;
+            height: 50px;
+            display: block;
+            left: 50%;
+            margin-left: -25px;
+            top: 50%;
+            margin-top: -25px;
+            background: url(../img/player_icon.png) no-repeat;
+            background-size: 50px 50px;
+            cursor: pointer;
+        }
+    }
+    .lesson-infor {
+        position: relative;
+        height: 100px;
+        width: 566px;
+        float: left;
+
+
+        .lesson-info-h2,
+        h5 {
+            font-size: 14px;
+            color: $color-black;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+        p {
+            color: gray;
+            font-size: 12px;
+            opacity: 1!important;
+            line-height: 18px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .lessonicon-box {
+            a {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-left: 3px;
+                background-size: 16px 16px;
+                -webkit-background-size: 16px 16px;
+                img {
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+       .lesson-info-h2 a,
+        h5 a {
+            color: $color-black;
+        }
+
+       .lessonicon-box {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            top: -105px;
+            bottom: 4px;
+        }
+    }
+}

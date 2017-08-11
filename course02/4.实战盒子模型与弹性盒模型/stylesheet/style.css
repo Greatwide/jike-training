@@ -1,0 +1,249 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.continer {
+   /*
+    width: 600px;*/
+    height: 170px;
+    margin: 20px;
+    background-color: #B4DCFA;
+    box-shadow: 2px 4px 6px #000;
+}
+
+
+/*正常盒子*/
+
+.normalboxcontent {
+   /* width: 200px;*/
+    width: 100%;
+    height: 100px;
+    background-color: chocolate;
+    text-align: center;
+}
+
+.normalbox {
+    /*width: 200px;*/
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: solid 5px olivedrab;
+    background-color: red;
+}
+
+.normalboxpack {
+    display: block;
+    float: left;
+    margin: 20px;
+    /*width: 230px;*/
+    width: 100%;
+    height: 130px;
+    background-color: blueviolet;
+    box-shadow: 2px 4px 6px #000;
+}
+
+
+/*怪异盒子*/
+
+.abnormalbox {
+   /* width: 230px;*/
+    width: 100%;
+    height: 130px;
+    border: solid 5px olivedrab;
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    margin: 20px;
+    background-color: red;
+    box-shadow: 2px 4px 6px #000;
+}
+
+.abnormalboxcontent {
+    /*width: 200px;*/
+    width: 100%;
+    height: 100px;
+    background-color: chocolate;
+    margin: 10px;
+    text-align: center;
+}
+
+
+/*弹性盒子*/
+
+.fboxcontiner {
+    height: 100px;
+   /* width: 600px;*/
+    width: 100%;
+    margin: 20px;
+    background-color: #B4DCFA;
+    display: -webkit-flex;
+    box-shadow: 2px 4px 6px #000;
+}
+
+
+/*居中*/
+
+#becenter {
+    -webkit-justify-content: center;
+}
+
+
+/*右对齐*/
+
+#beright {
+    -webkit-justify-content: flex-end;
+}
+
+.fbox1 {
+    height: 100px;
+    /*-webkit-flex:1;*/
+    background-color: #2fff67;
+    -webkit-order: 1;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fbox2 {
+    height: 100px;
+    /*-webkit-flex:1;*/
+    background-color: #ff6600;
+    -webkit-order: 2;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fbox3 {
+    height: 100px;
+    /* -webkit-flex:1;*/
+    background-color: aqua;
+    -webkit-order: 3;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fbox11 {
+    background-color: #2fff67;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fbox12 {
+    background-color: #ff6600;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fbox13 {
+    background-color: aqua;
+    box-shadow: 2px 4px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#order1 {
+    -webkit-order: 1;
+}
+
+#order2 {
+    -webkit-order: 2;
+}
+
+#order3 {
+    -webkit-order: 3;
+}
+
+#space1 {
+    -webkit-flex: 1;
+}
+
+#space2 {
+    -webkit-flex: 2;
+}
+
+.bigflexbox {
+    height: 300px;
+    /*width: 300px;*/
+    width: 100%;
+    margin: 20px;
+    background-color: #B4DCFA;
+    box-shadow: 2px 4px 6px #000;
+}
+
+#boxflexcenter {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+#flexcenter {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+}
+
+#boxvertical {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+}
+
+#flexvertical {
+    display: -webkit-flex;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: center;
+    -webkit-flex-direction: column;
+}
+
+.basicbox {
+    height: 50px;
+    width: 50px;
+    box-shadow: 2px 4px 6px #000;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#greenbox {
+    background-color: #2fff67;
+}
+
+#redbox {
+    background-color: #ff6600;
+}
+
+#aquabox {
+    background-color: aqua;
+}
+
+
+/*分栏*/
+
+.cols {
+    width: 1000px;
+    border: 10px solid #9DEBFA;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: thin;
+    -webkit-column-rule-color: red;
+    margin: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+.cols p {
+    -webkit-column-span: all;
+}
+
+p {
+    padding: 5px 10px;
+    background: #53ff91;
+}

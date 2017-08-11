@@ -1,0 +1,93 @@
+/*¥Û≈£*/
+
+.powerman {
+    width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.powerman h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+    margin-top: 30px;
+    display: block;
+}
+
+.bigbox a {
+    width: 343px;
+    height: 135px;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+}
+
+.powerman a:hover {
+    opacity: .8;
+}
+
+.smallbox a {
+    width: 140px;
+    height: 135px;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+}
+
+.textcenter {
+    padding-top: 45px;
+}
+
+.bigbox span {
+    font-size: 13px;
+}
+
+.smallbox span {
+    font-size: 13px;
+}
+
+.box1 {
+    background: url(../img/dn1.jpg) no-repeat center center;
+}
+
+.box2 {
+    background: url(../img/dn2.jpg) no-repeat center center;
+}
+
+.box3 {
+    background: url(../img/dn3.jpg) no-repeat center center;
+}
+
+.box4 {
+    background: url(../img/dn4.jpg) no-repeat center center;
+}
+
+.box5 {
+    background: url(../img/dn5.jpg) no-repeat center center;
+}
+
+.box6 {
+    background: url(../img/dn6.jpg) no-repeat center center;
+}
+
+.box7 {
+    background: url(../img/dn7.jpg) no-repeat center center;
+}
+
+.box8 {
+    background: url(../img/dn8.jpg) no-repeat center center;
+}

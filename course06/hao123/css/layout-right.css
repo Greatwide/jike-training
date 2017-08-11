@@ -1,0 +1,233 @@
+.layout-right {
+    width: 900px;
+    float: right;
+}
+
+.layout-famoussite {
+    position: relative;
+    z-index: 100;
+    border: 1px solid #adb;
+    background-color: #fcfcfc;
+}
+
+.g_clr:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.box-pos {
+    position: relative;
+}
+
+.famous-sites {
+    padding-left: 25px;
+}
+
+.famous-sites .addwebsite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    background-image: url("../img/icons1.png");
+    background-repeat: no-repeat;
+    background-position: -594px -149px
+}
+
+.site-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+    padding: 6px 0 4px 9px;
+    width: 130px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.site-item1 {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+    padding: 6px 5px 4px 9px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+}
+
+.sitemainlink {
+    background-repeat: no-repeat;
+    background-position: 2px 44%;
+    background-position: 2px 40%\9;
+    padding-left: 25px;
+}
+
+.sitelink {
+    /*padding: 0 4px;*/
+    color: #333;
+    display: inline-block;
+}
+
+.sublink {
+    padding-right: 0;
+}
+
+.famous-sites a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.famous-sites a:hover {
+    text-decoration: underline;
+    color: #f50;
+}
+
+.famous-site-icon {
+    background-image: url("../img/famoussite.png");
+    background-repeat: no-repeat;
+}
+
+.famous-site-icon1 {
+    background-image: url("../img/famoussite1.png");
+    background-repeat: no-repeat;
+}
+
+
+/*第1行第1个*/
+
+.icon-baidu {
+    background-position: 2px -198px;
+}
+
+.icon-sina {
+    background-position: 2px -278px;
+}
+
+.icon-sohu {
+    background-position: 2px -318px;
+}
+
+.icon-tencent {
+    background-position: 2px -38px;
+}
+
+.icon-163 {
+    background-position: 2px -157px;
+}
+
+.icon-phonix {
+    background-position: 2px -238px;
+}
+
+.icon-taobao {
+    background-position: 2px -358px;
+}
+
+.icon-4399 {
+    background-position: 2px 2px;
+}
+
+.icon-car {
+    background-position: 2px -518px;
+}
+
+
+/*知名网站下半部分*/
+
+
+/*分隔线*/
+
+.famous-sites .split-line {
+    position: relative;
+    z-index: 80;
+    margin: 0 30px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.textcolor-green {
+    color: #118850;
+    text-decoration: none;
+}
+
+.textcolor-blue {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.textcolor-red {
+    color: #f50;
+    text-decoration: none;
+}
+
+.recomand-icon {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icons1.png");
+    background-position: -589px -324px;
+    z-index: 20;
+    background-repeat: no-repeat;
+}
+
+.site-item-recomm {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+    padding: 6px 0 4px 9px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+}
+
+.short {
+    margin-right: 0px;
+}
+
+.notice {
+    position: absolute;
+    right: 16px;
+    top: 37px;
+    width: 197px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.notice .nt-font {
+    font-size: 50px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.notice .sk-color-red {
+    color: #f50;
+}
+
+.notice .sk-color-green {
+    color: #0aa770;
+}
+
+.notice .sk-color-blue {
+    color: #534fa7;
+}
+
+.notice .sk-color-yellow {
+    color: #ffb333;
+}
+
+.notice .sk-color-purple {
+    color: #e44eff;
+}

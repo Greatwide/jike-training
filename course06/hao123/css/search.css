@@ -1,0 +1,221 @@
+/*ËÑËØÀ¸ÑùÊ½*/
+
+.search-wrapper {
+    height: 82px;
+    margin-top: 50px;
+}
+
+.search-outer {
+    position: relative;
+    margin: 0 auto;
+    width: 1190px;
+    /* z-index: 110;*/
+}
+
+.search-inner {
+    height: 46px;
+    padding: 27px 0 0 166px;
+    position: relative;
+    line-height: 46px;
+}
+
+.search {
+    width: 800px;
+    position: relative;
+}
+
+.hotsearch-list a,
+.hotsearch-list span {
+    text-decoration: none;
+}
+
+.search .baidu-logo {
+    width: 120px;
+    height: 40px;
+    position: relative;
+    float: left;
+    padding-right: 20px;
+}
+
+.search .logo-link {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+}
+
+.search .logo-link span {
+    width: 120px;
+    height: 39px;
+    display: block;
+    background: url(../img/baidu-logo.png);
+}
+
+.search form {
+    display: block;
+}
+
+.form-wrapper {
+    float: left;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 538px;
+    height: 44px;
+    border: 1px solid #666;
+    border-right: 0;
+    background: #fff;
+}
+
+.search .search-input {
+    width: 448px;
+    height: 18px;
+    padding: 10px 0;
+    border: 0;
+    margin: -2px 30px 0 60px;
+    font: 16px arial;
+}
+
+
+/*
+input, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+
+}*/
+
+.search .mybtn {
+    width: 120px;
+    height: 46px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid;
+    margin: -4px 0 0 -4px;
+}
+
+.mybtn:hover {
+    opacity: 0.7;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 10px;
+}
+
+.search .hotword {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    text-indent: -99999px;
+    z-index: 12;
+}
+
+.search .hot-num {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    text-indent: 0;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    line-height: 18px;
+    font-family: arial;
+    font-weight: 700;
+    font-size: 12px;
+    background-image: url("../img/icons.png");
+    background-position: -422px -300px;
+    background-repeat: no-repeat;
+}
+
+.tabs-toggle,
+.tabs-toggle:hover {
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 136px;
+    z-index: 1;
+    padding: 0 10px;
+    width: 38px;
+    height: 44px;
+    font: 400 12px/45px simsun;
+    text-decoration: none;
+    color: #999;
+}
+
+.tabs-toggle .arrow {
+    overflow: hidden;
+    position: absolute;
+    top: 19px;
+    left: 38px;
+    width: 9px;
+    height: 6px;
+    text-indent: -999px;
+    background-image: url("../img/icons.png");
+    background-position: -205px -603px;
+    background-repeat: no-repeat;
+}
+
+.hotsearch-wrapper {
+    width: 1000px;
+    margin: -9px auto -7px;
+}
+
+.hotsearch-box {
+    position: relative;
+    z-index: 103;
+    margin: 6px 0 38px 195px;
+    width: 658px;
+    height: 20px;
+}
+
+.hotsearch-list {
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 5px 0 0 15px;
+}
+
+.hotsearch-list .title {
+    margin-right: 20px;
+    float: left;
+}
+
+.hotsearch-list .hotsearch-link {
+    background-image: url("../img/icons.png");
+    background-position: -542px -471px;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+}
+
+.hotsearch-list a {
+    color: #666;
+}
+
+.hotsearch-list a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+}

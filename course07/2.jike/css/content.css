@@ -1,0 +1,271 @@
+/*页面内容样式*/
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+.content {
+    background: #f5f5f5;
+}
+
+.margin-top20 {
+    margin-top: 20px!important;
+}
+
+.width1k {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+}
+
+#main {
+    width: 776px;
+}
+
+.float_r {
+    float: right;
+}
+
+.allCourse>.cwrap {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.course-menu {
+    position: relative;
+    z-index: 500;
+}
+
+.course-menu>.m-wrap {
+    box-sizing: content-box;
+    height: 38px;
+    background: #fff;
+    color: gray;
+    line-height: 38px;
+}
+
+.course-menu .menu-left {
+    overflow: visible;
+    float: left;
+    height: 38px;
+}
+
+.course-menu .previewMode {
+    float: right;
+}
+
+.course-menu .menu-left h3 {
+    float: left;
+    padding: 0 21px;
+    background: #fff;
+    border-right: 1px solid #f5f5f5;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+}
+
+.course-menu .menu-left>dl {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    float: left;
+    height: 36px;
+    margin: 0 1px 0 -1px;
+    white-space: nowrap;
+}
+
+.course-menu .menu-left dt {
+    padding: 0 18px;
+    cursor: default;
+}
+
+.course-menu .menu-left dt>.arrow {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.course-menu .menu-left dt>.arrow:after,
+.course-menu .menu-left dt>.arrow:before {
+    display: block;
+    width: 0!important;
+    height: 0!important;
+    padding: 0!important;
+    font-size: 0!important;
+    line-height: 0!important;
+    border: 5px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: gray;
+    content: " ";
+}
+
+.course-menu .menu-left dd a:hover {
+    color: #35B558;
+}
+
+.course-menu .menu-left dt>.arrow:after {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    border-width: 4px;
+    border-bottom-width: 0;
+    border-top-color: #fff;
+}
+
+.course-menu .menu-left dd {
+    position: relative;
+    z-index: 12;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    /*top:-28px;*/
+    -webkit-transition: all .1s ease .1s;
+    -moz-transition: all .1s ease .1s;
+    -ms-transition: all .1s ease .1s;
+    transition: all .1s ease .1s;
+}
+
+p {
+    display: block;
+    /*-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;*/
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+}
+
+.course-menu .menu-left dd a {
+    display: block;
+    padding: 0 32px 0 17px;
+    font-weight: 500;
+    color: gray;
+}
+
+.previewMode li.curr,
+.previewMode li:hover {
+    background: #fff;
+}
+
+.previewMode li {
+    position: relative;
+    float: left;
+    width: 36px;
+    height: 38px;
+    border-left: 1px solid #f5f5f5;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.previewMode li.kuai-icon .icon {
+    width: 14px;
+    background: url(../img/icon-kuai.png) no-repeat 0 0;
+    background-size: 14px;
+}
+
+.previewMode li .icon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../img/preview-icon.png) no-repeat 0 0;
+}
+
+.previewMode li.list-icon .icon {
+    width: 19px;
+    background: url(../img/icon-list.png) no-repeat center;
+    background-size: 16px 12px;
+}
+
+.type-title-one:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+/*
+.menu-left dd{
+    display:none;
+}*/
+
+
+/* .ddtest{
+    display: inline-block;
+    float: left;
+    width: 33px;
+    height: 33px;
+    background-color: red;
+}*/
+
+.course-menu .menu-left>dl:hover dt {
+    padding: 0 17px;
+}
+
+.course-menu .menu-left>dl:hover {
+    height: auto;
+    overflow: visible;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-width: 0 1px 1px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+}

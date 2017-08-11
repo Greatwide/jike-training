@@ -1,0 +1,45 @@
+body {
+    font: 14px/100% arial, "Hiragino Sans GB", "Hiragino Sans GB W3", \5b8b\4f53;
+    background: #f7f7f8;
+    _zoom: 1;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+input,
+label,
+button {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+.page-width {
+    margin: 0 auto;
+    width: 1190px;
+}

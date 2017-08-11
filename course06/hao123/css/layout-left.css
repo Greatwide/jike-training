@@ -1,0 +1,190 @@
+/*×ó±ßÄÚÈÝ*/
+
+.left-layout {
+    float: left;
+    width: 280px;
+}
+
+.left-layout img {
+    width: 278px;
+    height: 70px;
+}
+
+.ad-box {
+    display: block;
+    float: left;
+}
+
+
+/*·þÎñ*/
+
+.left-info-wrap {
+    background-color: #fcfcfc;
+    border: 1px solid #cecece;
+    margin-top: 10px;
+}
+
+.servicetab {
+    position: relative;
+}
+
+.servicetab .servicetab-bd {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.servicetab .starbar {
+    padding: 9px 0 0 18px;
+}
+
+.servicetab .startbar-list {
+    width: 128px;
+    display: inline-block;
+}
+
+.g_clr:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.servicetab .split {
+    padding: 0 5px;
+    color: #999;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+}
+
+.servicetab .category {
+    position: relative;
+    line-height: 26px;
+}
+
+.servicetab .star-icon {
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    position: relative;
+    top: -.1em;
+    background-image: url("../img/icons1.png");
+    background-repeat: no-repeat;
+}
+
+
+/*
+.servicetab .ser-icons{
+    background-image: url("../img/icons.png");
+    background-repeat: no-repeat;
+}
+*/
+
+.servicetab .i-tv {
+    padding: 1px;
+    background-position: -354px -525px;
+}
+
+.servicetab .i-game {
+    background-position: -507px -478px;
+}
+
+.servicetab .i-movie {
+    background-position: -563px -525px;
+}
+
+.servicetab .i-comic {
+    background-position: -99px -561px;
+}
+
+.servicetab .i-news {
+    background-position: -247px -525px;
+}
+
+.servicetab .i-travel {
+    background-position: -96px -307px;
+}
+
+.servicetab .i-lottery {
+    background-position: -235px -560px;
+}
+
+.servicetab .i-joy {
+    background-position: -163px -157px;
+}
+
+.servicetab .i-discount {
+    background-position: -326px -280px;
+}
+
+.servicetab .i-stock {
+    background-position: -431px -424px;
+}
+
+.color_red {
+    color: #f50;
+}
+
+.servicetab .startbar-list,
+.servicetab .category,
+.servicetab .split,
+.servicetab .baritem-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+
+.servicetab .split {
+    padding: 0 5px;
+    color: #999;
+    position: relative;
+    top: -1px;
+}
+
+.servicetab .box-startools {
+    position: relative;
+    border-top: 1px solid #ebebeb;
+    padding-top: 10px;
+}
+
+.servicetab .startools-icon {
+    background-position: -167px -308px;
+}
+
+.servicetab .startools-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: -3px;
+    margin-left: 18px;
+    _display: inline;
+    background-repeat: no-repeat;
+}
+
+.servicetab .startools-container {
+    width: 203px;
+    height: 52px;
+    overflow: hidden;
+    margin-left: 44px;
+}
+
+.servicetab .startools-list {
+    margin-right: -24px;
+}
+
+.servicetab .startools-link {
+    width: 41px;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    color: #666;
+    white-space: nowrap;
+    margin-bottom: 11px;
+    display: inline-block;
+    text-decoration: none;
+}

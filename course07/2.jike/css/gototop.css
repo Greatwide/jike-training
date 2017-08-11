@@ -1,0 +1,304 @@
+/*»Øµ½¶¥²¿*/
+
+.gotop {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.gotop span.top:hover {
+    background: url(../img/gotop2.jpg) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 34px 103px;
+    -webkit-background-size: 34px 103px;
+    -moz-background-size: 34px 103px;
+}
+
+.gotop span.top {
+    display: block;
+    background: url(../img/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+}
+
+.gotop span {
+    cursor: pointer;
+}
+
+.gotop span.QRcode {
+    position: relative;
+    display: block;
+    background: url(//e.jikexueyuan.com/headerandfooter/images/gotop.jpg) 0 -34px no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 35px;
+}
+
+.gotop span.QRcode img,
+.gotop span.jkxy-app img {
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+
+.gotop span.jkxy-app {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/phone-1.png) center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.gotop span.jkxy-app:hover {
+    background: #f7f7f7 url(../img/phone-2.png) center center no-repeat;
+    background-size: 12px 24px;
+}
+
+.appqrcode {
+    background: url(../img/qrcode.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+
+#aside {
+    width: 210px;
+}
+
+.aside-allCategory {
+    margin: 0;
+    border: 1px solid #35b558;
+    background-color: #fff;
+}
+
+.aside-allCategory>.hd {
+    height: 45px;
+    padding: 0 32px;
+    border-bottom: 1px solid #eee;
+    line-height: 45px;
+    cursor: default;
+}
+
+.aside-allCategory>.hd h2 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.aside-allCategory>.hd h2 a {
+    color: #35b558;
+}
+
+.aside-allCategory>.hd .icon-course-curr {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/icon-course-curr.png) no-repeat 0 0 / 15px 15px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 14px;
+}
+
+.hdlist {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hdlist li {
+    height: 45px;
+}
+
+.hdlist a {
+    display: block;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.hdlist li {
+    height: 45px;
+}
+
+.hdlist a .icon-zylj {
+    background: url(../img/icon-zylj.png) no-repeat left center;
+    background-size: 15px 14px;
+}
+
+.hdlist a i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.hdlist a .icon-zstx {
+    background: url(../img/icon-zstx.png) no-repeat left center;
+    background-size: 15px 12.5px;
+}
+
+.hdlist a .icon-xlkc {
+    background: url(../img/icon-xlkc.png) no-repeat left center;
+    background-size: 14px 14px;
+}
+
+.hdlist a .icon-kcbq {
+    background: url(../img/icon-kcbq.png) no-repeat left center;
+    background-size: 15px 13px;
+}
+
+.aside-cList {
+    position: relative;
+    width: 208px;
+}
+
+.aside-cList li {
+    padding: 0;
+    border-bottom: 0;
+}
+
+.aside-cList li>div {
+    cursor: pointer;
+    width: 208px;
+    height: 37px;
+    border-bottom: 1px solid #f5f5f5;
+    background: url(../img/icon-more.png) 186px center no-repeat;
+    background-size: 6px 10px;
+    padding-left: 32px;
+}
+
+.aside-cList li>div a {
+    font-size: 12px;
+    color: #666;
+    line-height: 36px;
+}
+
+.aside-cList li .list-show {
+    display: none;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    min-height: 417px;
+    min-width: 401px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 209px;
+    top: -46px;
+    z-index: 1101;
+    list-style: none;
+    margin-left: -1px;
+    padding-bottom: 30px;
+    float: left;
+    width: 591px;
+}
+
+.aside-cList li .list-show dl {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.aside-cList li .list-show dt {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    height: 37px;
+    line-height: 45px;
+}
+
+.aside-cList li .list-show dt>a {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.aside-cList li .list-show dd {
+    list-style: none;
+    margin-left: -8px;
+    padding: 3px 0;
+}
+
+.aside-cList li .list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.float_l {
+    float: left;
+}
+
+.gotop span.jkxy-app:hover .appqrcode {
+    display: block;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.hdlist a:hover {
+    color: #35b558;
+    background: #fafafa url(../img/seeall.png) no-repeat 160px center;
+    background-size: 40px 10px;
+}
+
+.aside-cList li:last-child>div:hover {
+    border-bottom: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.aside-cList li>div:hover {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 38px;
+    width: 210px;
+    margin-top: -1px;
+    margin-left: -1px;
+    padding-left: 24px;
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.aside-cList li .list-show dt>a {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.aside-cList li .list-show dd {
+    list-style: none;
+    margin-left: -8px;
+    padding: 3px 0;
+}

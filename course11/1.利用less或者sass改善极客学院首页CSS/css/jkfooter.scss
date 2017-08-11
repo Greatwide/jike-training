@@ -1,0 +1,150 @@
+/*底部*/
+
+.jkfooter {
+    min-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 25px;
+    .fwrapper {
+        width: 1000px;
+        margin: 0 auto;
+        border-bottom: 1px solid #e4e4e4;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding-bottom: 10px;
+        .f-logo {
+            width: 160px;
+            display: inline-block;
+            float: left;
+            margin-right: 70px;
+            img {
+                margin-top: 40px;
+                width: 109px;
+                height: 40px;
+                display: block;
+            }
+
+             p {
+                font-size: 12px;
+                color: #999;
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
+
+     dl {
+        width: 135px;
+        color: #808080;
+        float: left;
+         dt {
+             font-size: 14px;
+             line-height: 30px;
+             a {
+                 color: #808080;
+             }
+         }
+         dd {
+             font-size: 12px;
+             line-height: 30px;
+             a {
+                 color: #999999;
+             }
+         }
+    }
+    a:hover {
+        color: #35b558;
+    }
+    .service {
+        display: inline-block;
+        width: 175px;
+        text-align: left;
+        .hot-line {
+            color: #808080;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .downQR {
+            display: inline-block;
+            width: 140px;
+            height: 30px;
+            border: 1px solid #eeeeee;
+            margin-bottom: 10px;
+            line-height: 30px;
+            color: #808080;
+            font-size: 13px;
+            cursor: pointer;
+            text-align: center;
+            img {
+                display: block;
+                position: absolute;
+                width: 115px;
+                height: 153px;
+                z-index: 2;
+                margin-top: 20px;
+                display: none;
+            }
+            &:hover img {
+                margin-top: -157px;
+                display: block;
+                z-index: 2;
+            }
+        }
+        .QR-ios {
+            background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-ios.png)no-repeat 0 0;
+            background-size: 30px 30px;
+        }
+        .QR-android {
+            background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-and.png)no-repeat 0 0;
+            background-size: 30px 30px;
+        }
+
+    }
+
+}
+
+.copyright {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    p {
+        font-size: 12px;
+        color: #999;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        float: left;
+        display: block;
+        padding-left: 120px;
+    }
+    a {
+        color: #999;
+        .down-sina {
+            float: right;
+            display: block;
+            height: 15px;
+            width: 20px;
+            margin-right: 10px;
+            background: url(../img/icon-down-sina.png)no-repeat 0 0;
+            background-size: 20px 15px;
+        }
+        .down-wechat {
+            display: block;
+            float: right;
+            height: 15px;
+            width: 20px;
+            background: url(../img/icon-down-wechat.png)no-repeat 0 0;
+            background-size: 18px 15px;
+        }
+    }
+    .safe {
+        clear: both;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+}
+

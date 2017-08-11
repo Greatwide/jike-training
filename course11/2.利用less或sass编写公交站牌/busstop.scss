@@ -1,0 +1,92 @@
+
+$InfoTextColor: #ffffff;  //描述栏字体颜色
+$LineColor:#ff0000;  //线路字体颜色
+$StopNameColor:#000000;//站名字字体颜色
+$bk-color: #00B7FF;
+
+html,body,ul,li{
+  margin: 0px;
+  padding: 0px;
+}
+
+.wapper{
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.base-ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.base-li{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.brief-info{
+  width: 500px;
+  height: 30px;
+  background-color: $bk-color;
+  line-height: 30px;
+  color: $InfoTextColor;
+  font-size: 14px;
+}
+
+.brief-info ul{
+ @extend .base-ul;
+  padding: 0 10px;
+  li{
+    @extend .base-li;
+    /*设置子元素的排列方向是竖直方*/
+    flex-direction: row;
+  }
+}
+/*
+.brief-info ul li{
+ @extend .base-li;
+  //设置子元素的排列方向是竖直方
+  flex-direction: row;
+}*/
+
+
+.Line-Num{
+  color: $LineColor;
+  font-size: 20px;
+}
+
+cur{
+  border: 1px solid red;
+}
+.stoplist ul {
+  @extend .base-ul;
+  width: 480px;
+  height: 120px;
+  color:$StopNameColor;
+  li {
+    font-size: 11px;
+    width: 12px;
+    height: 110px;
+    margin-top: 5px;
+    @extend .base-li;
+    flex-direction: column;
+    /*即每个li的子元素span为竖直方向的两端对齐*/
+  }
+}
+/*
+.stoplist ul li {
+  font-size: 11px;
+  width: 12px;
+  height: 110px;
+  margin-top: 5px;
+  @extend .base-li;
+  flex-direction: column;
+
+}*/

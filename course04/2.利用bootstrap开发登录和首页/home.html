@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/network.ico">
+    <title>实时监控系统</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!--当屏幕小的时候，收缩-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="home.html"><img src="img/monitor.png">实时数据</a>
+                    </li>
+                    <li>
+                        <a href="alarm.html"><img src="img/alarm.png">告警管理</a>
+                    </li>
+                    <li>
+                        <a href="kpi.html"><img src="img/kpi.png">KPI统计</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/config.png"> 配置管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">协议管理</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">设备管理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container test">
+        <div class="row">
+            <div class="col-md-2 col-xs-6 col-sm-6">
+                <div class="well sidebar-nav sidebar-color">
+                    <ul class="nav nav-list">
+                        <li class="nav-header"><i class="icon-user"></i> 网络设备</li>
+                        <li class="active"><a href="home.html">服务器</a></li>
+                        <li><a href="rooter.html">路由器</a></li>
+                        <li><a href="switch.html">交换机</a></li>
+                        <li class="nav-header"><i class="icon-user"></i> 动力环境设备</li>
+                        <li><a href="AirCon.html">空调</a></li>
+                        <li><a href="ups.html">UPS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 page-color">
+                <div class="row">
+                    <div class="page-header">
+                        <h3>服务器运行实时数据 <small></small></h3>
+                    </div>
+                    <table class="table table-striped table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th>服务器编码</th>
+                                <th>机架位置</th>
+                                <th>cpu占有率</th>
+                                <th>CPU温度</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="list-roles">
+                                <td>Ser-001</td>
+                                <td>R101-U31</td>
+                                <td>85%</td>
+                                <td>35℃</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">操作 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="#"><i class="icon-pencil"></i> 修改</a></li>
+                                            <li><a href="#"><i class="icon-trash"></i> 删除</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="list-roles">
+                                <td>Ser-011</td>
+                                <td>R101-U31</td>
+                                <td>30%</td>
+                                <td>54℃</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">操作 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="#"><i class="icon-pencil"></i> 修改</a></li>
+                                            <li><a href="#"><i class="icon-trash"></i> 删除</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="list-roles">
+                                <td>Ser-001</td>
+                                <td>R101-U31</td>
+                                <td>45%</td>
+                                <td>46℃</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">操作 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="#"><i class="icon-pencil"></i> 修改</a></li>
+                                            <li><a href="#"><i class="icon-trash"></i> 删除</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="btn btn-success">新增服务器</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    <!-- bootstrap官网的例子说明在底部引入js会加载页面更快一些-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--end-->
+</body>
+
+</html>

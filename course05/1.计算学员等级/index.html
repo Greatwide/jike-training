@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>分数等级</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function calc() {
+        var results;
+        var scores = parseInt(document.getElementById("score").value);
+        if (scores < 0 || scores > 100 || isNaN(scores)) //没输入分数或者分数不在0-100范围
+            alert("分数必须在0-100之间")
+        else {
+            //把分数分为2段，提高判断效率。不需要每个分数都按0-100去判断
+            if (scores >= 50) { //50分以上
+                if (scores >= 90) {
+                    results = "一等生";
+                } else if (scores >= 80) {
+                    results = "二等生";
+                } else if (scores >= 70) {
+                    results = "三等生";
+                } else if (scores >= 60) {
+                    results = "四等生";
+                } else {
+                    results = "五等生";
+                }
+            } else {
+                if (scores >= 40) {
+                    results = "六等生";
+                } else if (scores >= 30) {
+                    results = "七等生";
+                } else if (scores >= 20) {
+                    results = "八等生";
+                } else if (scores >= 10) {
+                    results = "九等生";
+                } else {
+                    results = "十等生";
+                }
+            }
+            document.getElementById("result").innerText = results;
+        }
+
+
+    }
+    </script>
+    <input type="text" required id="score" placeholder="请输入分数">
+    <br>
+    <button onclick="calc()">判断等级</button>
+    <br>
+    <span id="result" style="color: red"></span>
+</body>
+
+</html>

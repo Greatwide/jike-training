@@ -1,0 +1,2 @@
+fis3 release -r output
+fis3 server start --root output

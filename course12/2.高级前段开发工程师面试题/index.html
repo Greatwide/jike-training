@@ -1,0 +1,3658 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>初级前端工程师面试题</title>
+    <style type="text/css">
+    body {
+        margin-left: 10px;
+        font-family: "微软雅黑";
+    }
+    
+    .center {
+        text-align: center
+    }
+    
+    code,xmp {
+        color: #f55dec;
+        font-style: italic;
+    }
+    .puretext{
+        color:#000000;
+        font-style: normal;
+    }
+    .wrap {
+        width: 1000px;
+        background-color: #e9e9e9;
+        margin: 0px auto;
+        margin-top: 20px;
+        padding: 0 10px 0 10px;
+        box-shadow: #BEBEBE -2px -2px 5px 5px;
+    }
+    
+    .maintitle {
+        text-align: center;
+        font-size: 40px;
+        height: 150px;
+        line-height: 150px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="maintitle">
+            <b>HTML</b>
+        </div>
+        <h4>Doctype作用？</h4>
+        <p>
+            <!DOCTYPE>声明位于HTML文档中的第一行，处于 &lthtml&gt标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现</p>
+        <h4>标准模式与兼容模式各有什么区别?</h4>
+        <p>标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作</p>
+        <h4>HTML5 为什么只需要写 &lt!DOCTYPE HTML&gt？</h4>
+        <p><span>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）</span>
+            <span>而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型</span>
+        </p>
+        <h4>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h4>
+        <ul>
+            <li>首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素</li>
+            <li>行内元素有：a b span img input select strong（强调的语气）</li>
+            <li>块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</li>
+            <li>常见的空元素：br hr img input link meta</li>
+        </ul>
+        <h4>页面导入样式时，使用link和@import有什么区别？</h4>
+        <ul>
+            <li>link属于XHTML标签，除了加载CSS外，还能用于定义RSS,定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</li>
+            <li>页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</li>
+            <li>import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</li>
+        </ul>
+        <h4>介绍一下你对浏览器内核的理解？</h4>
+        <ul>
+            <li>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎</li>
+            <li>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核</li>
+            <li>JS引擎则：解析和执行javascript来实现网页的动态效果</li>
+            <li>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎</li>
+        </ul>
+        <h4>常见的浏览器内核有哪些？</h4>
+        <ul>
+            <li>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]</li>
+            <li>Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等</li>
+            <li>Presto内核：Opera7及以上。 [Opera内核原为：Presto，现为：Blink;]</li>
+            <li>Webkit内核：Safari,Chrome等。 [ Chrome的：Blink（WebKit的分支）]</li>
+        </ul>
+        <h4>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和HTML5？</h4>
+        <ul>
+            <p>HTML5 现在已经不是 SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加</p>
+        </ul>
+        <ul> 新增功能
+            <ul>
+                <li>新增各种CSS选择器  （: not(.input)：所有 class 不是“input”的节点）</li>
+                <li>圆角           （border-radius:8px）</li>
+                <li>多列布局        （multi-column layout）</li>
+                <li>阴影和反射        （Shadow\Reflect）</li>
+                <li>文字特效      （text-shadow）</li>
+                <li>文字渲染      （Text-decoration）</li>
+                <li>线性渐变      （gradient）</li>
+                <li>旋转          （transform）</li>
+                <li>增加了旋转,缩放,定位,倾斜,动画，多背景</li>
+                <li>transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation:`</li>
+                <li>绘画 canvas;</li>
+                <li>用于媒介回放的 video 和 audio 元素;</li>
+                <li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;</li>
+                <li>sessionStorage 的数据在浏览器关闭后自动删除;</li>
+                <li>语意化更好的内容元素，比如 article、footer、header、nav、section;</li>
+                <li>表单控件，calendar、date、time、email、url、search</li>
+                <li>新的技术webworker, websocket, Geolocation</li>
+            </ul>
+        </ul>
+        <ul>移除的元素
+            <ul>
+                <li>纯表现的元素：basefont，big，center，font, s，strike，tt，u;</li>
+                <li>对可用性产生负面影响的元素：frame，frameset，noframes</li>
+            </ul>
+        </ul>
+        <ul>支持HTML5新标签
+            <ul>
+                <li>IE8/IE7/IE6支持通过document.createElement方法产生的标签</li>
+                <li>可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式</li>
+                <li>当然也可以直接使用成熟的框架、比如html5shim</li>
+                <code>
+                &lt!--[if lt IE 9]&gt
+                &ltscript&gt src="http://html5shim.googlecode.com/svn
+                /trunk/html5.js"&lt/script&gt
+                &lt![endif]--&gt
+            </code>
+            </ul>
+        </ul>
+        <h4>简述一下你对HTML语义化的理解？</h4>
+        <p>用正确的标签做正确的事情</p>
+        <ul>
+            <li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
+            <li>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</li>
+            <li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
+            <li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解</li>
+        </ul>
+        <h4>实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果</h4>
+        <p>[代码为]<code>&ltdiv style="height:1px;overflow:hidden;background:red"&gt&lt/div&gt</code></p>
+        <h4>title与h1的区别、b与strong的区别、i与em的区别</h4>
+        <ul>
+            <li>title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响</li>
+            <li>strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：&ltstrong&gt会重读，而&ltB&gt是展示强调内容</li>
+            <li> i内容展示为斜体，em表示强调的文本</li>
+            <li>Physical Style Elements -- 自然样式标签 b, i, u, s, pre</li>
+            <li>Semantic Style Elements -- 语义样式标签 strong, em, ins, del, code</li>
+        </ul>
+        <h4>**HTML5的离线储存怎么使用，工作原理能不能解释一下？**</h4>
+        <ul>
+            <li>在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件</li>
+            <li>原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示</li>
+            <p>如何使用：</p>
+            <ul>
+                <li>页面头部像下面一样加入一个manifest的属性；</li>
+                <li>在cache.manifest文件的编写离线存储的资源</li>
+                <li>在离线状态时，操作window.applicationCache进行需求实现</li>
+                <code>
+                CACHE MANIFEST<br>
+                #v0.11<br>
+                CACHE:<br>
+                js/app.js<br>
+                css/style.css<br>
+                NETWORK:<br>
+                resourse/logo.png<br>
+                FALLBACK:<br>
+                / /offline.html<br>
+                ```<br>
+            </code>
+            </ul>
+        </ul>
+        <h4>
+            **浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？**
+        </h4>
+        <ul>
+            <li> - 在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。</li>
+            <li> - 离线的情况下，浏览器就直接使用离线存储的资源。</li>
+        </ul>
+        <h4>**请描述一下 cookies，sessionStorage 和 localStorage 的区别？**</h4>
+        <ul>
+            <li>- cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）</li>
+            <li>- cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递</li>
+            <li>- `sessionStorage`和`localStorage`不会自动把数据发给服务器，仅在本地保存</li>
+            <p>- 存储大小：</p>
+            <ul>
+                <li>- `cookie`数据大小不能超过4k</li>
+                <li>- `sessionStorage`和`localStorage`虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
+            </ul>
+            <p>有效期时间：</p>
+            <ul>
+                <li>`localStorage` 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+                <li>`sessionStorage` 数据在当前浏览器窗口关闭后自动删除</li>
+                <li>`cookie` 设置的`cookie`过期时间之前一直有效，即使窗口或浏览器关闭</li>
+            </ul>
+        </ul>
+        <h4>**iframe有那些缺点？**</h4>
+        <ul>
+            <li>iframe会阻塞主页面的Onload事件</li>
+            <li>搜索引擎的检索程序无法解读这种页面，不利于SEO</li>
+            <li>iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载</li>
+            <li>使用`iframe`之前需要考虑这两个缺点。如果需要使用`iframe`，最好是通过`javascript`动态给`iframe`添加`src`属性值，这样可以绕开以上两个问题</li>
+        </ul>
+        <h4>**Label的作用是什么？是怎么用的？**</h4>
+        <p>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件</p>
+        <p>使用方法1：</p>
+        <textarea style="width: 600px;height: 50px;color:#f55dec ">
+            <label for="mobile">Number:</label>
+            <input type="text" id="mobile" />
+        </textarea>
+        <p>* 使用方法2：</p>
+        <textarea style="width: 600px;color:#f55dec">
+            <label>Date:
+                <input type="text" />
+            </label>` `
+        </textarea>
+        <h4>**HTML5的form如何关闭自动完成功能？**</h4>
+        <p>给不想要提示的 form 或某个 input 设置为 autocomplete=off</p>
+        <h4>**如何实现浏览器内多个标签页之间的通信? (阿里)**</h4>
+        <ul>
+            <li>- WebSocket、SharedWorker</li>
+            <li>- 也可以调用localstorge、cookies等本地存储方式</li>
+        </ul>
+        <h4>**webSocket如何兼容低浏览器？(阿里)**</h4>
+        <ul>
+            <li>- Adobe Flash Socket</li>
+            <li>- ActiveX HTMLFile (IE)</li>
+            <li>- 基于 multipart 编码发送 XHR</li>
+            <li>- 基于长轮询的 XHR</li>
+        </ul>
+        <h4>**页面可见性（Page Visibility API） 可以有哪些用途？**</h4>
+        <ul>
+            <li>- 通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;</li>
+            <li>- 在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放</li>
+        </ul>
+        <h4> **如何在页面上实现一个圆形的可点击区域？**</h4>
+        <ul>
+            <li>- map+area或者svg</li>
+            <li>- border-radius</li>
+            <li>- 纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等</li>
+        </ul>
+        <h4>**网页验证码是干嘛的，是为了解决什么安全问题**</h4>
+        <ul>
+            <li>- 区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水</li>
+            <li>- 有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试</li>
+        </ul>
+        <h4>**title与h1的区别、b与strong的区别、i与em的区别？**</h4>
+        <ul>
+            <li>- `title`属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响</li>
+            <li>- `strong`是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：<strong>会重读</strong>，而
+                <B>是展示强调内容</B>
+            </li>
+            <li>- i内容展示为斜体，em表示强调的文本</li>
+        </ul>
+        <br/>
+        <hr/>
+
+        <div class="maintitle">
+            <b>CSS</b>
+        </div>
+
+        <h4>介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</h4>
+        <ul>
+            <li>有两种， IE 盒子模型、W3C 盒子模型；</li>
+            <li>盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；</li>
+            <li>区 别： IE的content部分把 border 和 padding计算了进去;</li>
+        </ul>
+        <h4>CSS选择符有哪些？哪些属性可以继承？</h4>
+        <ul>
+            <li>id选择器（例如： # myid）</li>
+            <li>类选择器（例如：.myclassname）</li>
+            <li>标签选择器（div, h1, p）</li>
+            <li>相邻选择器（h1 + p）</li>
+            <li>子选择器（ul > li）</li>
+            <li>后代选择器（li a）</li>
+            <li>通配符选择器（ * ）</li>
+            <li>属性选择器（a[rel = "external"]）</li>
+            <li>伪类选择器（a:hover, li:nth-child）</li>
+            <li>可继承的样式： font-size font-family color, UL LI DL DD DT
+                <li>不可继承的样式：border padding margin width height
+        </ul>
+        <h4>CSS优先级算法如何计算？</h4>
+        <ul>
+            <li>优先级就近原则，同权重情况下样式定义最近者为准</li>
+            <li>载入样式以最后载入的定位为准</li>
+            <p>优先级为:</p>
+            <ul>
+                <li>同权重: 内联样式表（标签内部）&gt 嵌入样式表（当前文件中）&gt 外部样式表（外部文件中）</li>
+                <li>!important &gt id &gt class &gt tag</li>
+                <li>important 比 内联优先级高</li>
+            </ul>
+        </ul>
+        <h4>CSS3新增伪类有那些？</h4>
+        <ul>
+            <li> p:first-of-type 选择属于其父元素的首个p元素的每个 p 元素</li>
+            <li> p:last-of-type 选择属于其父元素的最后 p 元素的每个 p 元素</li>
+            <li>p:only-of-type 选择属于其父元素唯一的 p元素的每个 p元素</li>
+            <li> p:only-child 选择属于其父元素的唯一子元素的每个 p元素</li>
+            <li> p:nth-child(2) 选择属于其父元素的第二个子元素的每个p元素</li>
+            <li> :after 在元素之前添加内容,也可以用来做清除浮动</li>
+            <li> :before 在元素之后添加内容</li>
+            <li> :enabled 控制表单控件的启用状态
+                <li> :disabled 控制表单控件的禁用状态</li>
+                <li> :checked 单选框或复选框被选中</li>
+            <li>:nth-child(n)      匹配父元素下指定子元素，在所有子元素中排序第n</li>
+            <li>:nth-last-child(n) 匹配父元素下指定子元素，在所有子元素中排序第n，从后向前数</li>
+            <li>:nth-child(odd)</li>
+            <li>:nth-child(even)</li>
+            <li>:nth-child(3n+1)</li>
+            <li>:first-child</li>
+            <li>:last-child</li>
+            <li>:only-child</li>
+
+            <li>:nth-of-type(n)      匹配父元素下指定子元素，在同类子元素中排序第n</li>
+            <li>:nth-last-of-type(n) 匹配父元素下指定子元素，在同类子元素中排序第n，从后向前数</li>
+            <li>:nth-of-type(odd)</li>
+            <li>:nth-of-type(even)</li>
+            <li>:nth-of-type(3n+1)</li>
+            <li>:first-of-type</li>
+            <li>:last-of-type</li>
+            <li>:only-of-type</li>
+
+            <li>::selection     选择被用户选取的元素部分</li>
+            <li>:first-line     选择元素中的第一行</li>
+            <li>:first-letter   选择元素中的第一个字符</li>
+
+        </ul>
+        <h4>如何居中div？</h4>
+        <ul>
+            <li>
+                水平居中一
+                <br/>给div设置一个宽度，然后添加margin:0 auto属性
+                <br/>
+                <code>
+                div{<br/>
+                width:200px;<br/>
+                margin:0 auto;<br/>
+                }<br/>
+            </code>
+            </li>
+            <li>
+                水平垂直居中二
+                <br/> 未知容器的宽高，利用 `transform` 属性
+                <br/>
+                <code>
+                div {<br/>
+                position: absolute;     /* 相对定位或绝对定位均可 */<br/>
+                width:500px;<br/>
+                height:300px;<br/>
+                top: 50%;<br/>
+                left: 50%;<br/>
+                transform: translate(-50%, -50%);<br/>
+                background-color: pink;     /* 方便看效果 */<br/>
+                }<br/>
+            </code>
+            </li>
+            <li>
+                水平垂直居中三
+                <br/>
+                <ul>
+                    <li>利用 flex 布局</li>
+                    <li>实际使用时应考虑兼容性</li>
+                </ul>
+                <code>
+                .container {<br/>
+                    display: flex;<br/>
+                    align-items: center;        /* 垂直居中 */<br/>
+                    justify-content: center;    /* 水平居中 */<br/>
+
+                }<br/>
+                .container div {<br/>
+                    width: 100px;<br/>
+                    height: 100px;<br/>
+                    background-color: pink;     /* 方便看效果 */<br/>
+                }<br/>
+            </code>
+            </li>
+        </ul>
+        <h4>position的值relative和absolute定位原点是？</h4>
+        <ul>
+            <li><b>absolute:</b>生成绝对定位的元素，相对于值不为 static的第一个父元素进行定位
+                <li>
+                    <li><b>fixed（老IE不支持）:</b> 生成绝对定位的元素，相对于浏览器窗口进行定位</li>
+                    <li><b>relative:</b> 生成相对定位的元素，相对于其正常位置进行定位</li>
+                    <li><b>static:</b> 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）</li>
+                    <li><b>inherit:</b>规定从父元素继承 position 属性的值</li>
+        </ul>
+        <h4>解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？</h4>
+        <ul>
+            <li> 一个用于页面布局的全新CSS3功能，Flexbox可以把列表放在同一个方向（从上到下排列，从左到右），并让列表能延伸到占用可用的空间</li>
+            <li> 较为复杂的布局还可以通过嵌套一个伸缩容器（flex container）来实现</li>
+            <li> 采用Flex布局的元素，称为Flex容器（flex container），简称"容器"</li>
+            <li> 它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称"项目"</li>
+            <li> 常规布局是基于块和内联流方向，而Flex布局是基于flex-flow流可以很方便的用来做局中，能对不同屏幕大小自适应</li>
+            <li> 在布局上有了比以前更加灵活的空间</li>
+        </ul>
+        <h4>用纯CSS创建一个三角形的原理是什么？</h4>
+        <p>把上、左、右三条边隐藏掉（颜色设为 transparent）
+            <br>
+            <code>
+        #demo {<br>
+        width: 0;<br>
+        height: 0;<br>
+        border-width: 20px;<br>
+        border-style: solid;<br>
+        border-color: transparent transparent red transparent;<br>
+        }<br>
+    </code>
+        </p>
+        <h4>一个满屏 品 字布局 如何设计?</h4>
+        <p>
+            - 简单的方式：
+            <br> 上面的div宽100%， 下面的两个div分别宽50%， 然后用float或者inline使其不换行即可
+        </p>
+        <h4>css多列等高如何实现？</h4>
+        <ul>
+            <li>利用padding-bottom|margin-bottom正负值相抵</li>
+            <li>设置父容器设置超出隐藏（overflow:hidden），这样子父容器的高度就还是它里面的列没有设定padding-bottom时的高度</li>
+            <li>当它里面的任一列高度增加了，则父容器的高度被撑到里面最高那列的高度</li>
+            <li>其他比这列矮的列会用它们的padding-bottom补偿这部分高度差</li>
+        </ul>
+        <h4>position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？</h4>
+        <ul>
+            <li>如果元素的display为none,那么元素不被渲染,position,float不起作用</li>
+            <li>如果元素拥有position:absolute;或者position:fixed;属性那么元素将为绝对定位,float不起作用</li>
+            <li>如果元素float属性不是none,元素会脱离文档流,根据float属性值来显示.有浮动,绝对定位,inline-block属性的元素,margin不会和垂直方向上的其他元素margin折叠</li>
+        </ul>
+        <h4>为什么需要清除浮动？清除浮动的方式*</h4>
+        <ul>
+            <li>清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示</li>
+            <li>父级div定义height</li>
+            <li>父级div 也一起浮动</li>
+            <li>常规的使用一个class</li>
+            <code>
+        .clearfix:before, .clearfix:after {<br/>
+        content: " ";<br/>
+        display: table;<br/>
+        }<br/>
+        .clearfix:after {<br/>
+        clear: both;<br/>
+        }<br/>
+        .clearfix {<br/>
+        *zoom: 1;<br/>
+        }<br/>
+        </code>
+            <li>SASS编译的时候，浮动元素的父级div定义伪类:after</li>
+            <code>
+        &:after,&:before{<br>
+        content: " ";<br>
+        visibility: hidden;<br>
+        display: block;<br>
+        height: 0;<br>
+        clear: both;<br>
+        }
+        </code>
+            <ul>解析原理
+                <li>display:block 使生成的元素以块级元素显示,占满剩余空间</li>
+                <li>height:0 避免生成内容破坏原有布局的高度</li>
+                <li>visibility:hidden 使生成的内容不可见，并允许可能被生成内容盖住的内容可以进行点击和交互</li>
+                <li>通过 content:"."生成内容作为最后一个元素，至于content里面是点还是其他都是可以的，例如oocss里面就有经典的 content:".",有些版本可能content 里面内容为空,一丝冰凉是不推荐这样做的,firefox直到7.0 content:”" 仍然会产生额外的空隙</li>
+                <li>zoom：1 触发IE hasLayout</li>
+                <li>通过分析发现，除了clear：both用来闭合浮动的，其他代码无非都是为了隐藏掉content生成的内容，这也就是其他版本的闭合浮动为什么会有font-size：0，line-height：0</li>
+            </ul>
+        </ul>
+        <h4>什么是外边距合并？</h4>
+        <p>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距, 合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+        <h4>margin和padding分别适合什么场景使用？</h4>
+        <ul>
+            <li> margin是用来隔开元素与元素的间距；padding是用来隔开元素与内容的间隔</li>
+            <li> margin用于布局分开元素使元素与元素互不相干</li>
+            <li> padding用于元素与内容之间的间隔，让内容（文字）与（包裹）元素之间有一段</li>
+        </ul>
+        <h4>::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用</h4>
+        <ul>
+            <li>单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。（伪元素由双冒号和伪元素名称组成）</li>
+            <li> 双冒号是在当前规范中引入的，用于区分伪类和伪元素。不过浏览器需要同时支持旧的已经存在的伪元素写法</li>
+            <li> 比如:first-line、:first-letter、:before、:after等，而新的在CSS3中引入的伪元素则不允许再支持旧的单冒号的写法</li>
+            <li> 想让插入的内容出现在其它内容前，使用::before，否者，使用::after；在代码顺序上，::after生成的内容也比::before生成的内容靠后</li>
+            <li> 如果按堆栈视角，::after生成的内容会在::before生成的内容之上</li>
+        </ul>
+        <h4>让页面里的字体变清晰，变细用CSS怎么做？</h4>
+        <p>-webkit-font-smoothing: antialiased;</p>
+
+       <h4> **display,float,position的关系**</h4>
+        <ul>
+            <li>如果 `display` 为`none`，那么`position`和`float`都不起作用，这种情况下元素不产生框</li>
+            <li>否则，如果`position`值为`absolute`或者`fixed`，框就是绝对定位的，`float`的计算值为`none`，`display`根据下面的表格进行调整</li>
+            <li>否则，如果`float`不是`none`，框是浮动的，`display`根据下表进行调整</li>
+            <li>否则，如果元素是根元素，`display`根据下表进行调整</li>
+            <li>其他情况下`display`的值为指定值 总结起来：绝对定位、浮动、根元素都需要调整 `display`</li>
+        </ul>
+        <h4>**外边距折叠(collapsing margins)**</h4>
+        <ul>
+            <li>毗邻的两个或多个 `margin` 会合并成一个`margin`，叫做外边距折叠。规则如下：</li>
+            <li>两个或多个毗邻的普通流中的块元素垂直方向上的`margin`会折叠</li>
+            <li>浮动元素或`inline-block`元素或绝对定位元素的`margin`不会和垂直方向上的其他元素的margin折叠</li>
+            <li>创建了块级格式化上下文的元素，不会和它的子元素发生margin折叠</li>
+            <li>元素自身的`margin-bottom`和`margin-top`相邻时也会折</li>
+        </ul>
+
+        <h4>**display有哪些值？说明他们的作用**</h4>
+        <ul>
+            <li>block         象块类型元素一样显示</li>
+            <li>none          缺省值。象行内元素类型一样显示</li>
+            <li>inline-block  象行内元素一样显示，但其内容象块类型元素一样显示</li>
+            <li>list-item     象块类型元素一样显示，并添加样式列表标记</li>
+            <li>table         此元素会作为块级表格来显示</li>
+            <li>inherit       规定应该从父元素继承 display 属性的值</li>
+        </ul>
+
+        <h4>**经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？**</h4>
+        <ul>
+        <li>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.</li>
+        <li>浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一</li>
+        <li>IE下,可以使用获取常规属性的方法来获取自定义属性,也可以使用getAttribute()获取自定义属性;</li>
+        <li>Firefox下,只能使用getAttribute()获取自定义属性</li>
+            <li>解决方法:统一通过getAttribute()获取自定义属性</li>
+        <li>IE下,even对象有x,y属性,但是没有pageX,pageY属性</li>
+        <li>Firefox下,event对象有pageX,pageY属性,但是没有x,y属性</li>
+
+        </ul>
+
+        <h4>**li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？**</h4>
+
+        <p>行框的排列会受到中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，占据空间，所以会有间隔，把字符大小设为0，就没有空格了</p>
+
+        <h4>**为什么要初始化CSS样式**</h4>
+
+        <p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异</p>
+
+        <h4>**对BFC规范(块级格式化上下文：block formatting context)的理解？**</h4>
+        <ul>
+            <li>一个页面是由很多个 Box 组成的,元素的类型和 display 属性,决定了这个 Box 的类型</li>
+            <li>不同类型的 Box,会参与不同的 Formatting Context（决定如何渲染文档的容器）,因此Box内的元素会以不同的方式渲染,也就是说BFC内部的元素和外部的元素不会互相影响</li>
+        </ul>
+
+        <h4>**css定义的权重**</h4>
+
+
+        <p>以下是权重的规则：标签的权重为1，class的权重为10，id的权重为100，以下/// 例子是演示各种定义的权重值：</p>
+
+        <p>/*权重为1*/</p>
+        <code>
+            div{</br>
+        }</br>
+        /*权重为10*/</br>
+        .class1{</br>
+        }</br>
+        /*权重为100*/</br>
+        #id1{</br>
+        }</br>
+        /*权重为100+1=101*/</br>
+        #id1 div{</br>
+        }</br>
+        /*权重为10+1=11*/</br>
+        .class1 div{</br>
+        }</br>
+        /*权重为10+10+1=21*/</br>
+        .class1 .class2 div{</br>
+        }</br>
+
+        // 如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现</br>
+        ```
+        </code>
+
+        <h4>**display:inline-block 什么时候会显示间隙？(携程)**</h4>
+
+        <p>移除空格、使用margin负值、使用font-size:0、letter-spacing、word-spacing</p>
+
+        <h4>**box-sizing 常用的属性有哪些？分别有什么作用？**</h4>
+        <ul>
+            <li>box-sizing: content-box;  // 默认的标准(W3C)盒模型元素效果</li>
+            <li>box-sizing: border-box;   // 触发怪异(IE)盒模型元素的效果</li>
+            <li>box-sizing: inherit;      //  继承父元素 box-sizing 属性的值</li>
+        </ul>
+
+
+        <h4>**请列举几种隐藏元素的方法**</h4>
+        <ul>
+            <li>visibility: hidden;   这个属性只是简单的隐藏某个元素，但是元素占用的空间任然存在</li>
+            <li>opacity: 0;           CSS3属性，设置0可以使一个元素完全透明</li>
+            <li>position: absolute;   设置一个很大的 left 负值定位，使元素定位在可见区域之外</li>
+            <li>display: none;        元素会变得不可见，并且不会再占用文档的空间</li>
+            <li>transform: scale(0);  将一个元素设置为缩放无限小，元素将不可见，元素原来所在的位置将被保留</li>
+            <li>hidden="hidden": HTML5属性,效果和display:none;相同，但这个属性用于记录一个元素的状态</li>
+            <li>height: 0;            将元素高度设为 0 ，并消除边框
+            <li>filter: blur(0);      CSS3属性，将一个元素的模糊度设置为0，从而使这个元素“消失”在页面中
+
+        </ul>
+
+
+        <h4>**rgba() 和 opacity 的透明效果有什么不同？**</h4>
+        <ul>
+            <li>opacity 作用于元素以及元素内的所有内容（包括文字）的透明度</li>
+            <li>rgba() 只作用于元素自身的颜色或其背景色，子元素不会继承透明效果</li>
+        </ul>
+
+
+        <h4>**css 属性 content 有什么作用？**</h4>
+
+        <p>content 属性专门应用在 before/after 伪元素上，用于插入额外内容或样式</p>
+
+
+        <h4>**什么是外边距重叠？ 重叠的结果是什么？**</h4>
+
+        * 外边距重叠就是 margin-collapse<br>
+        * 相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。
+        这种合并外边距的方式被称为折叠，结合而成的外边距称为折叠外边距<br>
+
+        * 折叠结果遵循下列计算规则：<br>
+        - 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值<br>
+        - 两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值<br>
+        - 两个外边距一正一负时，折叠结果是两者的相加的和<br>
+
+        <h4>**请写出多种等高布局**</h4>
+
+        * 在列的父元素上使用这个背景图进行Y轴的铺放，从而实现一种等高列的假像<br>
+        * 模仿表格布局等高列效果：兼容性不好，在ie6-7无法正常运行<br>
+        * css3 flexbox 布局： .container{display: flex; align-items: stretch;}<br>
+
+        <H4>**css垂直居中的方法有哪些？**</H4>
+
+        * 如果是单行文本, line-height 设置成和 height 值<br>
+        <xmp>
+        .vertical {
+        height: 100px;
+        line-height: 100px;
+        }
+        </xmp>
+        * 已知高度的块级子元素，采用绝对定位和负边距<br>
+
+       <xmp>
+        .container {
+        position: relative;
+        }
+        .vertical {
+        height: 300px;  /*子元素高度*/
+        position: absolute;
+        top:50%;  /*父元素高度50%*/
+        margin-top: -150px; /*自身高度一半*/
+        }
+       </xmp>
+
+        * 未知高度的块级父子元素居中，模拟表格布局<br>
+        * 缺点：IE67不兼容，父级 overflow：hidden 失效<br>
+
+       <xmp>
+        .container {
+        display: table;
+        }
+        .content {
+        display: table-cell;
+        vertical-align: middle;
+        }
+       </xmp>
+
+        * 新增 inline-block 兄弟元素，设置 vertical-align<br>
+        - 缺点：需要增加额外标签，IE67不兼容<br>
+        <xmp>
+
+        .container {
+        height: 100%;/*定义父级高度，作为参考*/
+        }
+        .extra .vertical{
+        display: inline-block;  /*行内块显示*/
+        vertical-align: middle; /*垂直居中*/
+        }
+        .extra {
+        height: 100%; /*设置新增元素高度为100%*/
+        }
+        </xmp>
+        * 绝对定位配合 CSS3 位移<br>
+
+       <xmp>
+        .vertical {
+        position: absolute;
+        top:50%;  /*父元素高度50%*/
+        transform:translateY(-50%, -50%);
+        }
+       </xmp>
+        * CSS3弹性盒模型
+        <xmp>
+        .container {
+        display:flex;
+        justify-content: center; /*子元素水平居中*/
+        align-items: center; /*子元素垂直居中*/
+        }
+        </xmp>
+
+        <h4>**圣杯布局的实现原理？**</h4>
+
+        * 要求：三列布局；中间主体内容前置，且宽度自适应；两边内容定宽<br>
+        * 好处：重要的内容放在文档流前面可以优先渲染<br>
+        * 原理：利用相对定位、浮动、负边距布局，而不添加额外标签<br>
+        <xmp>
+            .container {
+            padding-left: 150px;
+            padding-right: 190px;
+            }
+            .main {
+            float: left;
+            width: 100%;
+            }
+            .left {
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+            position: relative;
+            left: -150px;
+            }
+            .right {
+            float: left;
+            width: 190px;
+            margin-left: -190px;
+            position: relative;
+            right: -190px;
+            }
+        </xmp>
+
+        <h4>**什么是双飞翼布局？实现原理？**</h4>
+
+        - 双飞翼布局：对圣杯布局（使用相对定位，对以后布局有局限性）的改进，消除相对定位布局<br>
+        - 原理：主体元素上设置左右边距，预留两翼位置。左右两栏使用浮动和负边距归位，消除相对定位<br>
+
+        <xmp>
+        .container {
+        /*padding-left:150px;*/
+        /*padding-right:190px;*/
+        }
+        .main-wrap {
+        width: 100%;
+        float: left;
+        }
+        .main {
+        margin-left: 150px;
+        margin-right: 190px;
+        }
+        .left {
+        float: left;
+        width: 150px;
+        margin-left: -100%;
+        /*position: relative;*/
+        /*left:-150px;*/
+        }
+        .right {
+        float: left;
+        width: 190px;
+        margin-left: -190px;
+        /*position:relative;*/
+        /*right:-190px;*/
+        }
+        </xmp>
+
+        <h4>**在CSS样式中常使用 px、em 在表现上有什么区别？**</h4>
+
+        * px 相对于显示器屏幕分辨率，无法用浏览器字体放大功能<br>
+        * em 值并不是固定的，会继承父级的字体大小： em = 像素值 / 父级font-size<br>
+
+        <h4>**为什么要初始化CSS样式？**</h4>
+
+        * 不同浏览器对有些标签样式的默认值解析不同<br>
+        * 不初始化CSS会造成各现浏览器之间的页面显示差异<br>
+        * 可以使用 reset.css 或 Normalize.css 做 CSS 初始化<br>
+
+        <h4>**解释下什么是浮动和它的工作原理？**</h4>
+
+
+        * 非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开
+        此时，内容会溢出到容器外面而影响布局。这种现象被称为浮动（溢出）<br>
+        * 工作原理：<br>
+        - 浮动元素脱离文档流，不占据空间（引起“高度塌陷”现象）<br>
+        - 浮动元素碰到包含它的边框或者其他浮动元素的边框停留<br>
+
+        <h4>**浮动元素引起的问题？**</h4>
+
+        * 父元素的高度无法被撑开，影响与父元素同级的元素<br>
+        * 与浮动元素同级的非浮动元素会跟随其后<br>
+
+        <h4>**列举几种清除浮动的方式？**</h4>
+
+        * 添加额外标签，例如 `<xmp><div style="clear:both"></div>`</xmp><br>
+        * 使用 br 标签和其自身的 clear 属性，例如 `<xmp><br clear="all" /></xmp><br>
+        * 父元素设置 overflow：hidden; 在IE6中还需要触发 hasLayout，例如zoom：1;<br>
+        * 父元素也设置浮动<br>
+        * 使用 :after 伪元素。由于IE6-7不支持 :after，使用 zoom:1 触发 hasLayout<br>
+
+        <h4>**清除浮动最佳实践（after伪元素闭合浮动）：**</h4>
+
+        <xmp>
+        .clearfix:after{
+        content: "\200B";
+        display: table;
+        height: 0;
+        clear: both;
+        }
+        .clearfix{
+        *zoom: 1;
+        }
+        </xmp>
+        <h4>**什么是 FOUC(Flash of Unstyled Content)？ 如何来避免 FOUC？**</h4>
+
+        * 当使用 @import 导入 CSS 时，会导致某些页面在 IE 出现奇怪的现象：<br>
+        没有样式的页面内容显示瞬间闪烁，这种现象称为“文档样式短暂失效”，简称为FOUC<br>
+        * 产生原因：当样式表晚于结构性html加载时，加载到此样式表时，页面将停止之前的渲染<br>
+        * 等待此样式表被下载和解析后，再重新渲染页面，期间导致短暂的花屏现象<br>
+        * 解决方法：使用 link 标签将样式表放在文档 head<br>
+
+        <h4>**介绍使用过的 CSS 预处理器？**</h4>
+
+        * CSS 预处理器基本思想：为 CSS 增加了一些编程的特性（变量、逻辑判断、函数等）<br>
+        * 开发者使用这种语言进行进行 Web 页面样式设计，再编译成正常的 CSS 文件使用<br>
+        * 使用 CSS 预处理器，可以使 CSS 更加简洁、适应性更强、可读性更佳，无需考虑兼容性<br>
+        * 最常用的 CSS 预处理器语言包括：Sass（SCSS）和 LESS<br>
+
+        <h4>**CSS优化、提高性能的方法有哪些？**</h4>
+
+        * 多个css合并，尽量减少HTTP请求<br>
+        * 将css文件放在页面最上面<br>
+        * 移除空的css规则<br>
+        * 避免使用CSS表达式<br>
+        * 选择器优化嵌套，尽量避免层级过深<br>
+        * 充分利用css继承属性，减少代码量<br>
+        * 抽象提取公共样式，减少代码量<br>
+        * 属性值为0时，不加单位<br>
+        * 属性值为小于1的小数时，省略小数点前面的0<br>
+        * css雪碧图<br>
+
+        <h4>**浏览器是怎样解析CSS选择器的？**</h4>
+
+        - 浏览器解析 CSS 选择器的方式是从右到左<br>
+
+        <h4>**在网页中的应该使用奇数还是偶数的字体？**</h4>
+
+        - 在网页中的应该使用“偶数”字体：<br>
+        * 偶数字号相对更容易和 web 设计的其他部分构成比例关系<br>
+        * 使用奇数号字体时文本段落无法对齐<br>
+        * 宋体的中文网页排布中使用最多的就是 12 和 14<br>
+        <h4>**margin和padding分别适合什么场景使用？**</h4>
+
+        * 需要在border外侧添加空白，且空白处不需要背景（色）时，使用 margin<br>
+        * 需要在border内测添加空白，且空白处需要背景（色）时，使用 padding<br>
+
+        <h4>**抽离样式模块怎么写，说出思路？**</h4>
+
+        - CSS可以拆分成2部分：公共CSS 和 业务CSS：<br>
+        - 网站的配色，字体，交互提取出为公共CSS。这部分CSS命名不应涉及具体的业务<br>
+        - 对于业务CSS，需要有统一的命名，使用公用的前缀。可以参考面向对象的CSS<br>
+
+        <h4>**元素竖向的百分比设定是相对于容器的高度吗？**</h4>
+
+        - 元素竖向的百分比设定是相对于容器的宽度，而不是高度<br>
+
+        <h4>**全屏滚动的原理是什么？ 用到了CSS的那些属性？**</h4>
+
+        * 原理类似图片轮播原理，超出隐藏部分，滚动时显示<br>
+        * 可能用到的CSS属性：overflow:hidden; transform:translate(100%, 100%); display:none;<br>
+
+        <h4>**什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？**</h4>
+
+        * 响应式设计就是网站能够兼容多个终端，而不是为每个终端做一个特定的版本<br>
+        * 基本原理是利用CSS3媒体查询，为不同尺寸的设备适配不同样式<br>
+        * 对于低版本的IE，可采用JS获取屏幕宽度，然后通过resize方法来实现兼容：<br>
+        <xmp>
+        $(window).resize(function () {
+        screenRespond();
+        });
+        screenRespond();
+        function screenRespond(){
+        var screenWidth = $(window).width();
+        if(screenWidth <= 1800){
+        $("body").attr("class", "w1800");
+        }
+        if(screenWidth <= 1400){
+        $("body").attr("class", "w1400");
+        }
+        if(screenWidth > 1800){
+        $("body").attr("class", "");
+        }
+        }
+        </xmp>
+
+        <h4>**什么是视差滚动效果，如何给每页做不同的动画？**</h4>
+
+        * 视差滚动是指多层背景以不同的速度移动，形成立体的运动效果，具有非常出色的视觉体验<br>
+        * 一般把网页解剖为：背景层、内容层和悬浮层。当滚动鼠标滚轮时，各图层以不同速度移动，形成视差的<br>
+
+        * 实现原理<br>
+        - 以 “页面滚动条” 作为 “视差动画进度条”<br>
+        - 以 “滚轮刻度” 当作 “动画帧度” 去播放动画的<br>
+        - 监听 mousewheel 事件，事件被触发即播放动画，实现“翻页”效果<br>
+
+        <h4>**a标签上四个伪类的执行顺序是怎么样的？**</h4>
+
+        ```link > visited > hover > active```<br>
+
+        - L-V-H-A love hate 用喜欢和讨厌两个词来方便记忆<br>
+
+        <h4>**伪元素和伪类的区别和作用？**</h4>
+
+        - 伪元素 -- 在内容元素的前后插入额外的元素或样式，但是这些元素实际上并不在文档中生成<br>
+        - 它们只在外部显示可见，但不会在文档的源代码中找到它们，因此，称为“伪”元素。例如：<br>
+
+        <xmp>
+        p::before {content:"第一章：";}
+        p::after {content:"Hot!";}
+        p::first-line {background:red;}
+        p::first-letter {font-size:30px;}
+
+        </xmp>
+
+        - 伪类 -- 将特殊的效果添加到特定选择器上。它是已有元素上添加类别的，不会产生新的元素。例如：<br>
+
+       <xmp>
+        a:hover {color: #FF00FF}
+        p:first-child {color: red}
+       </xmp>
+
+            <h4>**::before 和 :after 中双冒号和单冒号有什么区别？**</h4>
+
+        * 在 CSS 中伪类一直用 : 表示，如 :hover, :active 等<br>
+        * 伪元素在CSS1中已存在，当时语法是用 : 表示，如 :before 和 :after<br>
+        * 后来在CSS3中修订，伪元素用 :: 表示，如 ::before 和 ::after，以此区分伪元素和伪类<br>
+        * 由于低版本IE对双冒号不兼容，开发者为了兼容性各浏览器，继续使使用 :after 这种老语法表示伪元素<br>
+        * 综上所述：::before 是 CSS3 中写伪元素的新语法； :after 是 CSS1 中存在的、兼容IE的老语法<br>
+
+
+        **如何修改Chrome记住密码后自动填充表单的黄色背景？**
+
+        - 产生原因：由于Chrome默认会给自动填充的input表单加上 input:-webkit-autofill 私有属性造成的
+        - 解决方案1：在form标签上直接关闭了表单的自动填充：autocomplete="off"
+        - 解决方案2：input:-webkit-autofill { background-color: transparent; }
+
+            <h4>**input [type=search] 搜索框右侧小图标如何美化？**</h4>
+
+        <xmp>
+        input[type="search"]::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 8px;
+        background:url("images/searchicon.png") no-repeat 0 0;
+        background-size: 15px 15px;
+        }
+        </xmp>
+
+            <h4>**网站图片文件，如何点击下载？而非点击预览？**</h4>
+        <xmp>
+        `<a href="logo.jpg" download>下载</a>`
+        `<a href="logo.jpg" download="网站LOGO" >下载</a>`
+        </xmp>
+            <h4>**iOS safari 如何阻止“橡皮筋效果”？**</h4>
+
+        <xmp>
+        $(document).ready(function(){
+        var stopScrolling = function(event) {
+        event.preventDefault();
+        }
+        document.addEventListener('touchstart', stopScrolling, false);
+        document.addEventListener('touchmove', stopScrolling, false);
+        });
+        </xmp>`
+
+            <h4>**你对 line-height 是如何理解的？**</h4>
+
+        * line-height 指一行字的高度，包含了字间距，实际上是下一行基线到上一行基线距离<br>
+        * 如果一个标签没有定义 height 属性，那么其最终表现的高度是由 line-height 决定的<br>
+        * 一个容器没有设置高度，那么撑开容器高度的是 line-height 而不是容器内的文字内容<br>
+        * 把 line-height 值设置为 height 一样大小的值可以实现单行文字的垂直居中<br>
+        * line-height 和 height 都能撑开一个高度，height 会触发 haslayout，而 line-height 不会<br>
+
+            <h4>**line-height 三种赋值方式有何区别？（带单位、纯数字、百分比）**</h4>
+
+        * 带单位：px 是固定值，而 em 会参考父元素 font-size 值计算自身的行高<br>
+        * 纯数字：会把比例传递给后代。例如，父级行高为 1.5，子元素字体为 18px，则子元素行高为 1.5 * 18 = 27px<br>
+        * 百分比：将计算后的值传递给后代<br>
+
+            <h4>**设置元素浮动后，该元素的 display 值会如何变化？**</h4>
+
+        - 设置元素浮动后，该元素的 display 值自动变成 block<br>
+
+            <h4>**怎么让Chrome支持小于12px 的文字？**</h4>
+
+        <xmp>
+        .shrink{
+        -webkit-transform:scale(0.8);
+        -o-transform:scale(1);
+        display:inline-block;
+        }
+        </xmp>
+
+            <h4>**让页面里的字体变清晰，变细用CSS怎么做？（IOS手机浏览器字体齿轮设置）**</h4>
+
+        <xmp>
+        -webkit-font-smoothing: antialiased;
+        </xmp>
+
+            <h4>**font-style 属性 oblique 是什么意思？**</h4>
+
+        - font-style: oblique; 使没有 italic 属性的文字实现倾斜<br>
+
+            <h4>**如果需要手动写动画，你认为最小时间间隔是多久？**</h4>
+
+        - 16.7ms 多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔: 1s / 60 * 1000 ＝ 16.7ms<br>
+
+            <h4>**display:inline-block 什么时候会显示间隙？**</h4>
+
+        * 相邻的 inline-block 元素之间有换行或空格分隔的情况下会产生间距<br>
+        * 非 inline-block 水平元素设置为 inline-block 也会有水平间距<br>
+        * 可以借助 vertical-align:top; 消除垂直间隙<br>
+        * 可以在父级加 font-size：0; 在子元素里设置需要的字体大小，消除垂直间隙<br>
+        * 把 li 标签写到同一行可以消除垂直间隙，但代码可读性差<br>
+
+            <h4>**overflow: scroll 时不能平滑滚动的问题怎么处理？**</h4>
+
+        - 监听滚轮事件，然后滚动到一定距离时用 jquery 的 animate 实现平滑效果<br>
+
+            <h4>**一个高度自适应的div，里面有两个div，一个高度100px，希望另一个填满剩下的高度**</h4>
+
+        - 方案1：<br>
+        `.sub { height: calc(100%-100px); }`
+        - 方案2：<br>
+            <xmp>
+        `.container { position:relative; }`
+        `.sub { position: absolute; top: 100px; bottom: 0; }`
+            </xmp>
+        - 方案3：<br>
+            <xmp>
+        `.container { display:flex; flex-direction:column; }`
+        `.sub { flex:1; }`
+            </xmp>
+        <hr/>
+        <div class="maintitle">
+            <b>Javascript</b>
+        </div>
+
+        <h4>**JavaScript的组成**</h4>
+
+        - JavaScript 由以下三部分组成：<br>
+        - ECMAScript（核心）：JavaScript 语言基础<br>
+        - DOM（文档对象模型）：规定了访问HTML和XML的接口<br>
+        - BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法<br>
+
+        <h4>**JS的基本数据类型和引用数据类型**</h4>
+
+        - 基本数据类型：undefined、null、boolean、number、string、symbol<br>
+        - 引用数据类型：object、array、function<br>
+
+        <h4>**检测浏览器版本版本有哪些方式？**</h4>
+        - 根据 navigator.userAgent   //  UA.toLowerCase().indexOf('chrome')<br>
+        - 根据 window 对象的成员       // 'ActiveXObject' in window<br>
+
+        <h4>**介绍JS有哪些内置对象？**</h4>
+
+        - 数据封装类对象：Object、Array、Boolean、Number、String<br>
+        - 其他对象：Function、Arguments、Math、Date、RegExp、Error<br>
+        - ES6新增对象：Symbol、Map、Set、Promises、Proxy、Reflect<br>
+
+        <h4>**说几条写JavaScript的基本规范？**</h4>
+
+        - 代码缩进，建议使用“四个空格”缩进<br>
+        - 代码段使用花括号{}包裹<br>
+        - 语句结束使用分号;<br>
+        - 变量和函数在使用前进行声明<br>
+        - 以大写字母开头命名构造函数，全大写命名常量<br>
+        - 规范定义JSON对象，补全双引号<br>
+        - 用{}和[]声明对象和数组<br>
+
+        <h4>**如何编写高性能的JavaScript？**</h4>
+
+        * 遵循严格模式："use strict";<br>
+        * 将js脚本放在页面底部，加快渲染页面<br>
+        * 将js脚本将脚本成组打包，减少请求<br>
+        * 使用非阻塞方式下载js脚本<br>
+        * 尽量使用局部变量来保存全局变量<br>
+        * 尽量减少使用闭包<br>
+        * 使用 window 对象属性方法时，省略 window<br>
+        * 尽量减少对象成员嵌套<br>
+        * 缓存 DOM 节点的访问<br>
+        * 通过避免使用 eval() 和 Function() 构造器<br>
+        * 给 setTimeout() 和 setInterval() 传递函数而不是字符串作为参数<br>
+        * 尽量使用直接量创建对象和数组<br>
+        * 最小化重绘(repaint)和回流(reflow)<br>
+
+
+        <h4>**描述浏览器的渲染过程，DOM树和渲染树的区别？**</h4>
+
+        - 浏览器的渲染过程：<br>
+        - 解析HTML构建 DOM(DOM树)，并行请求 css/image/js<br>
+        - CSS 文件下载完成，开始构建 CSSOM(CSS树)<br>
+        - CSSOM 构建结束后，和 DOM 一起生成 Render Tree(渲染树)<br>
+        - 布局(Layout)：计算出每个节点在屏幕中的位置<br>
+        - 显示(Painting)：通过显卡把页面画到屏幕上<br>
+        <br>
+        - DOM树 和 渲染树 的区别：<br>
+        - DOM树与HTML标签一一对应，包括head和隐藏元素<br>
+        - 渲染树不包括head和隐藏元素，大段文本的每一个行都是独立节点，每一个节点都有对应的css属性<br>
+
+
+        <h4>**经常遇到的浏览器的JS兼容性有哪些？解决方法是什么？**</h4>
+
+        * 当前样式：getComputedStyle(el, null) VS el.currentStyle<br>
+        * 事件对象：e VS window.event<br>
+        * 鼠标坐标：e.pageX, e.pageY VS window.event.x, window.event.y<br>
+        * 按键码：e.which VS event.keyCode<br>
+        * 文本节点：el.textContent VS el.innerText<br>
+
+        <h4>**重绘和回流（重排）的区别和关系？**</h4>
+
+        - 重绘：当渲染树中的元素外观（如：颜色）发生改变，不影响布局时，产生重绘<br>
+        - 回流：当渲染树中的元素的布局（如：尺寸、位置、隐藏/状态状态）发生改变时，产生重绘回流<br>
+        - 注意：JS获取Layout属性值（如：offsetLeft、scrollTop、getComputedStyle等）也会引起回流。因为浏览器需要通过回流计算最新值<br>
+        - 回流必将引起重绘，而重绘不一定会引起回流<br>
+
+
+        <h4>**如何最小化重绘(repaint)和回流(reflow)？**</h4>
+
+        - 需要要对元素进行复杂的操作时，可以先隐藏(display:"none")，操作完成后再显示<br>
+        - 需要创建多个DOM节点时，使用DocumentFragment创建完后一次性的加入document<br>
+        - 缓存Layout属性值，如：var left = elem.offsetLeft; 这样，多次使用 left 只产生一次回流<br>
+        - 尽量避免用table布局（table元素一旦触发回流就会导致table里所有的其它元素回流）<br>
+        - 避免使用css表达式(expression)，因为每次调用都会重新计算值（包括加载页面）<br>
+        - 尽量使用 css 属性简写，如：用 border 代替 border-width, border-style, border-color<br>
+        - 批量修改元素样式：elem.className 和 elem.style.cssText 代替 elem.style.xxx<br>
+
+        <h4>**script 的位置是否会影响首屏显示时间？**</h4>
+
+        - 在解析 HTML 生成 DOM 过程中，js 文件的下载是并行的，不需要 DOM 处理到 script 节点。因此，script的位置不影响首屏显示的开始时间<br>
+        - 浏览器解析 HTML 是自上而下的线性过程，script作为 HTML 的一部分同样遵循这个原则<br>
+        - 因此，script 会延迟 DomContentLoad，只显示其上部分首屏内容，从而影响首屏显示的完成时间<br>
+
+        <h4>**解释JavaScript中的作用域与变量声明提升？**</h4>
+
+        - JavaScript作用域：<br>
+        - 在Java、C等语言中，作用域为for语句、if语句或{}内的一块区域，称为作用域；<br>
+        - 而在 JavaScript 中，作用域为function(){}内的区域，称为函数作用域。<br>
+        <br>
+        - JavaScript变量声明提升：<br>
+        -  在JavaScript中，函数声明与变量声明经常被JavaScript引擎隐式地提升到当前作用域的顶部<br>
+        -  声明语句中的赋值部分并不会被提升，只有名称被提升<br>
+        -  函数声明的优先级高于变量，如果变量名跟函数名相同且未赋值，则函数声明会覆盖变量声明<br>
+        -  如果函数有多个同名参数，那么最后一个参数（即使没有定义）会覆盖前面的同名参数<br>
+
+        <h4>**介绍JavaScript的原型，原型链？有什么特点？**</h4>
+
+        - 原型：<br>
+        - JavaScript的所有对象中都包含了一个 [__proto__] 内部属性，这个属性所对应的就是该对象的原型<br>
+        - JavaScript的函数对象，除了原型 [__proto__] 之外，还预置了 prototype 属性<br>
+        - 当函数对象作为构造函数创建实例时，该 prototype 属性值将被作为实例对象的原型 [__proto__]<br>
+        <br>
+        - 原型链：<br>
+        -  当一个对象调用的属性/方法自身不存在时，就会去自己 [__proto__] 关联的前辈 prototype 对象上去找<br>
+        -  如果没找到，就会去该 prototype 原型 [__proto__] 关联的前辈 prototype 去找。依次类推，直到找到属性/方法或 undefined 为止。从而形成了所谓的“原型链”<br>
+
+        <br>
+        - 原型特点：<br>
+        - JavaScript对象是通过引用来传递的，当修改原型时，与之相关的对象也会继承这一改变<br>
+
+
+        <h4>**JavaScript有几种类型的值？，你能画一下他们的内存图吗**</h4>
+
+        - 原始数据类型（Undefined，Null，Boolean，Number、String）-- 栈<br>
+        - 引用数据类型（对象、数组和函数）-- 堆<br>
+        - 两种类型的区别是：存储位置不同：<br>
+        - 原始数据类型是直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据；<br>
+        - 引用数据类型存储在堆(heap)中的对象，占据空间大、大小不固定，如果存储在栈中，将会影响程序运行的性能；<br>
+        - 引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址<br>
+        - 当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体<br>
+
+        <h4>**JavaScript如何实现一个类，怎么实例化这个类？**</h4>
+
+        - 构造函数法（this + prototype） -- 用 new 关键字 生成实例对象<br>
+        - 缺点：用到了 this 和 prototype，编写复杂，可读性差<br>
+
+       <xmp>
+        function Mobile(name, price){
+        this.name = name;
+        this.price = price;
+        }
+        Mobile.prototype.sell = function(){
+        alert(this.name + "，售价 $" + this.price);
+        }
+        var iPhone7 = new Mobile("iPhone7", 1000);
+        iPhone7.sell();
+       </xmp>
+        - Object.create 法 -- 用 Object.create() 生成实例对象<br>
+        - 缺点：不能实现私有属性和私有方法，实例对象之间也不能共享数据<br>
+
+        <xmp>
+        var Person = {
+        firstname: "Mark",
+        lastname: "Yun",
+        age: 25,
+        introduce: function(){
+        alert('I am ' + Person.firstname + ' ' + Person.lastname);
+        }
+        };
+
+        var person = Object.create(Person);
+        person.introduce();
+
+        // Object.create 要求 IE9+，低版本浏览器可以自行部署：
+        if (!Object.create) {
+        　   Object.create = function (o) {
+        　　　 function F() {}
+        　　　 F.prototype = o;
+        　　　 return new F();
+        　　};
+        　}
+        </xmp>
+        - 极简主义法（消除 this 和 prototype） -- 调用 createNew() 得到实例对象<br>
+        - 优点：容易理解，结构清晰优雅，符合传统的"面向对象编程"的构造<br>
+
+        <xmp>
+        var Cat = {
+        age: 3, // 共享数据 -- 定义在类对象内，createNew() 外
+        createNew: function () {
+        var cat = {};
+        // var cat = Animal.createNew(); // 继承 Animal 类
+        cat.name = "小咪";
+        var sound = "喵喵喵"; // 私有属性--定义在 createNew() 内，输出对象外
+        cat.makeSound = function () {
+        alert(sound);  // 暴露私有属性
+        };
+        cat.changeAge = function(num){
+        Cat.age = num; // 修改共享数据
+        };
+        return cat; // 输出对象
+        }
+        };
+
+        var cat = Cat.createNew();
+        cat.makeSound();
+        </xmp>
+
+        - ES6 语法糖 class -- 用 new 关键字 生成实例对象<br>
+
+       <xmp>
+        class Point {
+        constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        }
+        toString() {
+        return '(' + this.x + ', ' + this.y + ')';
+        }
+        }
+
+           var point = new Point(2, 3);
+       </xmp>
+
+        <h4>**Javascript如何实现继承？**</h4>
+
+        - 构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上<br>
+
+
+        <xmp>
+        function Cat(name,color){
+        　Animal.apply(this, arguments);
+        　this.name = name;
+        　this.color = color;
+        }
+        </xmp>
+        - 实例继承：将子对象的 prototype 指向父对象的一个实例<br>
+
+        <xmp>
+        Cat.prototype = new Animal();
+        Cat.prototype.constructor = Cat;
+        </xmp>
+
+        - 拷贝继承：如果把父对象的所有属性和方法，拷贝进子对象<br>
+
+        <xmp>
+        function extend(Child, Parent) {
+        　　　var p = Parent.prototype;
+        　　　var c = Child.prototype;
+        　　　for (var i in p) {
+        　　　   c[i] = p[i];
+        　　　}
+        　　　c.uber = p;
+        　 }
+        </xmp>         　　
+        - 原型继承：将子对象的 prototype 指向父对象的 prototype<br>
+
+        <xmp>
+        function extend(Child, Parent) {
+        var F = function(){};
+        　F.prototype = Parent.prototype;
+        　Child.prototype = new F();
+        　Child.prototype.constructor = Child;
+        　Child.uber = Parent.prototype;
+        }
+        </xmp>
+        - ES6 语法糖 extends：class ColorPoint extends Point {}<br>
+
+        <xmp>
+        class ColorPoint extends Point {
+        constructor(x, y, color) {
+        super(x, y); // 调用父类的constructor(x, y)
+        this.color = color;
+        }
+        toString() {
+        return this.color + ' ' + super.toString(); // 调用父类的toString()
+        }
+        }
+        </xmp>
+
+
+        <h4>**Javascript作用链域?**</h4>
+
+        - 全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节<br>
+        - 如果当前作用域没有找到属性或方法，会向上层作用域查找，直至全局函数，这种形式就是作用域链<br>
+
+        <h4>**谈谈this对象的理解**</h4>
+
+        - this 总是指向函数的直接调用者<br>
+        - 如果有 new 关键字，this 指向 new 出来的实例对象<br>
+        - 在事件中，this指向触发这个事件的对象<br>
+        - IE下 attachEvent 中的this总是指向全局对象Window<br>
+
+        <h4>**eval是做什么的？**</h4>
+
+        **eval的功能是把对应的字符串解析成JS代码并运行**<br>
+
+        - 应该避免使用eval，不安全，非常耗性能（先解析成js语句，再执行）<br>
+        - 由JSON字符串转换为JSON对象的时候可以用 eval('('+ str +')');<br>
+
+        <h4>**什么是 Window 对象? 什么是 Document 对象?**</h4>
+
+        - Window 对象表示当前浏览器的窗口，是JavaScript的顶级对象<br>
+        - 我们创建的所有对象、函数、变量都是 Window 对象的成员<br>
+        - Window 对象的方法和属性是在全局范围内有效的<br>
+        - Document 对象是 HTML 文档的根节点与所有其他节点（元素节点，文本节点，属性节点, 注释节点）<br>
+        -  Document 对象使我们可以通过脚本对 HTML 页面中的所有元素进行访问<br>
+        -  Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问<br>
+
+        <h4>**介绍 DOM 的发展**</h4>
+
+        - DOM：文档对象模型（Document Object Model），定义了访问HTML和XML文档的标准，与编程语言及平台无关<br>
+        - DOM0：提供了查询和操作Web文档的内容API。未形成标准，实现混乱。如：document.forms['login']<br>
+        - DOM1：W3C提出标准化的DOM，简化了对文档中任意部分的访问和操作。如：JavaScript中的Document对象<br>
+        - DOM2：原来DOM基础上扩充了鼠标事件等细分模块，增加了对CSS的支持。如：getComputedStyle(elem, pseudo)<br>
+        - DOM3：增加了XPath模块和加载与保存（Load and Save）模块。如：XPathEvaluator<br>
+
+        <h4>**介绍DOM0，DOM2，DOM3事件处理方式区别**</h4>
+
+        - DOM0级事件处理方式：<br>
+        - `btn.onclick = func;`<br>
+        - `btn.onclick = null;`<br>
+        <br>
+        - DOM2级事件处理方式：<br>
+        - `btn.addEventListener('click', func, false);`<br>
+        - `btn.removeEventListener('click', func, false);`<br>
+        - `btn.attachEvent("onclick", func);`<br>
+        - `btn.detachEvent("onclick", func);`<br>
+        <br>
+        - DOM3级事件处理方式：<br>
+        - `eventUtil.addListener(input, "textInput", func);`<br>
+        -  `eventUtil` 是自定义对象，`textInput` 是DOM3级事件<br>
+
+        <h4>**事件的三个阶段**</h4>
+
+        - 捕获、目标、冒泡<br>
+
+        <h4>**介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？**</h4>
+
+        - 按照W3C标准的事件：首是进入捕获阶段，直到达到目标元素，再进入冒泡阶段<br>
+        - 事件执行次数（DOM2-addEventListener）：元素上绑定事件的个数<br>
+        - 注意1：前提是事件被确实触发<br>
+        - 注意2：事件绑定几次就算几个事件，即使类型和功能完全一样也不会“覆盖”<br>
+        - 事件执行顺序：判断的关键是否目标元素<br>
+        - 非目标元素：根据W3C的标准执行：捕获->目标元素->冒泡（不依据事件绑定顺序）<br>
+        - 目标元素：依据事件绑定顺序：先绑定的事件先执行（不依据捕获冒泡标准）<br>
+        - 最终顺序：父元素捕获->目标元素事件1->目标元素事件2->子元素捕获->子元素冒泡->父元素冒泡<br>
+        - 注意：子元素事件执行前提    事件确实“落”到子元素布局区域上，而不是简单的具有嵌套关系<br>
+
+        <h4>**在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？**</h4>
+
+        * 该DOM上的事件如果被触发，会执行两次（执行次数等于绑定次数）<br>
+        * 如果该DOM是目标元素，则按事件绑定顺序执行，不区分冒泡/捕获<br>
+        * 如果该DOM是处于事件流中的非目标元素，则先执行捕获，后执行冒泡<br>
+
+
+        <h4>**事件的代理/委托**</h4>
+
+        * 事件委托是指将事件绑定目标元素的到父元素上，利用冒泡机制触发该事件<br>
+        * 优点：<br>
+        - 可以减少事件注册，节省大量内存占用<br>
+        - 可以将事件应用于动态添加的子元素上<br>
+        * 缺点：<br>
+        使用不当会造成事件在不应该触发时触发<br>
+        * 示例：<br>
+
+       <xmp>
+        ulEl.addEventListener('click', function(e){
+        var target = event.target || event.srcElement;
+        if(!!target && target.nodeName.toUpperCase() === "LI"){
+        console.log(target.innerHTML);
+        }
+        }, false);
+       </xmp>
+
+        <h4>**IE与火狐的事件机制有什么区别？ 如何阻止冒泡？**</h4>
+
+        * IE只事件冒泡，不支持事件捕获；火狐同时支持件冒泡和事件捕获<br>
+
+        <h4>**IE的事件处理和W3C的事件处理有哪些区别？**</h4>
+
+        * 绑定事件<br>
+        - W3C: targetEl.addEventListener('click', handler, false);<br>
+        - IE: targetEl.attachEvent('onclick', handler);<br>
+
+        * 删除事件<br>
+        - W3C: targetEl.removeEventListener('click', handler, false);<br>
+        - IE: targetEl.detachEvent(event, handler);<br>
+
+        * 事件对象<br>
+        - W3C: var e = arguments.callee.caller.arguments[0]<br>
+        - IE: window.event<br>
+
+        * 事件目标<br>
+        - W3C: e.target<br>
+        - IE: window.event.srcElement<br>
+
+        * 阻止事件默认行为<br>
+        - W3C: window.event.cancelBubble = true<br>
+        - IE: window.event.returnValue = false<br>
+
+        * 阻止事件传播<br>
+        - W3C: e.stopPropagation()<br>
+        - IE: window.event<br>
+
+
+        <h4>**W3C事件的 target 与 currentTarget 的区别？**</h4>
+
+        * target 只会出现在事件流的目标阶段<br>
+        * currentTarget 可能出现在事件流的任何阶段<br>
+        * 当事件流处在目标阶段时，二者的指向相同<br>
+        * 当事件流处于捕获或冒泡阶段时：currentTarget 指向当前事件活动的对象(一般为父级)<br>
+
+        <h4>**如何派发事件(dispatchEvent)？（如何进行事件广播？）**</h4>
+
+        * W3C: 使用 dispatchEvent 方法<br>
+        * IE: 使用 fireEvent 方法<br>
+
+        <xmp>
+        var fireEvent = function(element, event){
+        if (document.createEventObject){
+        var mockEvent = document.createEventObject();
+        return element.fireEvent('on' + event, mockEvent)
+        }else{
+        var mockEvent = document.createEvent('HTMLEvents');
+        mockEvent.initEvent(event, true, true);
+        return !element.dispatchEvent(mockEvent);
+        }
+        }
+        </xmp>
+
+        <h4>**什么是函数节流？介绍一下应用场景和原理？**</h4>
+
+
+        * 函数节流(throttle)是指阻止一个函数在很短时间间隔内连续调用<br>
+        只有当上一次函数执行后达到规定的时间间隔，才能进行下一次调用<br>
+        但要保证一个累计最小调用间隔（否则拖拽类的节流都将无连续效果）<br>
+
+        * 函数节流用于 onresize, onscroll 等短时间内会多次触发的事件<br>
+
+        * 函数节流的原理：使用定时器做时间节流<br>
+        当触发一个事件时，先用 setTimout 让这个事件延迟一小段时间再执行<br>
+        如果在这个时间间隔内又触发了事件，就 clearTimeout 原来的定时器<br>
+        再 setTimeout 一个新的定时器重复以上流程<br>
+
+        * 函数节流简单实现：<br>
+
+        <xmp>
+        function throttle(method, context) {
+        clearTimeout(methor.tId);
+        method.tId = setTimeout(function(){
+        method.call(context);
+        }， 100); // 两次调用至少间隔 100ms
+        }
+        // 调用
+        window.onresize = function(){
+        throttle(myFunc, window);
+        }
+        </xmp>
+
+
+        <h4>**区分什么是“客户区坐标”、“页面坐标”、“屏幕坐标”？**</h4>
+
+        * 客户区坐标：鼠标指针在可视区中的水平坐标(clientX)和垂直坐标(clientY)<br>
+        * 页面坐标：鼠标指针在页面布局中的水平坐标(pageX)和垂直坐标(pageY)<br>
+        * 屏幕坐标：设备物理屏幕的水平坐标(screenX)和垂直坐标(screenY)<br>
+
+        <h4>**如何获得一个DOM元素的绝对位置？**</h4>
+
+        * elem.offsetLeft：返回元素相对于其定位父级左侧的距离<br>
+        * elem.offsetTop：返回元素相对于其定位父级顶部的距离<br>
+        * elem.getBoundingClientRect()：返回一个DOMRect对象，包含一组描述边框的只读属性，单位像素<br>
+
+        <h4>**分析 ['1', '2', '3'].map(parseInt) 答案是多少？**</h4>
+
+        - 答案:[1, NaN, NaN]<br>
+        * parseInt(string, radix) 第2个参数 radix 表示进制。省略 radix 或 radix = 0，则数字将以十进制解析<br>
+        * map 每次为 parseInt 传3个参数(elem, index, array)，其中 index 为数组索引<br>
+        * 因此，map 遍历 ["1", "2", "3"]，相应 parseInt 接收参数如下<br>
+
+        <xmp>
+        parseInt('1', 0);  // 1
+        parseInt('2', 1);  // NaN
+        parseInt('3', 2);  // NaN
+        </xmp>
+        -  所以，parseInt 参数 radix 不合法，导致返回值为 NaN<br>
+
+        <h4>**new 操作符具体干了什么？**</h4>
+
+        - 创建实例对象，this 变量引用该对象，同时还继承了构造函数的原型<br>
+        - 属性和方法被加入到 this 引用的对象中<br>
+        - 新创建的对象由 this 所引用，并且最后隐式的返回 this<br>
+
+        <h4>**用原生JavaScript的实现过什么功能吗？**</h4>
+
+        - 封装选择器、调用第三方API、设置和获取样式<br>
+
+        <h4>**解释一下这段代码的意思吗？**</h4>
+
+        <xmp>
+        [].forEach.call($$("*"), function(el){
+        el.style.outline = "1px solid #" + (~~(Math.random()*(1<<24))).toString(16);
+        })
+        ```
+        - 解释：获取页面所有的元素，遍历这些元素，为它们添加1像素随机颜色的轮廓(outline)
+        - 1. `$$(sel)` // $$函数被许多现代浏览器命令行支持，等价于 document.querySelectorAll(sel)
+        - 2. `[].forEach.call(NodeLists)` // 使用 call 函数将数组遍历函数 forEach 应到节点元素列表
+        - 3. `el.style.outline = "1px solid #333"` // 样式 outline 位于盒模型之外，不影响元素布局位置
+        - 4. `(1<<24)` // parseInt("ffffff", 16) == 16777215 == 2^24 - 1 // 1<<24 == 2^24 == 16777216
+        - 5. `Math.random()*(1<<24)` // 表示一个位于 0 到 16777216 之间的随机浮点数
+        - 6. `~~Math.random()*(1<<24)` // `~~` 作用相当于 parseInt 取整
+        - 7. `(~~(Math.random()*(1<<24))).toString(16)` // 转换为一个十六进制-
+        </xmp>
+
+        <h4>** JavaScript实现异步编程的方法？**</h4>
+
+        * 回调函数<br>
+        * 事件监听<br>
+        * 发布/订阅<br>
+        * Promises对象<br>
+        * Async函数[ES7]<br>
+
+        <h4>**web开发中会话跟踪的方法有哪些**</h4>
+
+        - cookie<br>
+        - session<br>
+        - url重写<br>
+        - 隐藏input<br>
+        - ip地址<br>
+
+        <h4>**介绍js的基本数据类型**</h4>
+
+        - Undefined、Null、Boolean、Number、String<br>
+
+        <h4>**介绍js有哪些内置对象？**</h4>
+
+        - Object 是 JavaScript 中所有对象的父对象<br>
+        - 数据封装类对象：Object、Array、Boolean、Number 和 String<br>
+        - 其他对象：Function、Arguments、Math、Date、RegExp、Error<br>
+
+
+        <h4>**说几条写JavaScript的基本规范？**</h4>
+
+        - 不要在同一行声明多个变量<br>
+        - 请使用 ===/!==来比较true/false或者数值<br>
+        - 使用对象字面量替代new Array这种形式<br>
+        - 不要使用全局函数<br>
+        - Switch语句必须带有default分支<br>
+        - 函数不应该有时候有返回值，有时候没有返回值<br>
+        - If语句必须使用大括号<br>
+        - for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污<br>
+
+        <h4>**JavaScript原型，原型链 ? 有什么特点？**</h4>
+
+        - 每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时<br>
+        - 如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念<br>
+        - 关系：`instance.constructor.prototype = instance.__proto__`<br>
+        - 特点：<br>
+        - JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。<br>
+
+        -  当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的<br>
+        -  就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象<br>
+
+        <h4>**JavaScript有几种类型的值？，你能画一下他们的内存图吗？**</h4>
+
+        - 栈：原始数据类型（Undefined，Null，Boolean，Number、String）<br>
+        - 堆：引用数据类型（对象、数组和函数）<br>
+
+        - 两种类型的区别是：存储位置不同；<br>
+        - 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；<br>
+        - 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其<br>
+        - 在栈中的地址，取得地址后从堆中获得实体<br>
+
+
+
+        <h4>**Javascript如何实现继承？**</h4>
+
+        - 构造继承<br>
+        - 原型继承<br>
+        - 实例继承<br>
+        - 拷贝继承<br>
+
+        - 原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式<br>
+
+       <xmp>
+        function Parent(){
+        this.name = 'wang';
+        }
+
+        function Child(){
+        this.age = 28;
+        }
+        Child.prototype = new Parent();//继承了Parent，通过原型
+
+        var demo = new Child();
+        alert(demo.age);
+        alert(demo.name);//得到被继承的属性
+        }
+       </xmp>
+
+        <h4>**javascript创建对象的几种方式？**</h4>
+
+        javascript创建对象简单的说,无非就是使用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用<br>
+
+        - 对象字面量的方式<br>
+
+        <xmp>
+        person={firstname:"Mark",lastname:"Yun",age:25,eyecolor:"black"};
+        ```
+
+        - 用function来模拟无参的构造函数
+
+        ```
+        function Person(){}
+        var person=new Person();//定义一个function，如果使用new"实例化",该function可以看作是一个Class
+        person.name="Mark";
+        person.age="25";
+        person.work=function(){
+        alert(person.name+" hello...");
+        }
+        person.work();
+        ```
+
+        - 用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）
+
+        ```
+        function Pet(name,age,hobby){
+        this.name=name;//this作用域：当前对象
+        this.age=age;
+        this.hobby=hobby;
+        this.eat=function(){
+        alert("我叫"+this.name+",我喜欢"+this.hobby+",是个程序员");
+        }
+        }
+        var maidou =new Pet("麦兜",25,"coding");//实例化、创建对象
+        maidou.eat();//调用eat方法
+        ```
+
+        - 用工厂方式来创建（内置对象）
+
+        ```
+        var wcDog =new Object();
+        wcDog.name="旺财";
+        wcDog.age=3;
+        wcDog.work=function(){
+        alert("我是"+wcDog.name+",汪汪汪......");
+        }
+        wcDog.work();
+        ```
+
+        - 用原型方式来创建
+
+        ```
+        function Dog(){
+
+        }
+        Dog.prototype.name="旺财";
+        Dog.prototype.eat=function(){
+        alert(this.name+"是个吃货");
+        }
+        var wangcai =new Dog();
+        wangcai.eat();
+
+        ```
+
+        - 用混合方式来创建
+
+        ```
+        function Car(name,price){
+        this.name=name;
+        this.price=price;
+        }
+        Car.prototype.sell=function(){
+        alert("我是"+this.name+"，我现在卖"+this.price+"万元");
+        }
+        var camry =new Car("凯美瑞",27);
+        camry.sell();
+        </xmp>
+
+        <h4>**Javascript作用链域?**</h4>
+
+        - 全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节<br>
+        - 当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找<br>
+        - 直至全局函数，这种组织形式就是作用域链<br>
+
+        <h4>**谈谈This对象的理解**</h4>
+
+        - this总是指向函数的直接调用者（而非间接调用者）<br>
+        - 如果有new关键字，this指向new出来的那个对象<br>
+        - 在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window<br>
+
+
+        <h4>**eval是做什么的？**</h4>
+
+        - 它的功能是把对应的字符串解析成JS代码并运行
+        - 应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）
+        - 由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')')
+
+        <h4>**null，undefined 的区别？**</h4>
+
+        - undefined   表示不存在这个值。<br>
+        - undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined<br>
+        - 例如变量被声明了，但没有赋值时，就等于undefined<br>
+
+        - null 表示一个对象被定义了，值为“空值”<br>
+        - null : 是一个对象(空对象, 没有任何属性和方法)<br>
+        - 例如作为函数的参数，表示该函数的参数不是对象；<br>
+
+        -  在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined<br>
+
+        <h4>**写一个通用的事件侦听器函数**</h4>
+
+        <xmp>
+        // event(事件)工具集，来源：github.com/markyun
+        markyun.Event = {
+        // 页面加载完成后
+        readyEvent : function(fn) {
+        if (fn==null) {
+        fn=document;
+        }
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+        window.onload = fn;
+        } else {
+        window.onload = function() {
+        oldonload();
+        fn();
+        };
+        }
+        },
+        // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+        // 参数： 操作的元素,事件名称 ,事件处理程序
+        addEvent : function(element, type, handler) {
+        if (element.addEventListener) {
+        //事件类型、需要执行的函数、是否捕捉
+        element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+        element.attachEvent('on' + type, function() {
+        handler.call(element);
+        });
+        } else {
+        element['on' + type] = handler;
+        }
+        },
+        // 移除事件
+        removeEvent : function(element, type, handler) {
+        if (element.removeEventListener) {
+        element.removeEventListener(type, handler, false);
+        } else if (element.datachEvent) {
+        element.detachEvent('on' + type, handler);
+        } else {
+        element['on' + type] = null;
+        }
+        },
+        // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+        stopPropagation : function(ev) {
+        if (ev.stopPropagation) {
+        ev.stopPropagation();
+        } else {
+        ev.cancelBubble = true;
+        }
+        },
+        // 取消事件的默认行为
+        preventDefault : function(event) {
+        if (event.preventDefault) {
+        event.preventDefault();
+        } else {
+        event.returnValue = false;
+        }
+        },
+        // 获取事件目标
+        getTarget : function(event) {
+        return event.target || event.srcElement;
+        },
+        // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+        getEvent : function(e) {
+        var ev = e || window.event;
+        if (!ev) {
+        var c = this.getEvent.caller;
+        while (c) {
+        ev = c.arguments[0];
+        if (ev && Event == ev.constructor) {
+        break;
+        }
+        c = c.caller;
+        }
+        }
+        return ev;
+        }
+        };
+        </xmp>
+
+        <h4>**["1", "2", "3"].map(parseInt) 答案是多少？**</h4>
+
+        -  [1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，其中 radix 表示解析时用的基数。<br>
+        -  map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。<br>
+
+        <h4>**事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？**</h4>
+
+        - 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为<br>
+        - 事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件<br>
+        - ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）<br>
+
+        <h4>**什么是闭包（closure），为什么要用它？**</h4>
+
+        - 闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域<br>
+
+        - 闭包的特性：<br>
+        - 函数内再嵌套函数<br>
+        - 内部函数可以引用外层的参数和变量<br>
+        - 参数和变量不会被垃圾回收机制回收<br>
+
+
+
+        <h4>**javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？**</h4><br>
+
+        - use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为<br><br>
+
+        <h4>**如何判断一个对象是否属于某个类？**</h4>
+
+
+        // 使用instanceof （待完善）<br>
+        if(a instanceof Person){<br>
+        alert('yes');<br>
+        }
+
+
+        <h4>**new操作符具体干了什么呢?**</h4>
+
+        - 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型<br>
+        - 属性和方法被加入到 this 引用的对象中<br>
+        - 新创建的对象由 this 所引用，并且最后隐式的返回 this<br>
+
+        <xmp>
+        var obj  = {};
+        obj.__proto__ = Base.prototype;
+        Base.call(obj);
+        </xmp>
+
+
+
+        <h4>**js延迟加载的方式有哪些？**</h4>
+
+        - defer和async、动态创建DOM方式（用得最多）、按需异步载入js<br>
+
+        <h4>**Ajax 是什么? 如何创建一个Ajax？**</h4>
+
+        > ajax的全称：Asynchronous Javascript And XML<br>
+
+        - 异步传输+js+xml<br>
+        - 所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验
+
+        - 创建XMLHttpRequest对象,也就是创建一个异步调用对象
+        - 建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息
+        - 设置响应HTTP请求状态变化的函数
+        - 发送HTTP请求
+        - 获取异步调用返回的数据
+        - 用JavaScript和DOM实现局部刷新
+
+        <h4>**同步和异步的区别?**</h4>
+
+        - 同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作<br>
+        - 异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容<br>
+
+        <h4>**异步加载JS的方式有哪些？**</h4>
+
+        - defer，只支持IE<br>
+        - async：<br>
+        - 创建script，插入到DOM中，加载完毕后callBack<br>
+
+
+        **documen.write和 innerHTML的区别**
+
+        - document.write只能重绘整个页面
+        - innerHTML可以重绘页面的一部分
+
+
+        <h4>**DOM操作——怎样添加、移除、移动、复制、创建和查找节点?**</h4>
+
+        - （1）创建新节点<br>
+        - createDocumentFragment() //创建一个DOM片段<br>
+        - createElement()   //创建一个具体的元素<br>
+        - createTextNode()   //创建一个文本节点<br>
+        - （2）添加、移除、替换、插入<br>
+        - appendChild()<br>
+        - removeChild()<br>
+        - replaceChild()<br>
+        - insertBefore() //在已有的子节点前插入一个新的子节点<br>
+        - （3）查找<br>
+        - getElementsByTagName()    //通过标签名称<br>
+        - getElementsByName()    // 通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)<br>
+        - getElementById()    //通过元素Id，唯一性<br>
+
+        <h4>**那些操作会造成内存泄漏？**</h4>
+
+        - 内存泄漏指任何对象在您不再拥有或需要它之后仍然存在<br>
+        - 垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收<br>
+        - setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏<br>
+        - 闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）<br>
+
+        <h4>**渐进增强和优雅降级**</h4>
+
+        - 渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验<br>
+        - 优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容<br>
+
+        <h4>**Javascript垃圾回收方法**</h4>
+
+        - 标记清除（mark and sweep）<br>
+
+        > - 这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”
+        > - 垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了<br>
+
+        **引用计数(reference counting)**
+
+        > 在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间<br>
+
+        <h4>**js继承方式及其优缺点**</h4>
+
+        - 原型链继承的缺点<br>
+        - 一是字面量重写原型会中断关系，使用引用类型的原型，并且子类型还无法给超类型传递参数。<br>
+
+        - 借用构造函数（类式继承）<br>
+        - 借用构造函数虽然解决了刚才两种问题，但没有原型，则复用无从谈起。所以我们需要原型链+借用构造函数的模式，这种模式称为组合继承<br>
+
+        - 组合式继承<br>
+        - 组合式继承是比较常用的一种继承方法，其背后的思路是使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数复用，又保证每个实例都有它自己的属性<br>
+
+        <h4>**defer和async**</h4>
+
+        - defer并行加载js文件，会按照页面上script标签的顺序执行async并行加载js文件，下载完成立即执行，不会按照页面上script标签的顺序执行<br>
+
+        <h4>**用过哪些设计模式？**</h4>
+
+        - 工厂模式：<br>
+        - 主要好处就是可以消除对象间的耦合，通过使用工程方法而不是new关键字。将所有实例化的代码集中在一个位置防止代码重复<br>
+        - 工厂模式解决了重复实例化的问题 ，但还有一个问题,那就是识别问题，因为根本无法 搞清楚他们到底是哪个对象的实例<br>
+        <xmp>
+        function createObject(name,age,profession){//集中实例化的函数var obj = new Object();
+        obj.name = name;
+        obj.age = age;
+        obj.profession = profession;
+        obj.move = function () {
+        return this.name + ' at ' + this.age + ' engaged in ' + this.profession;
+        };
+        return obj;
+        }
+        var test1 = createObject('trigkit4',22,'programmer');//第一个实例var test2 = createObject('mike',25,'engineer');//第二个实例
+        </xmp>
+
+        - 构造函数模式<br>
+        - 使用构造函数的方法 ，即解决了重复实例化的问题 ，又解决了对象识别的问题，该模式与工厂模式的不同之处在于<br>
+
+        - 构造函数方法没有显示的创建对象 (new Object());<br>
+
+        - 直接将属性和方法赋值给 this 对象;<br>
+
+        - 没有 renturn 语句<br>
+
+        <h4>**说说你对闭包的理解**</h4>
+
+        - 使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念<br>
+
+        - 闭包有三个特性：<br>
+        - 1.函数嵌套函数<br>
+
+        - 2.函数内部可以引用外部的参数和变量<br>
+
+        - 3.参数和变量不会被垃圾回收机制回收<br>
+
+        <h4>**请解释一下 JavaScript 的同源策略**</h4>
+
+        - 概念:同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议<br>
+        - 指一段脚本只能读取来自同一来源的窗口和文档的属性<br>
+
+        <h4>**为什么要有同源限制？**</h4>
+
+        - 我们举例说明：比如一个黑客程序，他利用Iframe把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过Javascript读取到你的表单中input中的内容，这样用户名，密码就轻松到手了<br>
+        - 缺点<br>
+        - 现在网站的JS都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节<br>
+
+        <h4>**实现一个函数clone，可以对JavaScript中的5种主要的数据类型（包括Number、String、Object、Array、Boolean）进行值复制**</h4>
+
+        <xmp>
+        Object.prototype.clone = function(){
+
+        var o = this.constructor === Array ? [] : {};
+
+        for(var e in this){
+
+        o[e] = typeof this[e] === "object" ? this[e].clone() : this[e];
+
+        }
+
+        return o;
+        }
+
+        </xmp>
+
+        <h4>**说说严格模式的限制**</h4>
+
+        - 严格模式主要有以下限制：<br>
+
+        - 变量必须声明后再使用<br>
+
+        - 函数的参数不能有同名属性，否则报错<br>
+
+        - 不能使用with语句<br>
+
+        - 不能对只读属性赋值，否则报错<br>
+
+        - 不能使用前缀0表示八进制数，否则报错<br>
+
+        - 不能删除不可删除的属性，否则报错<br>
+
+        - 不能删除变量delete prop，会报错，只能删除属性delete global[prop]<br>
+
+        - eval不会在它的外层作用域引入变量<br>
+
+        - eval和arguments不能被重新赋值<br>
+
+        - arguments不会自动反映函数参数的变化<br>
+
+        - 不能使用arguments.callee<br>
+
+        - 不能使用arguments.caller<br>
+
+        - 禁止this指向全局对象<br>
+
+        - 不能使用fn.caller和fn.arguments获取函数调用的堆栈<br>
+
+        - 增加了保留字（比如protected、static和interface）<br>
+
+        <h4>**如何删除一个cookie**</h4>
+
+        - 将时间设为当前时间往前一点<br>
+
+        <xmp>
+        var date = new Date();
+
+        date.setDate(date.getDate() - 1);//真正的删除
+        ```
+        setDate()方法用于设置一个月的某一天
+
+        - expires的设置
+
+        ```
+        document.cookie = 'user='+ encodeURIComponent('name')  + ';expires = ' + new Date(0)
+        ```
+        </xmp>
+
+        <h4>**编写一个方法 求一个字符串的字节长度**</h4>
+
+        - 假设：一个英文字符占用一个字节，一个中文字符占用两个字节<br>
+
+        <xmp>
+            function GetBytes(str){
+            var len = str.length;
+            var bytes = len;
+            for(var i=0; i< len; i++){
+            if (str.charCodeAt(i) > 255) bytes++;
+
+            }
+            return bytes;
+
+            }
+
+            alert(GetBytes("你好,as"));
+
+        </xmp>
+
+        <h4>**请解释什么是事件代理**</h4>
+
+        - 事件代理（Event Delegation），又称之为事件委托。是 JavaScript 中常用绑定事件的常用技巧。顾名思义，“事件代理”即是把原本需要绑定的事件委托给父元素，让父元素担当事件监听的职务。事件代理的原理是DOM元素的事件冒泡。使用事件代理的好处是可以提高性能<br>
+
+        <h4>**attribute和property的区别是什么？**</h4>
+
+        - attribute是dom元素在文档中作为html标签拥有的属性<br>
+        - property就是dom元素在js中作为对象拥有的属性<br>
+
+        - 对于html的标准属性来说，attribute和property是同步的，是会自动更新的<br>
+        - 但是对于自定义的属性来说，他们是不同步的<br>
+
+        <h4>**页面编码和被请求的资源编码如果不一致如何处理？**</h4>
+
+        * 后端响应头设置 charset<br>
+        * 前端页面`&ltmeta&gt`设置 charset<br>
+        <h4>**把`&ltscript&gt`放在`&lt/body&gt`之前和之后有什么区别？浏览器会如何解析它们？**</h4>
+
+         * 按照HTML标准，在`&lt/body&gt`结束后出现`&ltscript&gt`或任何元素的开始标签，都是解析错误<br>
+         * 虽然不符合HTML标准，但浏览器会自动容错，使实际效果与写在`&lt/body&gt之前没有区别<br>
+         * 浏览器的容错机制会忽略&ltscript&gt之前的`&lt/body&gt`，视作`&ltscript&gt仍在 body 体内。省略`&lt/body&gt`和`&lt/html&gt`闭合标签符合HTML标准，服务器可以利用这一标准尽可能少输出内容<br>
+
+        <h4>**延迟加载JS的方式有哪些？**</h4>
+
+        * 设置`&ltscript&gt`属性 defer="defer" （脚本将在页面完成解析时执行）<br>
+        * 动态创建 script DOM：document.createElement('script')<br>
+        * XmlHttpRequest 脚本注入<br>
+        * 延迟加载工具 LazyLoad<br>
+
+        <h4>**异步加载JS的方式有哪些？**</h4>
+
+        * 设置`&ltscript&gt属性 async="async" （一旦脚本可用，则会异步执行）<br>
+        * 动态创建 script DOM：document.createElement('script')<br>
+        * XmlHttpRequest 脚本注入<br>
+        * 异步加载库 LABjs<br>
+        * 模块加载器 Sea.js<br>
+
+        <h4>**JavaScript 中，调用函数有哪几种方式？**</h4>
+
+        * 方法调用模式          Foo.foo(arg1, arg2);<br>
+        * 函数调用模式          foo(arg1, arg2);<br>
+        * 构造器调用模式        (new Foo())(arg1, arg2)<br>
+        * call/applay调用模式   Foo.foo.call(that, arg1, arg2)<br>
+        * bind调用模式          Foo.foo.bind(that)(arg1, arg2)()<br>
+
+
+        <h4>**简单实现 Function.bind 函数？**</h4>
+
+        <xmp>
+            if (!Function.prototype.bind) {
+                Function.prototype.bind = function(that) {
+                    var func = this, args = arguments;
+                    return function() {
+                        return func.apply(that, Array.prototype.slice.call(args, 1));
+                    }
+                }
+            }
+            // 只支持 bind 阶段的默认参数：
+            func.bind(that, arg1, arg2)();
+
+            // 不支持以下调用阶段传入的参数：
+            func.bind(that)(arg1, arg2);
+        </xmp>
+
+        <h4>** 列举一下JavaScript数组和对象有哪些原生方法？**</h4>
+
+        <xmp>
+        * 数组：
+            - arr.concat(arr1, arr2, arrn);
+            - arr.join(",");
+            - arr.sort(func);
+            - arr.pop();
+            - arr.push(e1, e2, en);
+            - arr.shift();
+            - unshift(e1, e2, en);
+            - arr.reverse();
+            - arr.slice(start, end);
+            - arr.splice(index, count, e1, e2, en);
+            - arr.indexOf(el);
+            - arr.includes(el);   // ES6
+
+        * 对象：
+            -  object.hasOwnProperty(prop);
+            -  object.propertyIsEnumerable(prop);
+            -  object.valueOf();
+            -  object.toString();
+            -  object.toLocaleString();
+            -  Class.prototype.isPropertyOf(object);
+        </xmp>
+        <h4>**Array.splice() 与 Array.splice() 的区别？**</h4>
+
+        * slice -- “读取”数组指定的元素，不会对原数组进行修改<br>
+          - 语法：arr.slice(start, end)<br>
+          - start 指定选取开始位置（含）<br>
+          - end 指定选取结束位置（不含）<br>
+
+         * splice<br>
+           - “操作”数组指定的元素，会修改原数组，返回被删除的元素<br>
+           - 语法：arr.splice(index, count, [insert Elements])<br>
+           - index 是操作的起始位置<br>
+           - count = 0 插入元素，count > 0 删除元素<br>
+           - [insert Elements] 向数组新插入的元素<br>
+
+        <h4>**JavaScript 对象生命周期的理解？**</h4>
+
+        * 当创建一个对象时，JavaScript 会自动为该对象分配适当的内存<br>
+        * 垃圾回收器定期扫描对象，并计算引用了该对象的其他对象的数量<br>
+        * 如果被引用数量为 0，或惟一引用是循环的，那么该对象的内存即可回收<br>
+
+        <h4>**哪些操作会造成内存泄漏？**</h4>
+
+        -  JavaScript 内存泄露指对象在不需要使用它时仍然存在，导致占用的内存不能使用或回收<br>
+
+        - 未使用 var 声明的全局变量<br>
+        - 闭包函数(Closures)<br>
+        - 循环引用(两个对象相互引用)<br>
+        - 控制台日志(console.log)<br>
+        - 移除存在绑定事件的DOM元素(IE)<br>
+
+        <div class="maintitle">
+            <b>HTTP</b>
+        </div>
+        <h4>**http状态码有那些？分别代表是什么意思？**</h4>
+
+        <xmp class="puretext" >
+        简单版
+        [
+        100  Continue   继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
+        200  OK         正常返回信息
+        201  Created    请求成功并且服务器创建了新的资源
+        202  Accepted   服务器已接受请求，但尚未处理
+        301  Moved Permanently  请求的网页已永久移动到新位置。
+        302 Found       临时性重定向。
+        303 See Other   临时性重定向，且总是使用 GET 请求新的 URI。
+        304  Not Modified 自从上次请求后，请求的网页未修改过。
+
+        400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+        401 Unauthorized 请求未授权。
+        403 Forbidden   禁止访问。
+        404 Not Found   找不到如何与 URI 相匹配的资源。
+
+        500 Internal Server Error  最常见的服务器端错误。
+        503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+        ]
+        ```
+        </xmp>
+
+
+        <h4>**一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）**</h4>
+
+        <xmp class="puretext" >
+        - 注：这题胜在区分度高，知识点覆盖广，再不懂的人，也能答出几句，
+        - 而高手可以根据自己擅长的领域自由发挥，从URL规范、HTTP协议、DNS、CDN、数据库查询、
+        - 到浏览器流式解析、CSS规则构建、layout、paint、onload/domready、JS执行、JS API绑定等等；
+
+        - 详细版：
+        - 浏览器会开启一个线程来处理这个请求，对 URL 分析判断如果是 http 协议就按照 Web 方式来处理;
+        - 调用浏览器内核中的对应方法，比如 WebView 中的 loadUrl 方法;
+        - 通过DNS解析获取网址的IP地址，设置 UA 等信息发出第二个GET请求;
+        - 进行HTTP协议会话，客户端发送报头(请求报头);
+        - 进入到web服务器上的 Web Server，如 Apache、Tomcat、Node.JS 等服务器;
+        - 进入部署好的后端应用，如 PHP、Java、JavaScript、Python 等，找到对应的请求处理;
+        - 处理结束回馈报头，此处如果浏览器访问过，缓存上有对应资源，会与服务器最后修改时间对比，一致则返回304;
+        - 浏览器开始下载html文档(响应报头，状态码200)，同时使用缓存;
+        - 文档树建立，根据标记请求所需指定MIME类型的文件（比如css、js）,同时设置了cookie;
+        - 页面开始渲染DOM，JS根据DOM API操作DOM,执行事件绑定等，页面显示完成。
+
+        - 简洁版：
+        - 浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求；
+        - 服务器交给后台处理完成后返回数据，浏览器接收文件（HTML、JS、CSS、图象等）；
+        - 浏览器对加载到的资源（HTML、JS、CSS等）进行语法解析，建立相应的内部数据结构（如HTML的DOM）；
+        - 载入解析到的资源文件，渲染页面，完成。
+        </xmp>
+        <h4>**说说TCP传输的三次握手四次挥手策略**</h4>
+        <xmp class="puretext" >
+        - 为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送 后的情况置之不理，
+            它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK
+
+        - 发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。 最后，发送
+            端再回传一个带ACK标志的数据包，代表“握手”结束。 若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同
+            的数据包
+        </xmp>
+
+        <h4>**断开一个TCP连接则需要“四次握手”：**</h4>
+        <xmp class="puretext" >
+        - 第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不 会
+            再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，
+            此时主动关闭方还可 以接受数据
+
+        - 第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）
+
+        - 第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送
+            完了，不会再给你发数据了
+
+        - 第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手
+        </xmp>
+
+        <h4>**TCP和UDP的区别**</h4>
+        <xmp class="puretext" >
+        - TCP（Transmission Control Protocol，传输控制协议）是基于连接的协议，也就是说，在正式收发数据前，必须和对方建立
+            可靠的连接。一个TCP连接必须要经过三次“对话”才能建立起来
+
+        - UDP（User Data Protocol，用户数据报协议）是与TCP相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直
+            接就把数据包发送过去！ UDP适用于一次只传送少量数据、对可靠性要求不高的应用环境
+        </xmp>
+
+
+        <h4>**HTTP和HTTPS**</h4>
+        <xmp class="puretext" >
+        - HTTP协议通常承载于TCP协议之上，在HTTP和TCP之间添加一个安全协议层（SSL或TSL），这个时候，就成了我们常说的HTTPS
+        - 默认HTTP的端口号为80，HTTPS的端口号为443
+        </xmp>
+
+        <h4>**为什么HTTPS安全**</h4>
+        <xmp class="puretext" >
+        - 因为网络请求需要中间有很多的服务器路由器的转发。中间的节点都可能篡改信息，而如果使用HTTPS，密钥在你和终点站才
+            有。https之所以比http安全，是因为他利用ssl/tls协议传输。它包含证书，卸载，流量转发，负载均衡，页面适配，
+            浏览器适配，refer传递等。保障了传输过程的安全性
+        </xmp>
+        <h4>**关于Http 2.0 你知道多少？**</h4>
+        <xmp class="puretext" >
+        - HTTP/2引入了“服务端推（server push）”的概念，它允许服务端在客户端需要数据之前就主动地将数据发送到客户端缓存
+            中，从而提高性能。
+
+        - HTTP/2提供更多的加密支持
+
+        - HTTP/2使用多路技术，允许多个消息在一个连接上同时交差。
+
+        - 它增加了头压缩（header compression），因此即使非常小的请求，其请求和响应的header都只会占用很小比例的带宽
+        </xmp>
+        <h4>**GET和POST的区别，何时使用POST？**</h4>
+        <xmp class="puretext" >
+        -  GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
+        -  POST：一般用于修改服务器上的资源，对所发送的信息没有限制。
+        -  GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，也就是说Get是通
+            过地址栏来传值，而Post是通过提交表单来传值。
+        -  然而，在以下情况中，请使用 POST 请求：
+        - 无法使用缓存文件（更新服务器上的文件或数据库）
+
+        - 向服务器发送大量数据（POST 没有数据量限制）
+
+        - 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+
+        </xmp>
+
+        <h4>**说说网络分层里七层模型是哪七层**</h4>
+        <xmp class="puretext" >
+        - 应用层：应用层、表示层、会话层（从上往下）（HTTP、FTP、SMTP、DNS）
+
+        - 传输层（TCP和UDP）
+
+        - 网络层（IP）
+
+        - 物理和数据链路层（以太网）
+
+        - 每一层的作用如下：
+
+        - 物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）
+        数据链路层：将比特组装成帧和点到点的传递（帧Frame）
+        - 网络层：负责数据包从源到宿的传递和网际互连（包PackeT）
+        - 传输层：提供端到端的可靠报文传递和错误恢复（段Segment）
+        - 会话层：建立、管理和终止会话（会话协议数据单元SPDU）
+        - 表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）
+        - 应用层：允许访问OSI环境的手段（应用协议数据单元APDU）
+        </xmp>
+        <h4>**讲讲304缓存的原理**</h4>
+        <xmp class="puretext" >
+        - 服务器首先产生ETag，服务器可在稍后使用它来判断页面是否已经被修改。本质上，客户端通过将该记号传回服务器要求服务
+            器验证其（客户端）缓存
+        - 304是HTTP状态码，服务器用来标识这个文件没修改，不返回内容，浏览器在接收到个状态码后，会使用浏览器已缓存的文件
+        - 客户端请求一个页面（A）。 服务器返回页面A，并在给A加上一个ETag。 客户端展现该页面，并将页面连同ETag一起缓存。
+            客户再次请求页面A，并将上次请求时服务器返回的ETag一起传递给服务器。 服务器检查该ETag，并判断出该页面自上次客
+            户端请求之后还未被修改，直接返回响应304（未修改——Not Modified）和一个空的响应体
+        </xmp>
+        <h4>**HTTP/2 与 HTTP/1.x 的关键区别**</h4>
+        <xmp class="puretext" >
+        * 二进制协议代替文本协议，更加简洁高效
+        * 针对每个域只使用一个多路复用的连接
+        * 压缩头部信息减小开销
+        * 允许服务器主动推送应答到客户端的缓存中
+        </xmp>
+        <h4>**一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？**</h4>
+        <xmp class="puretext" >
+        - 01.浏览器查找域名对应的IP地址(DNS 查询：浏览器缓存->系统缓存->路由器缓存->ISP DNS 缓存->根域名服务器)
+        - 02.浏览器向 Web 服务器发送一个 HTTP 请求（TCP三次握手）
+        - 03.服务器 301 重定向（从 http://example.com 重定向到 http://www.example.com）
+        - 04.浏览器跟踪重定向地址，请求另一个带 www 的网址
+        - 05.服务器处理请求（通过路由读取资源）
+        - 06.服务器返回一个 HTTP 响应（报头中把 Content-type 设置为 'text/html'）
+        - 07.浏览器进 DOM 树构建
+        - 08.浏览器发送请求获取嵌在 HTML 中的资源（如图片、音频、视频、CSS、JS等）
+        - 09.浏览器显示完成页面
+        - 10.浏览器发送异步请求
+        </xmp>
+
+        <div class="maintitle">
+            <b>JQuery</b>
+        </div>
+        <h4>**你觉得jQuery或zepto源码有哪些写的好的地方**</h4>
+        <xmp class="puretext" >
+            - jquery源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window
+            对象作为局部变量使用，好处是当jquery中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的
+            访问window对象。同样，传入undefined参数，可以缩短查找undefined时的作用域链
+
+            ```
+            (function( window, undefined ) {
+
+            //用一个函数域包起来，就是所谓的沙箱
+
+            //在这里边var定义的变量，属于这个函数域内的局部变量，避免污染全局
+
+            //把当前沙箱需要的外部变量通过函数参数引入进来
+
+            //只要保证参数对内提供的接口的一致性，你还可以随意替换传进来的这个参数
+
+            window.jQuery = window.$ = jQuery;
+
+            })( window );
+            ```
+
+            - jquery将一些原型属性和方法封装在了jquery.prototype中，为了缩短名称，又赋值给了jquery.fn，这是很形象的写法
+            - 有一些数组或对象的方法经常能使用到，jQuery将其保存为局部变量以提高访问速度
+            - jquery实现的链式调用可以节约代码，所返回的都是同一个对象，可以提高代码效率
+        </xmp>
+
+        <h4>**jQuery 的实现原理？**</h4>
+        <xmp class="puretext" >
+            - `(function(window, undefined) {})(window);`
+            - jQuery 利用 JS 函数作用域的特性，采用立即调用表达式包裹了自身，解决命名空间和变量污染问题
+
+            - `window.jQuery = window.$ = jQuery;`
+            - 在闭包当中将 jQuery 和 $ 绑定到 window 上，从而将 jQuery 和 $ 暴露为全局变量
+        </xmp>
+        <h4>**jQuery.fn 的 init 方法返回的 this 指的是什么对象？ 为什么要返回 this？**</h4>
+        <xmp class="puretext" >
+            * jQuery.fn 的 init 方法 返回的 this 就是 jQuery 对象
+            * 用户使用 jQuery() 或 $() 即可初始化 jQuery 对象，不需要动态的去调用 init 方法
+        </xmp>
+        <h4>**jQuery.extend 与 jQuery.fn.extend 的区别？**</h4>
+        <xmp class="puretext" >
+            * $.fn.extend() 和 $.extend() 是 jQuery 为扩展插件提拱了两个方法
+            * $.extend(object); // 为jQuery添加“静态方法”（工具方法）
+
+            ```
+            $.extend({
+            　　min: function(a, b) { return a < b ? a : b; },
+            　　max: function(a, b) { return a > b ? a : b; }
+            });
+            $.min(2,3); //  2
+            $.max(4,5); //  5
+            ```
+            * $.extend([true,] targetObject, object1[, object2]); // 对targt对象进行扩展
+            ```
+            var settings = {validate:false, limit:5};
+            var options = {validate:true, name:"bar"};
+            $.extend(settings, options);  // 注意：不支持第一个参数传 false
+            // settings == {validate:true, limit:5, name:"bar"}
+            ```
+
+            * $.fn.extend(json); // 为jQuery添加“成员函数”（实例方法）
+
+            ```
+
+            $.fn.extend({
+            alertValue: function() {
+            $(this).click(function(){
+            alert($(this).val());
+            });
+            }
+            });
+
+            $("#email").alertValue();
+            ```
+        </xmp>
+        <h4>**jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？**</h4>
+        <xmp class="puretext" >
+            - 浅拷贝（只复制一份原始对象的引用）
+            `var newObject = $.extend({}, oldObject);`
+
+            - 深拷贝（对原始对象属性所引用的对象进行进行递归拷贝）
+            `var newObject = $.extend(true, {}, oldObject);`
+        </xmp>
+        <h4>**jQuery 的队列是如何实现的？队列可以用在哪些地方？**</h4>
+        <xmp class="puretext" >
+            * jQuery 核心中有一组队列控制方法，由 queue()/dequeue()/clearQueue() 三个方法组成。
+            * 主要应用于 animate()，ajax，其他要按时间顺序执行的事件中
+
+            ```javascript
+            var func1 = function(){alert('事件1');}
+            var func2 = function(){alert('事件2');}
+            var func3 = function(){alert('事件3');}
+            var func4 = function(){alert('事件4');}
+
+            // 入栈队列事件
+            $('#box').queue("queue1", func1);  // push func1 to queue1
+            $('#box').queue("queue1", func2);  // push func2 to queue1
+
+            // 替换队列事件
+            $('#box').queue("queue1", []);  // delete queue1 with empty array
+            $('#box').queue("queue1", [func3, func4]);  // replace queue1
+
+            // 获取队列事件（返回一个函数数组）
+            $('#box').queue("queue1");  // [func3(), func4()]
+
+            // 出栈队列事件并执行
+            $('#box').dequeue("queue1"); // return func3 and do func3
+            $('#box').dequeue("queue1"); // return func4 and do func4
+
+            // 清空整个队列
+            $('#box').clearQueue("queue1"); // delete queue1 with clearQueue
+            ```
+        </xmp>
+        <h4>**jQuery 中的 bind(), live(), delegate(), on()的区别？**</h4>
+
+        <xmp class="puretext" >
+            * bind 直接绑定在目标元素上
+            * live 通过冒泡传播事件，默认document上，支持动态数据
+            * delegate 更精确的小范围使用事件代理，性能优于 live
+            * on 是最新的1.9版本整合了之前的三种方式的新事件绑定机制
+        </xmp>
+        <h4>**是否知道自定义事件？ jQuery 里的 fire 函数是什么意思，什么时候用？**</h4>
+        <xmp class="puretext" >
+            * 事件即“发布/订阅”模式，自定义事件即“消息发布”，事件的监听即“订阅订阅”
+            * JS 原生支持自定义事件，示例：
+
+            ```javascript
+            document.createEvent(type); // 创建事件
+            event.initEvent(eventType, canBubble, prevent); // 初始化事件
+            target.addEventListener('dataavailable', handler, false); // 监听事件
+            target.dispatchEvent(e);  // 触发事件
+            ```
+
+            - jQuery 里的 fire 函数用于调用 jQuery 自定义事件列表中的事件
+
+        </xmp>
+        <h4>**jQuery 通过哪个方法和 Sizzle 选择器结合的？**</h4>
+        <xmp class="puretext" >
+
+            * Sizzle 选择器采取 Right To Left 的匹配模式，先搜寻所有匹配标签，再判断它的父节点
+            * jQuery 通过 $(selecter).find(selecter); 和 Sizzle 选择器结合
+        </xmp>
+        <h4>**jQuery 中如何将数组转化为 JSON 字符串，然后再转化回来？**</h4>
+        <xmp class="puretext" >
+            ```javascript
+            // 通过原生 JSON.stringify/JSON.parse 扩展 jQuery 实现
+            $.array2json = function(array) {
+            return JSON.stringify(array);
+            }
+
+            $.json2array = function(array) {
+            // $.parseJSON(array); // 3.0 开始，已过时
+            return JSON.parse(array);
+            }
+
+            // 调用
+            var json = $.array2json(['a', 'b', 'c']);
+            var array = $.json2array(json);
+            ```
+
+            **jQuery 一个对象可以同时绑定多个事件，这是如何实现的？**
+
+            ```javascript
+            $("#btn").on("mouseover mouseout", func);
+
+            $("#btn").on({
+            mouseover: func1,
+            mouseout: func2,
+            click: func3
+            });
+            ```
+        </xmp>
+        <h4>**针对 jQuery 的优化方法？**</h4>
+        <xmp class="puretext" >
+            * 缓存频繁操作DOM对象
+            * 尽量使用id选择器代替class选择器
+            * 总是从#id选择器来继承
+            * 尽量使用链式操作
+            * 使用时间委托 on 绑定事件
+            * 采用jQuery的内部函数data()来存储数据
+            * 使用最新版本的 jQuery
+        </xmp>
+        <h4>**jQuery 的 slideUp 动画，当鼠标快速连续触发, 动画会滞后反复执行，该如何处理呢?**</h4>
+        <xmp class="puretext" >
+            * 在触发元素上的事件设置为延迟处理：使用 JS 原生 setTimeout 方法
+            * 在触发元素的事件时预先停止所有的动画，再执行相应的动画事件：$('.tab').stop().slideUp();
+        </xmp>
+        <h4>**jQuery UI 如何自定义组件？**</h4>
+        <xmp class="puretext" >
+            - 通过向 $.widget() 传递组件名称和一个原型对象来完成
+            - `$.widget("ns.widgetName", [baseWidget], widgetPrototype);`
+        </xmp>
+        <h4>**jQuery 与 jQuery UI、jQuery Mobile 区别？**</h4>
+        <xmp class="puretext" >
+            * jQuery 是 JS 库，兼容各种PC浏览器，主要用作更方便地处理 DOM、事件、动画、AJAX
+
+            * jQuery UI 是建立在 jQuery 库上的一组用户界面交互、特效、小部件及主题
+
+            * jQuery Mobile 以 jQuery 为基础，用于创建“移动Web应用”的框架
+        </xmp>
+        <h4>**jQuery 和 Zepto 的区别？ 各自的使用场景？**</h4>
+        <xmp class="puretext" >
+
+            * jQuery 主要目标是PC的网页中，兼容全部主流浏览器。在移动设备方面，单独推出 jQuery Mobile
+            * Zepto 从一开始就定位移动设备，相对更轻量级。它的 API 基本兼容 jQuery，但对PC浏览器兼容不理想
+        </xmp>
+        <h4>- 什么是 Ajax? 如何创建一个Ajax？</h4>
+        <xmp class="puretext" >
+            * AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
+
+            * 创建 ajax 步骤：
+            - 1.创建 XMLHttpRequest 对象
+            - 2.创建一个新的 HTTP 请求，并指定该 HTTP 请求的类型、验证信息
+            - 3.设置响应 HTTP 请求状态变化的回调函数
+            - 4.发送 HTTP 请求
+            - 5.获取异步调用返回的数据
+            - 6.使用 JavaScript 和 DOM 实现局部刷新
+
+            ```
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 304)) {
+            fn.call(this, xhr.responseText);
+            }
+            };
+            xhr.send(data);
+
+        </xmp>
+
+
+
+
+        <div class="maintitle">
+            其他
+        </div>
+        <h4>**请你谈谈Cookie的弊端**</h4>
+        <xmp>
+            - cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的
+            - 第一：每个特定的域名下最多生成20个cookie
+
+            - 1.IE6或更低版本最多20个cookie
+
+            - 2.IE7和之后的版本最后可以有50个cookie。
+
+            - 3.Firefox最多50个cookie
+
+            - 4.chrome和Safari没有做硬性限制
+        </xmp>
+
+        <h4>**请你谈谈Cookie的弊端？**</h4>
+        <xmp class="puretext" >
+            * 每个特定的域名下最多生成的 cookie 个数有限制
+            * IE 和 Opera 会清理近期最少使用的 cookie，Firefox 会随机清理 cookie
+            * cookie 的最大大约为 4096 字节，为了兼容性，一般设置不超过 4095 字节
+            * 如果 cookie 被人拦截了，就可以取得所有的 session 信息
+        </xmp>
+
+
+        <h4>**JSONP：**</h4>
+        <xmp class="puretext" >
+            - 原理是：动态插入script标签，通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要
+            的json数据作为参数传入
+            - 由于同源策略的限制，XmlHttpRequest只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，
+            然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求
+            - 优点是兼容性好，简单易用，支持浏览器与服务器双向通信。缺点是只支持GET请求
+
+            - JSONP：json+padding（内填充），顾名思义，就是把JSON填充到一个盒子里
+
+            ```
+            <script>
+                function createJs(sUrl){
+
+                    var oScript = document.createElement('script');
+                    oScript.type = 'text/javascript';
+                    oScript.src = sUrl;
+                    document.getElementsByTagName('head')[0].appendChild(oScript);
+                }
+
+                createJs('jsonp.js');
+
+                box({
+                    'name': 'test'
+                });
+
+                function box(json){
+                    alert(json.name);
+                }
+            </script>
+            ```
+        </xmp>
+        <h4>**CORS**</h4>
+        <xmp class="puretext" >
+            - 服务器端对于CORS的支持，主要就是通过设置Access-Control-Allow-Origin来进行的。如果浏览器检测到相应的设置，就可以允许Ajax进行跨域的访问
+        </xmp>
+
+        <h4>**通过修改document.domain来跨子域**</h4>
+        <xmp class="puretext" >
+            - 将子域和主域的document.domain设为同一个主域.前提条件：这两个域名必须属于同一个基础域名!而且所用的协议，端口都要一致，否则无法利用document.domain进行跨域。主域相同的使用document.domain
+        </xmp>
+        <h4>**使用window.name来进行跨域**</h4>
+        <xmp class="puretext" >
+            - window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的
+        </xmp>
+        <h4>**使用HTML5中新引进的window.postMessage方法来跨域传送数据**</h4>
+        <xmp class="puretext" >
+            - 还有flash、在服务器上设置代理页面等跨域方式。个人认为window.name的方法既不复杂，也能兼容到几乎所有浏览器，这真是极好的一种跨域方法
+        </xmp>
+
+        <h4>**如何解决跨域问题?**</h4>
+        <xmp class="puretext" >
+            - jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面
+
+            - 如何解决跨域问题?
+
+            * document.domain + iframe：要求主域名相同 //只能跨子域
+            * JSONP(JSON with Padding)：response: callback(data) //只支持 GET 请求
+            * 跨域资源共享CORS(XHR2)：Access-Control-Allow //兼容性 IE10+
+            * 跨文档消息传输(HTML5)：postMessage + onmessage  //兼容性 IE8+
+            * WebSocket(HTML5)：new WebSocket(url) + onmessage //兼容性 IE10+
+            * 服务器端设置代理请求：服务器端不受同源策略限制
+        </xmp>
+
+        <div class="maintitle">
+            数据结构
+        </div>
+        <h4>**栈和队列的区别?**</h4>
+        <xmp class="puretext" >
+            - 栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。
+
+            - 队列先进先出，栈先进后出。
+
+            - 栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除
+        </xmp>
+        <h4>**栈和堆的区别？**</h4>
+        <xmp class="puretext" >
+            - 栈区（stack）—   由编译器自动分配释放   ，存放函数的参数值，局部变量的值等。
+
+            - 堆区（heap）   —   一般由程序员分配释放，   若程序员不释放，程序结束时可能由OS回收。
+
+            - 堆（数据结构）：堆可以被看成是一棵树，如：堆排序；
+
+            - 栈（数据结构）：一种先进后出的数据结构
+        </xmp>
+        <h4>**快速 排序的思想并实现一个快排？**</h4>
+        <xmp class="puretext" >
+            "快速排序"的思想很简单，整个排序过程只需要三步：
+
+            - （1）在数据集之中，找一个基准点
+
+            - （2）建立两个数组，分别存储左边和右边的数组
+
+            - （3）利用递归进行下次比较
+
+            ```
+            <script type="text/javascript">
+
+                function quickSort(arr){
+                    if(arr.length<=1){
+                        return arr;//如果数组只有一个数，就直接返回；
+                    }
+
+                    var num = Math.floor(arr.length/2);//找到中间数的索引值，如果是浮点数，则向下取整
+
+                    var numValue = arr.splice(num,1);//找到中间数的值
+                    var left = [];
+                    var right = [];
+
+                    for(var i=0;i<arr.length;i++){
+                        if(arr[i]<numValue){
+                            left.push(arr[i]);//基准点的左边的数传到左边数组
+                        }
+                        else{
+                            right.push(arr[i]);//基准点的右边的数传到右边数组
+                        }
+                    }
+
+                    return quickSort(left).concat([numValue],quickSort(right));//递归不断重复比较
+                }
+
+                alert(quickSort([32,45,37,16,2,87]));//弹出“2,16,32,37,45,87”
+
+            </script>
+        </xmp>
+        <div class="maintitle">
+            ES6
+        </div>
+
+        <h4>**ES6的了解**</h4>
+        <xmp class="puretext" >
+            新增模板字符串（为JavaScript提供了简单的字符串插值功能）、箭头函数（操作符左边为输入的参数，而右边则是进行的操作以及返回的值Inputs=>outputs。）、for-of（用来遍历数据—例如数组中的值。）arguments对象可被不定参数和默认参数完美代替。ES6将promise对象纳入规范，提供了原生的Promise对象。增加了let和const命令，用来声明变量。增加了块级作用域。let命令实际上就增加了块级作用域。ES6规定，var命令和function命令声明的
+            全局变量，属于全局对象的属性；let命令、const命令、class命令声明的全局变量，不属于全局对象的属性。。还有就是引入module模块的概念
+        </xmp>
+        <h4>**说说你对Promise的理解**</h4>
+        <xmp class="puretext" >
+            - 依照 Promise/A+ 的定义，Promise 有四种状态：
+            - pending: 初始状态, 非 fulfilled 或 rejected.
+
+            - fulfilled: 成功的操作.
+
+            - rejected: 失败的操作.
+
+            - settled: Promise已被fulfilled或rejected，且不是pending
+
+            - 另外， fulfilled 与 rejected 一起合称 settled
+            - Promise 对象用来进行延迟(deferred) 和异步(asynchronous ) 计算
+        </xmp>
+        <h4>**Promise 的构造函数**</h4>
+        <xmp class="puretext" >
+            - 构造一个 Promise，最基本的用法如下：
+
+            ```
+            var promise = new Promise(function(resolve, reject) {
+
+            if (...) {  // succeed
+
+            resolve(result);
+
+            } else {   // fails
+
+            reject(Error(errMessage));
+
+            }
+            });
+            ```
+
+            - Promise 实例拥有 then 方法（具有 then 方法的对象，通常被称为thenable）。它的使用方法如下：
+            ```
+            promise.then(onFulfilled, onRejected)
+            ```
+
+            - 接收两个函数作为参数，一个在 fulfilled 的时候被调用，一个在rejected的时候被调用，接收参数就是 future，onFulfilled 对应 resolve, onRejected 对应 reject
+        </xmp>
+        <h4>**什么是 Promise ？**</h4>
+        <xmp class="puretext" >
+            * Promise 就是一个对象，用来表示并传递异步操作的最终结果
+            * Promise 最主要的交互方式：将回调函数传入 then 方法来获得最终结果或出错原因
+            * Promise 代码书写上的表现：以“链式调用”代替回调函数层层嵌套（回调地狱）
+        </xmp>
+        <h4>**谈一谈你了解ECMAScript6的新特性？**</h4>
+        <xmp class="puretext" >
+            * 块级作用区域              `let a = 1;`
+            * 可定义常量                `const PI = 3.141592654;`
+            * 变量解构赋值              `var [a, b, c] = [1, 2, 3];`
+            * 字符串的扩展(模板字符串)  ` var sum = `${a + b}`;`
+            * 数组的扩展(转换数组类型)   `Array.from($('li'));`
+            * 函数的扩展(扩展运算符)     `[1, 2].push(...[3, 4, 5]);`
+            * 对象的扩展(同值相等算法)   ` Object.is(NaN, NaN);`
+            * 新增数据类型(Symbol)      `let uid = Symbol('uid');`
+            * 新增数据结构(Map)        ` let set = new Set([1, 2, 2, 3]);`
+            * for...of循环            `for(let val of arr){};`
+            * Promise对象            ` var promise = new Promise(func);`
+            * Generator函数          ` function* foo(x){yield x; return x*x;}`
+            * 引入Class(类)          ` class Foo {}`
+            * 引入模块体系            ` export default func;`
+            * 引入async函数[ES7]
+            ```
+            async function asyncPrint(value, ms) {
+            await timeout(ms);
+            console.log(value)
+            }
+
+            ```
+        </xmp>
+        <h4>**Object.is() 与原来的比较操作符 ===、== 的区别？**</h4>
+        <xmp class="puretext" >
+            -  == 相等运算符，比较时会自动进行数据类型转换
+            -  === 严格相等运算符，比较时不进行隐式类型转换
+            -  Object.is 同值相等算法，在 === 基础上对 0 和 NaN 特别处理
+
+            ```
+            +0 === -0 //true
+            NaN === NaN // false
+
+            Object.is(+0, -0) // false
+            Object.is(NaN, NaN) // true
+            ```
+        </xmp>
+        <h4>**什么是 Babel ？**</h4>
+        <xmp class="puretext" >
+            * Babel 是一个 JS 编译器，自带一组 ES6 语法转化器，用于转化 JS 代码。
+            这些转化器让开发者提前使用最新的 JS语法(ES6/ES7)，而不用等浏览器全部兼容。
+            * Babel 默认只转换新的 JS 句法(syntax)，而不转换新的API。
+        </xmp>
+
+
+        <div class="maintitle">
+            前端框架
+        </div>
+        <h4>**什么是单页面应用(SPA)？**</h4>
+        <xmp class="puretext" >
+            * 单页面应用(SPA)是指用户在浏览器加载单一的HTML页面，后续请求都无需再离开此页
+            * 目标：旨在用为用户提供了更接近本地移动APP或桌面应用程序的体验。
+
+            * 流程：第一次请求时，将导航页传输到客户端，其余请求通过 REST API 获取 JSON 数据
+            * 实现：数据的传输通过 Web Socket API 或 RPC(远程过程调用)。
+
+            * 优点：用户体验流畅，服务器压力小，前后端职责分离
+            * 缺点：关键词布局难度加大，不利于 SEO
+        </xmp>
+        <h4>**什么是“前端路由”? 什么时候适用“前端路由”? 有哪些优点和缺点?**</h4>
+        <xmp class="puretext" >
+            * 前端路由通过 URL 和 History 来实现页面切换
+            * 应用：前端路由主要适用于“前后端分离”的单页面应用(SPA)项目
+            * 优点：用户体验好，交互流畅
+            * 缺点：浏览器“前进”、“后退”会重新请求，无法合理利用缓存
+        </xmp>
+        <h4>**模块化开发怎么做？**</h4>
+        <xmp class="puretext" >
+            * 封装对象作为命名空间 -- 内部状态可以被外部改写
+            * 立即执行函数(IIFE) -- 需要依赖多个JS文件，并且严格按顺序加载
+            * 使用模块加载器 -- require.js, sea.js, EC6 模块
+        </xmp>
+        <h4>**通行的 Javascript 模块的规范有哪些？**</h4>
+        <xmp class="puretext" >
+            * CommonJS -- 主要用在服务器端 node.js
+
+            ```javascript
+            var math = require('./math');
+            math.add(2,3);
+            ```
+
+            * AMD(异步模块定义) -- require.js
+
+            ```javascript
+            require(['./math'], function (math) {
+            math.add(2, 3);
+            });
+            ```
+
+            * CMD(通用模块定义) -- sea.js
+            ```javascript
+            var math = require('./math');
+            math.add(2,3);
+            ```
+
+            * ES6 模块
+
+
+            ```javascript
+            import {math} from './math';
+            math.add(2, 3);
+            ```
+        </xmp>
+        <h4>**AMD 与 CMD 规范的区别？**</h4>
+        <xmp class="puretext" >
+
+            * 规范化产出：
+            - AMD 由 RequireJS 推广产出
+            - CMD 由 SeaJS 推广产出
+
+            * 模块的依赖:
+            - AMD 提前执行，推崇依赖前置
+            - CMD 延迟执行，推崇依赖就近
+
+            * API 功能:
+            - AMD 的 API 默认多功能（分全局 require 和局部 require）
+            - CMD 的 API 推崇职责单一纯粹（没有全局 require）
+
+            * 模块定义规则：
+            - AMD 默认一开始就载入全部依赖模块
+
+
+            ```javascript
+            define(['./a', './b'], function(a, b) {
+            a.doSomething();
+            b.doSomething();
+            });
+            ```
+
+            - CMD 依赖模块在用到时才就近载入
+
+            ```javascript
+            define(function(require, exports, module) {
+            var a = require('./a');
+            a.doSomething();
+            var b = require('./b');
+            b.doSomething();
+            })
+            ```
+        </xmp>
+        <h4>**requireJS的核心原理是什么？**</h4>
+        <xmp class="puretext" >
+            - 每个模块所依赖模块都会比本模块预先加载
+        </xmp>
+        <h4>**对 Node.js 的优点、缺点提出了自己的看法？ Node.js的特点和适用场景？**</h4>
+        <xmp class="puretext" >
+            * Node.js的特点：单线程，非阻塞I/O，事件驱动
+            * Node.js的优点：擅长处理高并发；适合I/O密集型应用
+
+            - Node.js的缺点：不适合CPU密集运算；不能充分利用多核CPU；可靠性低，某个环节出错会导致整个系统崩溃
+
+            - Node.js的适用场景：
+            - RESTful API
+            - 实时应用：在线聊天、图文直播
+            - 工具类应用：前端部署(npm, gulp)
+            - 表单收集：问卷系统
+        </xmp>
+        <h4>**如何判断当前脚本运行在浏览器还是node环境中？**</h4>
+        <xmp class="puretext" >
+            - 判断 Global 对象是否为 window，如果不为 window，当前脚本没有运行在浏览器中
+        </xmp>
+        <h4>**什么是 npm ？**</h4>
+
+        - npm 是 Node.js 的模块管理和发布工具<br>
+
+        <h4>**什么是 WebKit ？**</h4>
+        <xmp class="puretext" >
+            * WebKit 是一个开源的浏览器内核，由渲染引擎(WebCore)和JS解释引擎(JSCore)组成
+            * 通常所说的 WebKit 指的是 WebKit(WebCore)，主要工作是进行 HTML/CSS 渲染
+            * WebKit 一直是 Safari 和 Chrome(之前) 使用的浏览器内核，后来 Chrome 改用Blink 内核
+        </xmp>
+        <h4>**如何测试前端代码? 知道 Unit Test，BDD, TDD 么? 怎么测试你的前端工程(mocha, jasmin..)?**</h4>
+        <xmp class="puretext" >
+            * 通过为前端代码编写单元测试(Unit Test)来测试前端代码
+            * Unit Test：一段用于测试一个模块或接口是否能达到预期结果的代码
+            * BDD：行为驱动开发 -- 业务需求描述产出产品代码的开发方法
+            * TDD：测试驱动开发 -- 单元测试用例代码产出产品代码的开发方法
+            * 单元测试框架：
+
+
+            ```javascript
+            // mocha 示例
+            describe('Test add', function() {
+            it('1 + 2 = 3', function() {
+            expect(add(1, 2)).to.be.equal(3);
+            });
+            });
+
+            // jasmin 示例
+            describe('Test add', function () {
+            it('1 + 2 = 3', function () {
+            expect(add(1, 2)).toEqual(3);
+            });
+            });
+            ```
+        </xmp>
+        <h4>**介绍你知道的前端模板引擎？**</h4>
+
+        -  artTemplate, underscore, handlebars<br>
+
+        <h4>**什么是 Modernizr？ Modernizr 工作原理？**</h4>
+
+        * Modernizr 是一个开源的 JavaScript 库，用于检测用户浏览器对 HTML5 与 CSS3 的支持情况<br>
+
+        <h4>**移动端最小触控区域是多大？**</h4>
+
+        - 44 * 44 px<br>
+
+        <h4>**移动端的点击事件的延迟时间是多长，为什么会有延迟？ 如何解决这个延时？**</h4>
+        <xmp class="puretext" >
+            * 移动端 click 有 300ms 延迟，浏览器为了区分“双击”（放大页面）还是“单击”而设计
+            * 解决方案：
+            - 禁用缩放(对safari无效)
+            - 使用指针事件(IE私有特性，且仅IE10+)
+            - 使用 Zepto 的 tap 事件(有点透BUG)
+            - 使用 FastClick 插件(体积大[压缩后8k])
+        </xmp>
+        <h4>**什么是函数式编程？**</h4>
+        <xmp class="puretext" >
+            * 函数式编程是一种"编程范式"，主要思想是把运算过程尽量写成一系列嵌套的函数调用
+            * 例如：var result = subtract(multiply(add(1,2), 3), 4);
+
+            * 函数式编程的特点：
+            - 函数核心化：函数可以作为变量的赋值、另一函数的参数、另一函数的返回值
+            - 只用“表达式”，不用“语句”：要求每一步都是单纯的运算，都必须有返回值
+            - 没有"副作用"：所有功能只为返回一个新的值，不修改外部变量
+            - 引用透明：运行不依赖于外部变量，只依赖于输入的参数
+
+            * 函数式编程的优点：
+            - 代码简洁，接近自然语言，易于理解
+            - 便于维护，利于测试、除错、组合
+            - 易于“并发编程“，不用担心一个线程的数据，被另一个线程修改
+            - 可“热升级”代码，在运行状态下直接升级代码，不需要重启，也不需要停机
+        </xmp>
+        <h4>**什么是函数柯里化Currying)？**</h4>
+        <xmp class="puretext" >
+            * 柯里化：
+            - 通常也称部分求值，含义是给函数分步传递参数，每次递参部分应用参数，并返回一个更具体的函数，继续接受剩余参数
+            - 期间会连续返回具体函数，直至返回最后结果。因此，函数柯里化是逐步传参，逐步缩小函数的适用范围，逐步求解的过程
+            - 柯里化的作用：延迟计算；参数复用；动态创建函数
+
+            * 柯里化的缺点：
+            - 函数柯里化会产生开销（函数嵌套，比普通函数占更多内存），但性能瓶颈首先来自其它原因（DOM 操作等）
+        </xmp>
+        <h4>**什么是依赖注入？**</h4>
+        <xmp class="puretext" >
+            - 当一个类的实例依赖另一个类的实例时，自己不创建该实例，由IOC容器创建并注入给自己，因此称为依赖注入。
+            - 依赖注入解决的就是如何有效组织代码依赖模块的问题
+        </xmp>
+        <h4>**设计模式：什么是 singleton, factory, strategy, decorator？**</h4>
+        <xmp class="puretext" >
+            * Singleton(单例)   一个类只有唯一实例，这个实例在整个程序中有一个全局的访问点
+            * Factory (工厂)    解决实列化对象产生重复的问题
+            * Strategy(策略)    将每一个算法封装起来，使它们还可以相互替换，让算法独立于使用
+            * Observer(观察者)  多个观察者同时监听一个主体，当主体对象发生改变时，所有观察者都将得到通知
+            * Prototype(原型)   一个完全初始化的实例，用于拷贝或者克隆
+            * Adapter(适配器)   将不同类的接口进行匹配调整，尽管内部接口不兼容，不同的类还是可以协同工作
+            * Proxy(代理模式)   一个充当过滤转发的对象用来代表一个真实的对象
+            * Iterator(迭代器)  在不需要直到集合内部工作原理的情况下，顺序访问一个集合里面的元素
+            * Chain of Responsibility(职责连)  处理请求组成的对象一条链，请求链中传递，直到有对象可以处理
+        </xmp>
+        <h4>**什么是前端工程化？**</h4>
+        <xmp class="puretext" >
+            * 前端工程化就是把一整套前端工作流程使用工具自动化完成
+
+
+            * 前端开发基本流程：
+            - 项目初始化：yeoman, FIS
+            - 引入依赖包：bower, npm
+            - 模块化管理：npm, browserify, Webpack
+            - 代码编译：babel, sass, less
+            - 代码优化(压缩/合并)：Gulp, Grunt
+            - 代码检查：JSHint, ESLint
+            - 代码测试：Mocha
+            * 目前最知名的构建工具：Gulp, Grunt, npm + Webpack
+        </xmp>
+        <h4>**介绍 Yeoman 是什么？**</h4>
+        <xmp class="puretext" >
+            * Yeoman --前端开发脚手架工具，自动将最佳实践和工具整合起来构建项目骨架
+            * Yeoman 其实是三类工具的合体，三类工具各自独立：
+            - yo --- 脚手架，自动生成工具（相当于一个粘合剂，把 Yeoman 工具粘合在一起）
+            - Grunt、gulp --- 自动化构建工具 （最初只有grunt，之后加入了gulp）
+            - Bower、npm --- 包管理工具 （原来是bower，之后加入了npm）
+        </xmp>
+        <h4>**介绍 WebPack 是什么？ 有什么优势？**</h4>
+        <xmp class="puretext" >
+            * WebPack 是一款[模块加载器]兼[打包工具]，用于把各种静态资源（js/css/image等）作为模块来使用
+            * WebPack 的优势：
+            - WebPack 同时支持 commonJS 和 AMD/CMD，方便代码迁移
+            - 不仅仅能被模块化 JS ，还包括 CSS、Image 等
+            - 能替代部分 grunt/gulp 的工作，如打包、压缩混淆、图片base64
+            - 扩展性强，插件机制完善，特别是支持 React 热插拔的功能
+        </xmp>
+        <h4>**介绍类库和框架的区别？**</h4>
+        <xmp class="puretext" >
+            * 类库是一些函数的集合，帮助开发者写WEB应用，起主导作用的是开发者的代码
+            * 框架是已实现的特殊WEB应用，开发者只需对它填充具体的业务逻辑，起主导作用是框架
+        </xmp>
+
+        <h4>**什么是 MVC/MVP/MVVM/Flux？**</h4>
+        <xmp class="puretext" >
+            * MVC(Model-View-Controller)
+            - V->C, C->M, M->V
+            - 通信都是单向的；C只起路由作用，业务逻辑都部署在V
+            - Backbone
+
+
+            * MVP(Model-View-Presenter)
+            - V<->P, P<->M
+            - 通信都是双向的；V和M不发生联系(通过P传)；V非常薄，逻辑都部署在P
+            - Riot.js
+
+            * MVVM(Model-View-ViewModel)
+            - V->VM, VM<->M
+            - 采用双向数据绑定：View 和 ViewModel 的变动都会相互映射到对象上面
+            - Angular
+
+            * Flux(Dispatcher-Store-View)
+            - Action->Dispatcher->Store->View, View->Action
+            - Facebook 为了解决在 MVC 应用中碰到的工程性问题提出一个架构思想
+            - 基于一个简单的原则：数据在应用中单向流动（单向数据流）
+            - React(Flux 中 View，只关注表现层)
+        </xmp>
+        <h4>**Backbone 是什么？**</h4>
+        <xmp class="puretext" >
+            - Backbone 是一个基于 jquery 和 underscore 的前端(MVC)框架
+        </xmp>
+        <h4>**AngularJS 是什么？**</h4>
+        <xmp class="puretext" >
+            - AngularJS 是一个完善的前端 MVVM 框架，包含模板、数据双向绑定、路由、模块化、服务、依赖注入等
+            - AngularJS 由 Google 维护，用来协助大型单一页面应用开发。
+        </xmp>
+
+        <h4>**React 是什么？**</h4>
+        <xmp class="puretext" >
+            * React 不是 MV* 框架，用于构建用户界面的 JavaScript 库，侧重于 View 层
+            * React 主要的原理：
+            - 虚拟 DOM + diff 算法 -> 不直接操作 DOM 对象
+            - Components 组件 -> Virtual DOM 的节点
+            - State 触发视图的渲染 -> 单向数据绑定
+            - React 解决方案：React + Redux + react-router + Fetch + webpack
+        </xmp>
+        <h4>**react-router 路由系统的实现原理？**</h4>
+        <xmp class="puretext" >
+            - 实现原理：location 与 components 之间的同步
+
+            * 路由的职责是保证 UI 和 URL 的同步
+            * 在 react-router 中，URL 对应 Location 对象，UI 由 react components 决定
+            * 因此，路由在 react-router 中就转变成 location 与 components 之间的同步
+        </xmp>
+        <h4>**Meteor 是什么**</h4>
+        <xmp class="puretext" >
+            - Meteor 是一个全栈开发框架，基础构架是 Node.JS + MongoDB，并把延伸到了浏览器端。
+            - Meteor 统一了服务器端和客户端的数据访问，使开发者可以轻松完成全栈式开发工作。
+        </xmp>
+
+
+
+
+        <div class="maintitle">
+            JSON和XML
+        </div>
+
+        <h4>**XML和JSON的区别？</h4>
+        <xmp class="puretext">
+            - 数据体积方面
+            - JSON相对于XML来讲，数据的体积小，传递的速度更快些。
+
+            - 数据交互方面
+            - JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互
+
+            - 数据描述方面
+            - JSON对数据的描述性比XML较差
+
+            - 传输速度方面
+            - JSON的速度要远远快于XML
+        </xmp>
+
+        <h4>**JSON 的了解？**</h4>
+        <xmp class="puretext" >
+            - JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式
+            - 它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小
+
+            - JSON字符串转换为JSON对象:
+
+            ```
+            var obj =eval('('+ str +')');
+            var obj = str.parseJSON();
+            var obj = JSON.parse(str);
+            ```
+
+            - JSON对象转换为JSON字符串：
+
+            ```
+            var last=obj.toJSONString();
+            var last=JSON.stringify(obj);
+        </xmp>
+        <div class="maintitle">
+            本地存储
+        </div>
+        <h4>**浏览器本地存储**</h4>
+        <xmp class="puretext" >
+            - 在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage
+            - html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage
+            - sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据
+            也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储
+            - 而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
+        </xmp>
+            <h4>**web storage和cookie的区别**</h4>
+            <xmp class="puretext" >
+                - Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候
+                Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用
+                - 除此之外，WebStorage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie
+                - 但是cookie也是不可以或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”
+                数据而生
+                - 浏览器的支持除了IE７及以下不支持外，其他标准浏览器都完全支持(ie及FF需在web服务器里运行)，值得一提的是IE总是办好事，例如IE7、
+                IE6中的userData其实就是javascript本地存储的解决方案。通过简单的代码封装可以统一到所有的浏览器都支持web storage
+                - localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等
+            </xmp>
+
+            <h4>**cookie 和session 的区别：**</h4>
+            <xmp class="puretext" >
+                - 1、cookie数据存放在客户的浏览器上，session数据放在服务器上。
+
+                - 2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗
+
+                - 考虑到安全应当使用session。
+
+                - 3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能
+
+                - 考虑到减轻服务器性能方面，应当使用COOKIE。
+
+                - 4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
+
+                - 5、所以个人建议：
+
+                - 将登陆信息等重要信息存放为SESSION
+
+                - 其他信息如果需要保留，可以放在COOKIE中
+            </xmp>
+            <h4>**描述 cookies、sessionStorage 和 localStorage 的区别？**</h4>
+            <xmp class="puretext" >
+                * 与服务器交互：
+                - cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）
+                - cookie 始终会在同源 http 请求头中携带（即使不需要），在浏览器和服务器间来回传递
+                - sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存
+
+                * 存储大小：
+
+                - cookie 数据根据不同浏览器限制，大小一般不能超过 4k
+                - sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大
+
+                * 有期时间：
+                - localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据
+                - sessionStorage  数据在当前浏览器窗口关闭后自动删除
+                - cookie           设置的cookie过期时间之前一直有效，与浏览器是否关闭无关
+            </xmp>
+            <div class="maintitle">
+                移动终端
+            </div>
+            <h4> **移动端（Android、IOS）怎么做好用户体验?**</h4>
+            <xmp class="puretext" >
+
+                * 清晰的视觉纵线
+                * 信息的分组、极致的减法
+                * 利用选择代替输入
+                * 标签及文字的排布方式
+                * 依靠明文确认密码
+                * 合理的键盘利用
+
+                **前端页面有哪三层构成，分别是什么？作用是什么？**
+
+                * 结构层：由 (X)HTML 标记语言负责，解决页面“内容是什么”的问题
+                * 表示层：由 CSS 负责，解决页面“如何显示内容”的问题
+                * 行为层：由 JS 脚本负责，解决页面上“内容应该如何对事件作出反应”的问题
+            </xmp>
+
+            <div class="maintitle">
+                模块化
+            </div>
+
+
+
+            <h4>**说说你对AMD和Commonjs的理解**</h4>
+            <xmp class="puretext">
+                - CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。
+                AMD规范则是非同步加载模块，允许指定回调函数
+                - AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的
+            </xmp>
+            <h4>**模块化开发怎么做？**</h4>
+            <xmp class="puretext">
+                - 立即执行函数,不暴露私有成员
+
+                ```
+                var module1 = (function(){
+                　　　　var _count = 0;
+                　　　　var m1 = function(){
+                　　　　　　//...
+                　　　　};
+                　　　　var m2 = function(){
+                　　　　　　//...
+                　　　　};
+                　　　　return {
+                　　　　　　m1 : m1,
+                　　　　　　m2 : m2
+                　　　　};
+                　　})();
+                ```
+            </xmp>
+            <h4>**AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？**</h4>
+            <xmp class="puretext">
+                - Asynchronous Module Definition，异步模块定义，所有的模块将被异步加载，模块加载不影响后面语句运行。所有依赖某些模块的语句均放
+                置在回调函数中
+
+                ```
+                // CMD
+                define(function(require, exports, module) {
+                var a = require('./a')
+                a.doSomething()
+                // 此处略去 100 行
+                var b = require('./b') // 依赖可以就近书写
+                b.doSomething()
+                // ...
+                })
+
+                // AMD 默认推荐
+                define(['./a', './b'], function(a, b) { // 依赖必须一开始就写好
+                a.doSomething()
+                // 此处略去 100 行
+                b.doSomething()
+                // ...
+                })
+                ```
+            </xmp>
+
+            <h4>**对前端模块化的认识**</h4>
+            <xmp class="puretext">
+                - AMD 是 RequireJS 在推广过程中对模块定义的规范化产出
+                - CMD 是 SeaJS 在推广过程中对模块定义的规范化产出
+                - AMD 是提前执行，CMD 是延迟执行
+                - AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的
+            </xmp>
+
+            <div class="maintitle">
+                MVC
+            </div>
+            <h4>**说说你对MVC和MVVM的理解**</h4>
+            <xmp class="puretext">
+
+
+                - MVC
+                - View 传送指令到 Controller
+
+                - Controller 完成业务逻辑后，要求 Model 改变状态
+
+                - Model 将新的数据发送到 View，用户得到反馈
+
+                所有通信都是单向的
+            </xmp>
+            <div class="maintitle">
+                性能优化
+            </div>
+
+            <h4>**如何进行网站性能优化**</h4>
+            <xmp class="puretext">
+                - content方面
+                - 减少HTTP请求：合并文件、CSS精灵、inline Image
+                - 减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询
+                - 避免重定向：多余的中间访问
+                - 使Ajax可缓存
+                - 非必须组件延迟加载
+                - 未来所需组件预加载
+                - 减少DOM元素数量
+                - 将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量
+                - 减少iframe数量
+                - 不要404
+
+                - Server方面
+                - 使用CDN
+                - 添加Expires或者Cache-Control响应头
+                - 对组件使用Gzip压缩
+                - 配置ETag
+                - Flush Buffer Early
+                - Ajax使用GET进行请求
+                - 避免空src的img标签
+                - Cookie方面
+                - 减小cookie大小
+                - 引入资源的域名不要包含cookie
+
+                - css方面
+                - 将样式表放到页面顶部
+                - 不使用CSS表达式
+                - 不使用IE的Filter
+
+                - Javascript方面
+                - 将脚本放到页面底部
+                - 将javascript和css从外部引入
+                - 压缩javascript和css
+                - 删除不需要的脚本
+                - 减少DOM访问
+                - 合理设计事件监听器
+
+                - 图片方面
+                - 优化图片：根据实际颜色需要选择色深、压缩
+                - 优化css精灵
+                - 不要在HTML中拉伸图片
+                - 保证favicon.ico小并且可缓存
+
+                - 移动方面
+                - 保证组件小于25k
+                - `Pack Components into a Multipart Document`
+
+                **你有用过哪些前端性能优化的方法？**
+
+                - 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+                -  前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+                -  用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+                -  当需要设置的样式很多时设置className而不是直接操作style
+                -  少用全局变量、缓存DOM节点查找的结果。减少IO读取操作
+                -  避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)
+                -  图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳
+                -  避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢
+            </xmp>
+            <h4>**谈谈性能优化问题**</h4>
+            <xmp class="puretext">
+                - 代码层面：避免使用css表达式，避免使用高级选择器，通配选择器
+                - 缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等
+                - 请求数量：合并样式和脚本，使用css图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载
+                - 请求带宽：压缩文件，开启GZIP
+            </xmp>
+
+            <h4>**代码层面的优化**</h4>
+            <xmp class="puretext">
+                - 用hash-table来优化查找
+
+                - 少用全局变量
+
+                - 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能
+
+                - 用setTimeout来避免页面失去响应
+
+                - 缓存DOM节点查找的结果
+
+                - 避免使用CSS Expression
+
+                - 避免全局查询
+
+                - 避免使用with(with会创建自己的作用域，会增加作用域链长度)
+
+                - 多个变量声明合并
+
+                - 避免图片和iFrame等的空Src。空Src会重新加载当前页面，影响速度和效率
+
+                - 尽量避免写在HTML标签中写Style属性
+            </xmp>
+
+            <h4>**前端性能优化最佳实践？**</h4>
+            <xmp class="puretext">
+                * 性能评级工具（PageSpeed 或 YSlow）
+                * 合理设置 HTTP 缓存：Expires 与 Cache-control
+                * 静态资源打包，开启 Gzip 压缩（节省响应流量）
+                * CSS3 模拟图像，图标base64（降低请求数）
+                * 模块延迟(defer)加载/异步(async)加载
+                * Cookie 隔离（节省请求流量）
+                * localStorage（本地存储）
+                * 使用 CDN 加速（访问最近服务器）
+                * 启用 HTTP/2（多路复用，并行加载）
+                * 前端自动化（gulp/webpack）
+            </xmp>
+
+            <div class="maintitle">
+                SEO
+            </div>
+
+            <h4>**前端需要注意哪些SEO**</h4>
+            <xmp class="puretext">
+
+                - 合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，
+                不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；
+                keywords列举出重要关键词即可
+                - 语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页
+                - 重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取
+                - 重要内容不要用js输出：爬虫不会执行js获取内容
+                - 少用iframe：搜索引擎不会抓取iframe中的内容
+                - 非装饰性图片必须加alt
+                - 提高网站速度：网站速度是搜索引擎排序的一个重要指标
+            </xmp>
+
+            <h4>**如何做SEO优化?**</h4>
+            <xmp class="puretext">
+                * 标题与关键词
+                - 设置有吸引力切合实际的标题，标题中要包含所做的关键词
+
+                * 网站结构目录
+                - 最好不要超过三级，每级有“面包屑导航”，使网站成树状结构分布
+
+                * 页面元素
+                - 给图片标注"Alt"可以让搜索引擎更友好的收录
+
+                * 网站内容
+                - 每个月每天有规律的更新网站的内容，会使搜索引擎更加喜欢
+
+                * 友情链接
+                - 对方一定要是正规网站，每天有专业的团队或者个人维护更新
+
+                * 内链的布置
+                - 使网站形成类似蜘蛛网的结构，不会出现单独连接的页面或链接
+
+                * 流量分析
+                - 通过统计工具(百度统计，CNZZ)分析流量来源，指导下一步的SEO
+            </xmp>
+            <div class="maintitle">
+                网站安全
+            </div>
+
+            <h4>**常见web安全及防护原理**</h4>
+            <xmp class="puretext">
+                - sql注入原理
+                - 就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令
+
+                - 总的来说有以下几点
+                - 永远不要信任用户的输入，要对用户的输入进行校验，可以通过正则表达式，或限制长度，对单引号和双"-"进行转换等
+                - 永远不要使用动态拼装SQL，可以使用参数化的SQL或者直接使用存储过程进行数据查询存取
+                - 永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接
+                - 不要把机密信息明文存放，请加密或者hash掉密码和敏感的信息
+            </xmp>
+            <h4>**XSS原理及防范**</h4>
+            <xmp class="puretext">
+                - Xss(cross-site scripting)攻击指的是攻击者往Web页面里插入恶意html标签或者javascript代码。比如：攻击者在论坛中
+                放一个看似安全的链接，骗取用户点击后，窃取cookie中的用户私密信息；或者攻击者在论坛中加一个恶意表单，当用户提交
+                表单的时候，却把信息传送到攻击者的服务器中，而不是用户原本以为的信任站点
+            </xmp>
+            <h4>**XSS防范方法**</h4>
+            <xmp class="puretext">
+                - 首先代码里对用户输入的地方和变量都需要仔细检查长度和对”<”,”>”,”;”,”’”等字符做过滤；其次任何内容写到页面之
+                前都必须加以encode，避免不小心把html tag 弄出来。这一个层面做好，至少可以堵住超过一半的XSS 攻击
+            </xmp>
+            <h4>**XSS与CSRF有什么区别吗？**</h4>
+            <xmp class="puretext">
+                - XSS是获取信息，不需要提前知道其他用户页面的代码和数据包。CSRF是代替用户完成指定的动作，需要知道其他用户页面的代码和
+                数据包。要完成一次CSRF攻击，受害者必须依次完成两个步骤
+
+                - 登录受信任网站A，并在本地生成Cookie
+                - 在不登出A的情况下，访问危险网站B
+            </xmp>
+            <h4>**CSRF的防御**</h4>
+            <xmp class="puretext">
+                - 服务端的CSRF方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数
+                - 通过验证码的方法
+            </xmp>
+            <h4>**是否了解 Web 注入攻击（最常见 XSS 和 CSRF）？**</h4>
+            <xmp class="puretext">
+                * SQL注入
+                - 把SQL命令插入到表单或输入URL查询字符串提交，欺骗服务器达到执行恶意的SQL目的
+
+                * XSS(Cross Site Script)，跨站脚本攻击
+                - 攻击者在页面里插入恶意代码，当用户浏览该页之时，执行嵌入的恶意代码达到攻击目的
+
+                * CSRF(Cross Site Request Forgery)，跨站点伪造请求
+                - 伪造合法请求，让用户在不知情的情况下以登录的身份访问，利用用户信任达到攻击目的
+
+                **如何防范 Web 前端攻击？**
+
+                * 不要信任任何外部传入的数据
+                - 针对用户输入作相关的格式检查、过滤等操作
+
+                * 不要信任在任何传入的第三方数据
+                - 使用 CORS，设置 Access-Control-Allow-Origin
+
+                * 更安全地使用 Cookie
+                - 设置Cookie为HttpOnly，禁止了JavaScript操作Cookie
+
+                * 防止网页被其他网站内嵌为iframe
+                - 服务器端设置 X-Frame-Options 响应头，防止页面被内嵌
+            </xmp>
+
+            <div class="maintitle">
+                综合
+            </div>
+
+            <h4>**对前端工程师这个职位是怎么样理解的？它的前景会怎么样？**</h4>
+            <xmp class="puretext">
+                - 前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近
+                - 实现界面交互
+                - 提升用户体验
+                - 有了Node.js，前端可以实现服务端的一些事情
+
+                - 前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好，
+
+                - 参与项目，快速高质量完成实现效果图，精确到1px；
+
+                - 与团队成员，UI设计，产品经理的沟通；
+
+                - 做好的页面结构，页面重构和用户体验；
+
+                - 处理hack，兼容、写出优美的代码格式；
+
+                - 针对服务器的优化、拥抱最新前端技术。
+            </xmp>
+            <h4>**平时如何管理你的项目？**</h4>
+            <xmp class="puretext">
+                - 先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；
+
+                - 编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；
+
+                - 标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；
+
+                - 页面进行标注（例如 页面 模块 开始和结束）；
+
+                - CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）；
+
+                - JS 分文件夹存放 命名以该JS功能为准的英文翻译。
+
+                - 图片采用整合的 images.png png8 格式文件使用 - 尽量整合在一起使用方便将来的管理
+            </xmp>
+
+
+
+            <br/>
+        <h4 class="center">To be continued......</h4>
+
+    </div>
+</body>
+
+</html>

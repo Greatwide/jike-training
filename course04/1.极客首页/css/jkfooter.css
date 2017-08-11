@@ -1,0 +1,174 @@
+/*µ×²¿*/
+
+.jkfooter {
+    min-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+.jkfooter .fwrapper {
+    width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.fwrapper .f-logo {
+    width: 160px;
+    display: inline-block;
+    float: left;
+    margin-right: 70px;
+}
+
+.f-logo img {
+    margin-top: 40px;
+    width: 109px;
+    height: 40px;
+    display: block;
+}
+
+.f-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+    display: block;
+}
+
+.jkfooter dl {
+    width: 135px;
+    color: #808080;
+    float: left;
+}
+
+.jkfooter dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.jkfooter dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.jkfooter dl dt a {
+    color: #808080;
+}
+
+.jkfooter dl dd a {
+    color: #999999;
+}
+
+.jkfooter a:hover {
+    color: #35b558;
+}
+
+.jkfooter .service {
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+}
+
+.service .hot-line {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service .downQR {
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.service .QR-ios {
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-ios.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+.service .QR-android {
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-and.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+.service .downQR img {
+    display: block;
+    position: absolute;
+    width: 115px;
+    height: 153px;
+    z-index: 2;
+    display: none;
+}
+
+.service .downQR .QR-android img {
+    margin-top: 20px;
+}
+
+.service .downQR .QR-ios img {
+    margin-top: 20px;
+}
+
+.service .downQR:hover img {
+    margin-top: -157px;
+    display: block;
+    z-index: 2;
+}
+
+.copyright {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #999;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    display: block;
+    padding-left: 120px;
+}
+
+.copyright a {
+    color: #999;
+}
+
+.copyright a.down-sina {
+    float: right;
+    display: block;
+    height: 15px;
+    width: 20px;
+    margin-right: 10px;
+    background: url(../img/icon-down-sina.png)no-repeat 0 0;
+    background-size: 20px 15px;
+}
+
+.copyright a.down-wechat {
+    display: block;
+    float: right;
+    height: 15px;
+    width: 20px;
+    background: url(../img/icon-down-wechat.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}
+
+.copyright .safe {
+    clear: both;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}

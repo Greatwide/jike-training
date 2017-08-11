@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+    font: 13px arial;
+}
+header{
+
+    float: right;
+    padding: 10px;
+
+}
+.wrapper{
+    height: 100%;
+    min-height: 600px;
+    min-width: 810px;
+    position: relative;
+}
+
+
+#headerdivid {
+    width: 380px;
+    width:400px\9;
+    float: left;
+
+    display: block;
+    margin-left: 400px\9;
+   }
+
+#headerdivid a {
+    color: black;
+    line-height: 24px;
+    margin-left: 20px;
+}
+
+#headerdivid a:hover {
+    color: #0000cc;
+}
+
+#contentid {
+    text-align: center;
+    clear: both;
+}
+
+input {
+    width: 539px;
+    height: 34px;
+
+    padding: 0px;
+    background-image: url(../img/camara.png);
+    background-position: 510px;
+    background-repeat: no-repeat;
+    background-size: 18px 16px;
+    float: left;
+    border: 1px solid #ccc;
+    outline: 0px;
+    text-indent: 7px;
+}
+input:hover{
+    border-color: #999;
+}
+#input:focus{
+    border-color: #38f;
+}
+form{
+    width: 641px;
+    margin: 10px auto;
+}
+button {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    background: #3385ff;
+    border: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-left: 0px;
+    float: left;
+    outline: 0px;
+}
+button:hover{
+    background-color: #0000cc;
+    cursor: pointer;
+}
+#bottomid1 {
+    text-align: center;
+    padding-top: 100px\9;
+}
+
+#bottomid1 a {
+    margin-left: 15px;
+    color: #999;
+
+}
+
+#bottomid2 {
+    text-align: center;
+}
+
+#bottomid2 a,
+span {
+    color: #999;
+}
+
+#bottomid2 img {
+    width: 14px;
+    height: 17px;
+}
+
+.pop {
+    width: 70px;
+    height: 25px;
+    text-align: center;
+}
+
+.pop a {
+    text-decoration: blink;
+}
+
+.pop:hover {
+    background-color: #3385ff;
+    color: black;
+}
+
+.pop:hover a {
+    color: white
+}
+
+div.container {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    font-size: 9pt;
+    height: 100px;
+    width: 70px;
+    background-color: transparent;
+    *border: 1px solid #666;
+    display: none;
+    float: left;
+    box-shadow: 2px 4px 6px #000;
+}
+
+.arrowWrapper {
+    position: absolute;
+    top: -20px;
+    *top: -22px;
+    left: 20px;
+    display: block;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-color: transparent transparent #666 transparent;
+    border-style: dashed dashed solid dashed;
+    border-width: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: -9px;
+    left: -10px;
+    border-color: transparent transparent #fff transparent;
+    border-style: dashed dashed solid dashed;
+    border-width: 10px;
+}
+
+.content {
+    border: 1px solid #666;
+    display: none;
+}
+
+.content:hover {
+    display: block
+}
+
+.setting {
+    background-color: transparent;
+    height: 28px;
+    width: 40px;
+    margin-top: 4px;
+    float: left;
+    display: block;
+    text-decoration: underline;
+    color: black;
+
+}
+
+.setting a {
+    color: black;
+}
+
+.settingfont {
+    color: black
+}
+
+.setting:hover .settingfont {
+    color: #0000cc;
+}
+
+.setting:hover .content {
+    display: block;
+}
+
+.setting:hover .container {
+    display: block;
+    position: relative;
+    left:-15px;
+    top: 10px;
+}
+
+.more {
+    color: white;
+    text-align: center;
+    height: 28px;
+    width: 60px;
+    margin: -2px;
+    padding: 0px;
+    line-height: 200%;
+    float: left;
+    display: block;
+    background-color: #3385ff;
+}
+
+.morewrapper {
+    width: 85px;
+    min-height: 80px;
+    height: 100%;
+    border-left: 1px solid #e7e7e7;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    color: black;
+    display: none;
+}
+
+.more:hover .morewrapper {
+    display: block;
+}
+
+.moretext {
+    margin-top: 12px;
+    padding: 4px;
+    color: black
+}
+
+.morewrapper div a {
+    color: #666;
+}
+footer{
+    position: absolute;
+    bottom: 10px;
+    width: 534px;
+    margin-left: -267px;
+    left: 50%;
+}
